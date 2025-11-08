@@ -1,0 +1,6 @@
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\bin\Debug\DVLD_DataAccessLayer.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\bin\Debug\DVLD_DataAccessLayer.pdb
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.AssemblyReference.cache
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.pdb

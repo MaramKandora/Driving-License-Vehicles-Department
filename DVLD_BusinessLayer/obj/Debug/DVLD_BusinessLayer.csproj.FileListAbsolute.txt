@@ -1,0 +1,9 @@
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\bin\Debug\DVLD_BusinessLayer.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\bin\Debug\DVLD_BusinessLayer.pdb
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\bin\Debug\DVLD_DataAccessLayer.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\bin\Debug\DVLD_DataAccessLayer.pdb
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.csproj.AssemblyReference.cache
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.csproj.CoreCompileInputs.cache
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\obj\Debug\DVLD_Bus.693E2707.Up2Date
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.pdb
