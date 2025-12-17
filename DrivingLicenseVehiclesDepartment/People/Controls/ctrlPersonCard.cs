@@ -67,10 +67,7 @@ namespace DVLD_PresentationLayer
             lblPersonID.Text = _Person.PersonID.ToString();
             lblNationalNo.Text = _Person.NationalNo;
 
-            if (!string.IsNullOrWhiteSpace(_Person.ThirdName))
-                lblFullName.Text = _Person.FirstName + " " + _Person.SecondName + " " + _Person.ThirdName + " " + _Person.LastName;
-            else
-                lblFullName.Text = _Person.FirstName + " " + _Person.SecondName + " " + _Person.LastName;
+            lblFullName.Text = _Person.FullName;
 
             lblGender.Text = _Person.Gender.ToString();
             pbGender.Image =
@@ -78,7 +75,7 @@ namespace DVLD_PresentationLayer
 
             lblPhone.Text = _Person.Phone;
             lblAddress.Text = _Person.Address;
-            lblDateOfBirth.Text = _Person.DateOfBirth.ToString("dd/mm/yyyy");
+            lblDateOfBirth.Text = _Person.DateOfBirth.ToString("dd/MM/yyyy");
             lblEmail.Text = _Person.Email;
             
             lblCountry.Text = _Person.CountryInfo.CountryName;
@@ -87,10 +84,11 @@ namespace DVLD_PresentationLayer
         }
 
 
-        void ShowDefaultPersonInfo()
+        public void ShowDefaultPersonInfo()
         {
             llblEditPersonInfo.Enabled = false;
             _PersonID = -1;
+            _Person = null;
             lblPersonID.Text = "???";
             lblNationalNo.Text = "???";
             lblFullName.Text = "???";
@@ -109,41 +107,47 @@ namespace DVLD_PresentationLayer
 
        
 
-       public void LoadPersonInfo(int ID)
+       public bool LoadPersonInfo(int ID)
         {
-            
+
 
             _Person = clsPerson.FindPerson(ID);
 
             if (_Person == null)
             {
-                MessageBox.Show("Person`s Info is not found");
+                MessageBox.Show($"Person with ID \'{ID}\' was not found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ShowDefaultPersonInfo();
-                return ;
+               return false ; 
             }
 
             this._PersonID = _Person.PersonID;
             FillPersonInfo();
-            
+            return true ;
+           
         }
 
 
-        public void LoadPersonInfo(string NationalNo)
+        public void ClearPersonCard()
         {
-           
+            ShowDefaultPersonInfo();
+        }
+
+        public bool LoadPersonInfo(string NationalNo)
+        {
+          
 
             _Person = clsPerson.FindPerson(NationalNo);
 
             if (_Person == null)
             {
-                MessageBox.Show("Person`s Info is not found");
+                MessageBox.Show($"Person with National No \'{NationalNo}\' was not found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ShowDefaultPersonInfo();
-                return ;
+                return false;
             }
 
             this._PersonID = _Person.PersonID;
             FillPersonInfo();
-           
+            return true;
         }
 
         private void llblEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -151,6 +155,10 @@ namespace DVLD_PresentationLayer
             frmAddNew_UpdatePerson EditPersonInfo = new frmAddNew_UpdatePerson(this._PersonID);
             EditPersonInfo.ShowDialog();
             LoadPersonInfo(this._PersonID);
+        }
+
+        private void ctrlPersonCard_Load(object sender, EventArgs e)
+        {
         }
     }
 }

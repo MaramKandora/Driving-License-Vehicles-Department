@@ -15,7 +15,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $"Select * from Users Where UserID = @UserID";
 
@@ -62,17 +62,18 @@ namespace DVLD_DataAccessLayer
         }
 
 
-        public static bool FindUserByUserName(ref string UserName,ref int UserID, ref int PersonID, ref string Password, ref bool IsActive)
+        public static bool FindUserByUserNameAndPassword(ref string UserName, ref string Password, ref int UserID, ref int PersonID, ref bool IsActive)
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string Query = $"Select * from Users Where UserName = @UserName";
+            string Query = $"Select * from Users Where UserName = @UserName And Password = @Password";
 
             SqlCommand Command = new SqlCommand(Query, Connection);
 
             Command.Parameters.AddWithValue("@UserName", UserName);
+            Command.Parameters.AddWithValue("@Password", Password);
 
             try
             {
@@ -114,11 +115,61 @@ namespace DVLD_DataAccessLayer
         }
 
 
+        public static bool FindUserByPersonID( int PersonID,ref int UserID, ref string UserName, ref string Password, ref bool IsActive)
+        {
+            bool IsFound = false;
+
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $"Select * from Users Where PersonID = @PersonID";
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                Connection.Open();
+                SqlDataReader Reader = Command.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    UserID = (int)Reader["UserID"];
+                    UserName = Reader["UserName"].ToString();
+                    Password = Reader["Password"].ToString();
+                    IsActive = Convert.ToBoolean(Reader["IsActive"]);
+
+
+                    IsFound = true;
+
+                }
+                else
+                {
+                    IsFound = false;
+                }
+
+                Reader.Close();
+
+
+            }
+            catch
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+
+            return IsFound;
+        }
+
         public static int AddNewUser(int PersonID, string UserName, string Password, bool IsActive)
         {
             int NewUserID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $@"Insert Into Users 
                               Values (@PersonID, @UserName, @Password, @IsActive);
@@ -164,7 +215,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $@"Update Users 
                               Set PersonID = @PersonID, UserName= @UserName, Password= @Password, 
@@ -178,7 +229,8 @@ namespace DVLD_DataAccessLayer
             Command.Parameters.AddWithValue("@PersonID", PersonID);
             Command.Parameters.AddWithValue("@UserName", UserName);
             Command.Parameters.AddWithValue("@Password", Password);
-          
+            Command.Parameters.AddWithValue("@IsActive", IsActive);
+
             try
             {
                 Connection.Open();
@@ -205,7 +257,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $"Delete From Users Where UserID = @UserID";
 
@@ -238,7 +290,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsUserExist(int UserID)
         {
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $"Select Found = 1 from Users Where UserID = @UserID";
 
@@ -271,7 +323,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsUserExist(string UserName)
         {
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $"Select Found = 1 from Users Where UserName = @UserName";
 
@@ -301,13 +353,46 @@ namespace DVLD_DataAccessLayer
             return Result != null;
         }
 
+        public static bool IsUserExist_ByPersonID(int PersonID)
+        {
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $"Select Found = 1 from Users Where PersonID = @PersonID";
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            object Result = null;
+
+            try
+            {
+                Connection.Open();
+                Result = Command.ExecuteScalar();
+
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+
+            return Result != null;
+        }
+
         public static DataTable GetAllUsers()
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string Query = @"SELECT Users.UserID, Users.PersonID, (People.FirstName+' '+ People.SecondName+' '+ People.ThirdName+' '+ People.LastName) as FullName,
+            string Query = @"SELECT Users.UserID, Users.PersonID, 
+                           FullName = People.FirstName + ' ' + People.SecondName + ' ' + IsNull(People.ThirdName,'') + People.LastName ,
                             Users.UserName, Users.IsActive From Users
                             Inner Join People on Users.PersonID= People.PersonID";
 
@@ -341,5 +426,7 @@ namespace DVLD_DataAccessLayer
             return dt;
 
         }
+
+        
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DVLD_BusinessLayer;
 using System.IO;
 using Microsoft.SqlServer.Server;
+using DVLD_PresentationLayer.Global_Classes;
 
 namespace DVLD_PresentationLayer.Login
 {
@@ -22,164 +23,33 @@ namespace DVLD_PresentationLayer.Login
 
         clsUser _User;
 
-        string _UsersToRememberFile= @"E:\UsersToRemember_DVLD.txt";
-
-        void SaveUserToRememberMeFile(clsUser User)
-        {
-            if (IsUserExistInRememberMeFile(User))
-                return;
-
-            string UserText= User.UserName + "#//#" + clsGlobal.EncryptText(User.Password, clsGlobal.EncryptionKey);
-
-            try
-            {
-              
-                File.AppendAllText(_UsersToRememberFile, UserText);
-               
-            }
-            catch (IOException EX)
-            {
-                MessageBox.Show(EX.Message);    
-            }
-
-
-        }
-
-      
-        void DeleteUserFromRememberMeFile(clsUser User)
-        {
-
-            string UserText = User.UserName + "#//#" + clsGlobal.EncryptText(User.Password, clsGlobal.EncryptionKey);
-            bool isUserTextExists = false;
-            try
-            {
-                if (File.Exists(_UsersToRememberFile))
-                {
-                    string[] FileLines = File.ReadAllLines(_UsersToRememberFile);
-                    string UpdatedFile = "";
-
-                    for (int i = 0; i < FileLines.Length; i++)
-                    {
-                        if (FileLines[i] != UserText)
-                        {
-                             UpdatedFile += FileLines[i] + "\n";
-                        }
-                        else
-                        {
-                            isUserTextExists = true;
-                        }
-                    }
-
-                    if (isUserTextExists)
-                    {
-
-                        File.WriteAllText(_UsersToRememberFile, UpdatedFile);
-
-                    }
-                   
-                    
-
-                }
-
-                
-            }
-            catch (IOException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
-
-        }
-
-
-        bool IsUserExistInRememberMeFile(clsUser User)
-        {
-
-            try
-            {
-                if (File.Exists(_UsersToRememberFile))
-                {
-                    string[] FileLines = File.ReadAllLines(_UsersToRememberFile);
-                    
-                    foreach (string line in FileLines)
-                    {
-                        if (line.Contains(User.UserName))
-                        {
-                           return true;
-                        }
-                    }
-                }
-
-            }
-            catch (IOException ex)
-            {
-
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-
-
-            return false;
-        }
-
-     
-        void OnSignOut_Handler(int UserID)
-        {
-            clsUser User = clsUser.FindUser(UserID);
-
-            if (IsUserExistInRememberMeFile(User))
-            {
-                txtUserName.Text = User.UserName;
-                txtPassword.Text = User.Password;
-                cbRemeberMe.Checked = true;
-            }
-            else
-            {
-                txtUserName.Text = "";
-                txtPassword.Text = "";
-                cbRemeberMe.Checked = false;
-            }
-
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
           
             bool LoginSucceeded;
 
-            if (txtUserName.Text != "")
+
+            _User = clsUser.FindUserByUserNameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.Trim());
+
+            if (_User != null)
             {
-                _User = clsUser.FindUser(txtUserName.Text);
-
-                if (_User != null)
-                {
-                    if (_User.Password.ToLower() == txtPassword.Text.ToLower())
-                    {
-                        if (_User.IsActive)
-                            LoginSucceeded = true;
-                        else
-                        {
-                            LoginSucceeded = false; 
-                            MessageBox.Show("Your Account is Deactivated, Please Contact you Admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-                    }
-                    else
-                    {
-                        LoginSucceeded = false; 
-                    }
-
-                }
+                if (_User.IsActive)
+                    LoginSucceeded = true;
                 else
                 {
-                    LoginSucceeded = false; 
+                    LoginSucceeded = false;
+                    txtUserName.Focus();
+                    MessageBox.Show("Your Account is been Deactivated, Please Contact you Admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+
             }
             else
             {
-                LoginSucceeded = false; 
+                LoginSucceeded = false;
             }
+            
 
             if (LoginSucceeded)
             {
@@ -187,18 +57,22 @@ namespace DVLD_PresentationLayer.Login
                 
                 if (cbRemeberMe.Checked)
                 {
-                    SaveUserToRememberMeFile(_User);
+                    clsGlobal.RememberUserCredentials(_User);
                 }
                 else
                 {
-                    DeleteUserFromRememberMeFile(_User);
+                    clsGlobal.ClearRememberMeFile();
+                    txtUserName.Text = "";
+                    txtPassword.Text = "";
                 }
-               
+
+                this.Hide();
 
                 frmMain frmMainScreen = new frmMain(_User.UserID);
-                frmMainScreen.ReturnUserOnSignOut += OnSignOut_Handler;
                 frmMainScreen.ShowDialog();
 
+
+                this.Show();
               
 
             }
@@ -211,7 +85,76 @@ namespace DVLD_PresentationLayer.Login
 
         private void frmLoginScreen_Load(object sender, EventArgs e)
         {
-            //LoadUserLoginDataIfSetToBeRemembered(clsGlobal.CurrentUser);
+            string UserName = "", Password = "";
+
+            if (clsGlobal.LoadStoredCredentials(ref UserName, ref Password))
+            {
+                txtUserName.Text = UserName;
+                txtPassword.Text = Password;
+                cbRemeberMe.Checked = true; 
+            }
+            else
+            {
+                txtUserName.Text = "";
+                txtPassword.Text = "";
+                cbRemeberMe.Checked = false;
+            }
+
+            
+        }
+
+        void MainFormClosed_Handler(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
+
+        private void txtUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsPunctuation(e.KeyChar) && (e.KeyChar != '_' && e.KeyChar != '-' && e.KeyChar != '@')) 
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = (txtPassword.UseSystemPasswordChar) ? false : true;
+        }
+
+
+
+        private void textbox_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;  
+            }
+
+            if ((TextBox)sender == txtUserName && e.KeyChar == (char)Keys.Enter) 
+            {
+                txtPassword.Focus();
+            }
+           
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = btnLogin;
+        }
+
+   
+
+        private void txtUserName_Enter(object sender, EventArgs e)
+        {
+            this.AcceptButton = null;
         }
     }
 }

@@ -1,13 +1,26 @@
 {
   "ShowEmptyProjects": false,
-  "SelectedGroups": [],
+  "SelectedGroups": [
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\People\\frmAddNew_UpdatePerson.resx",
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\People\\frmPeopleManagement.resx",
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmAddNewUser.resx",
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Properties\\Resources.resx",
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.resx",
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmUsersManagement.resx",
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\People\\frmPersonInformations.resx",
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Login\\frmLoginScreen.resx",
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\People\\Controls\\ctrlPersonCard.resx",
+    "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\People\\Controls\\ctrlPersonCardWithFilter.resx"
+  ],
   "ExpandedProjects": [],
   "EnableSpellChecker": true,
   "ColumnOrder": [
     "name",
     "type",
     "neutral-value",
-    "neutral-comment"
+    "neutral-comment",
+    "file-path",
+    "file-name"
   ],
   "VisibleColumnKeys": [
     "name",

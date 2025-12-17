@@ -18,7 +18,7 @@ namespace DVLD_BusinessLayer
         public string FirstName { get; set; }   
         public string SecondName { get; set; } 
         public string ThirdName { get; set; }   
-        public string LastName { get; set; }    
+        public string LastName { get; set; } 
         public DateTime DateOfBirth { get; set; }  
         
         public enGender Gender { get; set; }
@@ -29,6 +29,12 @@ namespace DVLD_BusinessLayer
         public string ImagePath { get; set; }
 
         public clsCountry CountryInfo;
+
+        private string _FullName;
+        public string FullName
+        {
+            get {  return _FullName; }  
+        }
 
         public enum enGender { Male =0, Female=1 };
 
@@ -51,6 +57,7 @@ namespace DVLD_BusinessLayer
             NationalityCountryID = -1;
             CountryInfo = null;
             ImagePath = "";
+            _FullName = "";
 
             _Mode = enMode.AddNew;
             
@@ -73,6 +80,11 @@ namespace DVLD_BusinessLayer
             this.NationalityCountryID = NationalityCountryID;
             CountryInfo = clsCountry.Find(NationalityCountryID);
             this.ImagePath = ImagePath;
+
+            if (ThirdName != "")
+                _FullName = FirstName + " " + SecondName + " " + ThirdName + " " + LastName;
+            else
+                _FullName = FirstName + " " + SecondName + " " + LastName;
 
             _Mode = enMode.Update;
         }
@@ -138,13 +150,33 @@ namespace DVLD_BusinessLayer
            this.PersonID = clsPersonDataAccess.AddNewPerson(this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth,(short)this.Gender
                     , this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
 
-            return this.PersonID != -1;
+            if (PersonID != -1)
+            {
+                if (ThirdName != "")
+                    _FullName = FirstName + " " + SecondName + " " + ThirdName + " " + LastName;
+                else
+                    _FullName = FirstName + " " + SecondName + " " + LastName;
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
         }
 
          bool UpdatePerson()
         {
+            if (this.ThirdName != "")
+                _FullName = FirstName + " " + SecondName + " " + ThirdName + " " + LastName;
+            else
+                _FullName = FirstName + " " + SecondName + " " + LastName;
+
             return clsPersonDataAccess.UpdatePerson(this.PersonID, this.NationalNo, this.FirstName, this.SecondName, this.ThirdName, this.LastName, this.DateOfBirth, (short)this.Gender
                     , this.Address, this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
+
+           
         }
 
         public static bool DeletePerson(int personID)

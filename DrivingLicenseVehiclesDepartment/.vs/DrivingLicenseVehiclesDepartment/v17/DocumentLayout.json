@@ -3,203 +3,331 @@
   "WorkspaceRootPath": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\drivinglicensevehiclesdepartment\\login\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:login\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\login\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:login\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\users\\frmusersmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:users\\frmusersmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\users\\frmusersmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:users\\frmusersmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clsuserdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clslicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clstestdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clslicensedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clstestappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clstestappointmentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clstesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clspersondataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clsdriver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clslocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clsapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clslocaldrivinglicenseapplicationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clsglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clsdriverdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clssettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clsuserdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\global classes\\clsutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:global classes\\clsutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clsperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\drivinglicensevehiclesdepartment\\applications\\local driving license\\frmlocaldrivinglicenseapplicationsmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\local driving license\\frmlocaldrivinglicenseapplicationsmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\drivinglicensevehiclesdepartment\\applications\\local driving license\\frmlocaldrivinglicenseapplicationsmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\local driving license\\frmlocaldrivinglicenseapplicationsmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4fc5ff1-28ef-4b04-ad02-6b298310ccc7}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs",
-              "RelativeDocumentMoniker": "frmMain.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs [Design]",
-              "RelativeToolTip": "frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T15:11:18.543Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmUsersManagement.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmUsersManagement.cs",
-              "RelativeDocumentMoniker": "Users\\frmUsersManagement.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmUsersManagement.cs",
-              "RelativeToolTip": "Users\\frmUsersManagement.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAEwH8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T13:17:09.705Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmUsersManagement.cs [Design]",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmUsersManagement.cs",
-              "RelativeDocumentMoniker": "Users\\frmUsersManagement.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmUsersManagement.cs [Design]",
-              "RelativeToolTip": "Users\\frmUsersManagement.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T13:06:42.35Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T13:41:15.889Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmLoginScreen.cs [Design]",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Login\\frmLoginScreen.cs",
-              "RelativeDocumentMoniker": "Login\\frmLoginScreen.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Login\\frmLoginScreen.cs [Design]",
-              "RelativeToolTip": "Login\\frmLoginScreen.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T16:37:13.11Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "frmMain.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
               "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs",
               "RelativeToolTip": "frmMain.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAWwDoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T11:03:54.227Z"
+              "WhenOpened": "2025-12-05T16:45:22.157Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "clsGlobal.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsGlobal.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsGlobal.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsGlobal.cs",
-              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsGlobal.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "clsTest.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsTest.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsTest.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsTest.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsTest.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAIwIMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T05:04:10.775Z"
+              "WhenOpened": "2025-12-17T00:38:49.467Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "clsSettings.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsSettings.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsSettings.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsSettings.cs",
-              "RelativeToolTip": "..\\DVLD_DataAccessLayer\\clsSettings.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "clsTestData.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsTestData.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsTestData.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsTestData.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccessLayer\\clsTestData.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAmwOwAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T04:56:08.941Z"
+              "WhenOpened": "2025-12-17T00:28:52.093Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "clsUser.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsUser.cs",
-              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsUser.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsUser.cs",
-              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsUser.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAEwKUAAAAwAAAAAAAAAA==",
+              "Title": "clsTestType.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsTestType.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsTestType.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsTestType.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsTestType.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAIwDwAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T16:21:06.302Z"
+              "WhenOpened": "2025-12-17T00:08:09.181Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "clsUtil.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Global Classes\\clsUtil.cs",
-              "RelativeDocumentMoniker": "Global Classes\\clsUtil.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Global Classes\\clsUtil.cs",
-              "RelativeToolTip": "Global Classes\\clsUtil.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "clsTestAppointment.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsTestAppointment.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsTestAppointment.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsTestAppointment.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsTestAppointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T04:48:36.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmLoginScreen.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Login\\frmLoginScreen.cs",
-              "RelativeDocumentMoniker": "Login\\frmLoginScreen.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Login\\frmLoginScreen.cs",
-              "RelativeToolTip": "Login\\frmLoginScreen.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAawMIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T16:38:14.255Z",
+              "WhenOpened": "2025-12-16T23:48:30.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "clsTestAppointmentData.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsTestAppointmentData.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsTestAppointmentData.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsTestAppointmentData.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccessLayer\\clsTestAppointmentData.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T01:23:00.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "clsUser.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsUser.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsUser.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsUser.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsUser.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwMUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T00:32:11.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "clsApplication.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsApplication.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsApplication.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsApplication.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsApplication.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAwwFgAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T00:29:39.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "clsLocalDrivingLicenseApplicationData.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsLocalDrivingLicenseApplicationData.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsLocalDrivingLicenseApplicationData.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsLocalDrivingLicenseApplicationData.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccessLayer\\clsLocalDrivingLicenseApplicationData.cs",
+              "ViewState": "AgIAAB0BAAAAAAAAAAAmwC0BAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T23:05:31.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "clsDriver.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsDriver.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsDriver.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsDriver.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsDriver.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAUwGQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T00:25:43.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "clsUserDataAccess.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsUserDataAccess.cs",
               "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsUserDataAccess.cs",
               "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsUserDataAccess.cs",
               "RelativeToolTip": "..\\DVLD_DataAccessLayer\\clsUserDataAccess.cs",
-              "ViewState": "AgIAACQBAAAAAAAAAAAEwDYBAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAJcBAAAAAAAAAAAUwKsBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T16:03:37.925Z"
+              "WhenOpened": "2025-12-15T23:48:19.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "clsDriverData.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsDriverData.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsDriverData.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsDriverData.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccessLayer\\clsDriverData.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAowOQAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T23:47:48.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsLicense.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsLicense.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsLicense.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsLicense.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsLicense.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAoBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T23:42:45.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "clsPersonDataAccess.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsPersonDataAccess.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsPersonDataAccess.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsPersonDataAccess.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccessLayer\\clsPersonDataAccess.cs",
+              "ViewState": "AgIAAJkBAAAAAAAAAADwv6wBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T23:11:29.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "clsPerson.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsPerson.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsPerson.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsPerson.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsPerson.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T23:11:22.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "clsLicenseData.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsLicenseData.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsLicenseData.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsLicenseData.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccessLayer\\clsLicenseData.cs",
+              "ViewState": "AgIAAG4BAAAAAAAAAAAwwIIBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T23:10:57.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "clsLocalDrivingLicenseApplication.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsLocalDrivingLicenseApplication.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsLocalDrivingLicenseApplication.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsLocalDrivingLicenseApplication.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsLocalDrivingLicenseApplication.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAALsAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T22:35:52.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmLocalDrivingLicenseApplicationsManagement.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
+              "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
+              "RelativeToolTip": "Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
+              "ViewState": "AgIAAMkAAAAAAAAAAADwv9oAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T22:34:10.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmLocalDrivingLicenseApplicationsManagement.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
+              "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs [Design]",
+              "RelativeToolTip": "Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T22:30:34.504Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

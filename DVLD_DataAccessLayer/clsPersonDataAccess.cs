@@ -22,7 +22,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $"Select * from People Where PersonID = @PersonID";
 
@@ -82,7 +82,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $"Select * from People Where NationalNo = @NationalNo";
 
@@ -142,7 +142,7 @@ namespace DVLD_DataAccessLayer
         {
             int NewPersonID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $@"Insert Into People 
                               Values (@NationalNo, @FirstName, @SecondName, @ThirdName, @LastName, @DateOfBirth , @Gender,
@@ -213,7 +213,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $@"Update People 
                               Set NationalNo = @NationalNo, FirstName= @FirstName, SecondName= @SecondName, 
@@ -279,7 +279,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $"Delete From People Where PersonID = @PersonID";
 
@@ -312,7 +312,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsPersonExist(int PersonID)
         {
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $"Select Found = 1 from People Where PersonID = @PersonID";
 
@@ -344,7 +344,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsPersonExist(string NationalNo)
         {
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $"Select Found = 1 from People Where NationalNo = @NationalNo";
 
@@ -378,7 +378,7 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = @"SELECT People.PersonID, People.NationalNo, People.FirstName, People.SecondName, People.ThirdName, People.LastName,
                             People.DateOfBirth, People.Gender,

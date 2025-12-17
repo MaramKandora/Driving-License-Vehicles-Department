@@ -565,6 +565,7 @@
             this.Controls.Add(this.lblHeaderAddNew_UpdatePerson);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddNew_UpdatePerson";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New / Update Person";
             this.Load += new System.EventHandler(this.frmAddNew_UpdatePerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

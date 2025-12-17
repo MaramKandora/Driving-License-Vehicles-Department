@@ -11,24 +11,39 @@ namespace DVLD_BusinessLayer
     public class clsUser
     {
         public int UserID { get; set; }
-        public int PersonID { get; set; }   
 
-        public clsPerson PersonInfo {  get; set; }  
+        int _PersonID;
+        public int PersonID
+        {
+            get
+            {
+                return _PersonID;
+            }
+            set
+            {
+                _PersonID = value;
+                _PersonInfo = clsPerson.FindPerson(_PersonID);
+                
+            }
+        }
+
+
+        clsPerson _PersonInfo;
+        public clsPerson PersonInfo { get { return _PersonInfo; } }  
         public string UserName { get; set; }
 
         string _Password;
 
-        int _EncryptionKey = 4;
         public string Password
         {
             get
             {
-                return clsGlobal.DecryptText(_Password, _EncryptionKey);
+                return clsEncryptDecrypt.DecryptText(_Password);
             }
 
             set
             {
-                _Password = clsGlobal.EncryptText(_Password, _EncryptionKey);
+                _Password = clsEncryptDecrypt.EncryptText(value);
             }
         }
         public bool IsActive { get; set; }  
@@ -41,7 +56,7 @@ namespace DVLD_BusinessLayer
         {
             UserID = -1;
             PersonID = -1;
-            PersonInfo = null;
+            _PersonInfo = null;
             UserName = "";
             _Password = "";
             IsActive = false;   
@@ -57,7 +72,6 @@ namespace DVLD_BusinessLayer
             this.UserName = UserName;   
             this._Password = Password;   
             this.IsActive = IsActive;
-            PersonInfo = clsPerson.FindPerson(PersonID);
 
             _Mode = enMode.Update;
         }
@@ -81,14 +95,14 @@ namespace DVLD_BusinessLayer
 
         }
 
-        static public clsUser FindUser(string UserName)
+        static public clsUser FindUserByUserNameAndPassword(string UserName, string Password)
         {
-
-            string Password = "";
             int UserID = -1, PersonID = -1;
             bool IsActive = false;
 
-            if (clsUserDataAccess.FindUserByUserName(ref UserName, ref UserID, ref PersonID, ref Password, ref IsActive)) 
+            Password = clsEncryptDecrypt.EncryptText(Password);
+
+            if (clsUserDataAccess.FindUserByUserNameAndPassword(ref UserName, ref Password, ref UserID, ref PersonID, ref IsActive)) 
             {
                 return new clsUser(UserID, PersonID, UserName, Password, IsActive);
 
@@ -98,6 +112,23 @@ namespace DVLD_BusinessLayer
                 return null;
             }
 
+        }
+
+        static public clsUser FindUserByPersonID(int PersonID)
+        {
+            string Password = "", UserName = "";
+            int UserID = -1;
+            bool IsActive = false;
+
+            if (clsUserDataAccess.FindUserByPersonID(PersonID, ref UserID,ref UserName,ref Password,ref IsActive))
+            {
+                return new clsUser(UserID, PersonID, UserName, Password, IsActive);
+
+            }
+            else
+            {
+                return null;
+            }
         }
 
        
@@ -111,7 +142,11 @@ namespace DVLD_BusinessLayer
             return clsUserDataAccess.IsUserExist(UserName);
         }
 
-      
+        public static bool IsUserExist_ByPersonID(int PersonID)
+        {
+            return clsUserDataAccess.IsUserExist_ByPersonID(PersonID);
+        }
+
         bool AddNewUser()
         {
             
@@ -130,6 +165,7 @@ namespace DVLD_BusinessLayer
         {
             return clsUserDataAccess.DeleteUser(UserID);
         }
+
 
 
         public bool Save()

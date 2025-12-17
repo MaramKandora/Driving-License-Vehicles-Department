@@ -573,6 +573,16 @@ namespace DVLD_PresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap letter_x_13162749 {
+            get {
+                object obj = ResourceManager.GetObject("letter-x_13162749", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap License_Type_32 {
             get {
                 object obj = ResourceManager.GetObject("License Type 32", resourceCulture);
@@ -806,6 +816,16 @@ namespace DVLD_PresentationLayer.Properties {
         internal static System.Drawing.Bitmap PassedTests_32 {
             get {
                 object obj = ResourceManager.GetObject("PassedTests 32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap password_12048844__1_ {
+            get {
+                object obj = ResourceManager.GetObject("password_12048844 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

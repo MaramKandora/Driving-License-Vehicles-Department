@@ -38,7 +38,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.label1.Location = new System.Drawing.Point(373, 53);
+            this.label1.Location = new System.Drawing.Point(358, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(311, 52);
             this.label1.TabIndex = 0;
@@ -46,9 +46,9 @@
             // 
             // ctrlPersonInformations1
             // 
-            this.ctrlPersonInformations1.Location = new System.Drawing.Point(36, 144);
+            this.ctrlPersonInformations1.Location = new System.Drawing.Point(12, 144);
             this.ctrlPersonInformations1.Name = "ctrlPersonInformations1";
-            this.ctrlPersonInformations1.Size = new System.Drawing.Size(996, 372);
+            this.ctrlPersonInformations1.Size = new System.Drawing.Size(967, 372);
             this.ctrlPersonInformations1.TabIndex = 1;
             // 
             // btnClose
@@ -57,9 +57,9 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_PresentationLayer.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(868, 547);
+            this.btnClose.Location = new System.Drawing.Point(823, 503);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(112, 45);
+            this.btnClose.Size = new System.Drawing.Size(121, 45);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -68,15 +68,15 @@
             // 
             // frmPersonInformation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1071, 630);
+            this.ClientSize = new System.Drawing.Size(989, 573);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlPersonInformations1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmPersonInformation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Person Details";
             this.ResumeLayout(false);
             this.PerformLayout();
