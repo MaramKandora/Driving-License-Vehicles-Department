@@ -63,7 +63,7 @@ namespace DVLD_BusinessLayer
                 if ( BaseApplication != null) 
                 {
                     return new clsLocalDrivingLicenseApplication(LDLApplicationID, LicenseClassID, ApplicationID, BaseApplication.ApplicantPersonID
-                        , BaseApplication.ApplicationDate, BaseApplication.enApplicationTypeID, BaseApplication.enApplicationStatus1
+                        , BaseApplication.ApplicationDate, BaseApplication.enApplicationTypeID, BaseApplication.enApplicationStatusID
                         , BaseApplication.LastStatusDate, BaseApplication.Fees, BaseApplication.CreatedByUserID);
                 }
                 else
@@ -91,7 +91,7 @@ namespace DVLD_BusinessLayer
                 if (BaseApplication != null)
                 {
                     return new clsLocalDrivingLicenseApplication(LDLApplicationID, LicenseClassID, BaseApplicationID, BaseApplication.ApplicantPersonID
-                        , BaseApplication.ApplicationDate, BaseApplication.enApplicationTypeID, BaseApplication.enApplicationStatus1
+                        , BaseApplication.ApplicationDate, BaseApplication.enApplicationTypeID, BaseApplication.enApplicationStatusID
                         , BaseApplication.LastStatusDate, BaseApplication.Fees, BaseApplication.CreatedByUserID);
                 }
                 else
@@ -173,20 +173,38 @@ namespace DVLD_BusinessLayer
             
         }
 
-       
 
-        public static int GetNumberOfPassedTests(int LDLAppID)
+
+        public bool IsTestForFirstTime( clsTestType.enTestType TestType)
         {
-            //TODO : this function should be in test class
-            return clsLocalDrivingLicenseApplicationData.GetPassedTests(LDLAppID);
+            return clsLocalDrivingLicenseApplicationData.IsTestForFirstTime(this.LDLApplicationID, (int)TestType);
         }
-       
-        
+
+        public bool IsLicenseIssued()
+        {
+            return clsLicense.IsLicenseExistByApplicationID(this.ApplicationID);    
+        }
 
         public static DataTable GetAllLocalDrivingLicenseApplications()
         {
             return clsLocalDrivingLicenseApplicationData.GetAllLocalDrivingLicenseApplications();
         }
+
+        public bool IsTestTypePassed(clsTestType.enTestType TestType)
+        {
+            return clsTest.IsTestPassed(this.LDLApplicationID, TestType);
+        }
+
+        public int GetTrialsOfTestType(clsTestType.enTestType TestType)
+        {
+            return clsLocalDrivingLicenseApplicationData.GetTrialsForTestType(this.LDLApplicationID, (int)TestType);
+        }
+
+        public bool IsThereActiveTestForTestType( clsTestType.enTestType TestType)
+        {
+            return clsLocalDrivingLicenseApplicationData.GetActiveTestAppointmentID(this.LDLApplicationID,(int)TestType) != -1;
+        }
+
     }
 
 

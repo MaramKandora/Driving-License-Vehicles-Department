@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
 using DVLD_PresentationLayer.Applications.Local_Driving_License;
+using DVLD_PresentationLayer.License;
+using DVLD_PresentationLayer.Tests;
 
 namespace DVLD_PresentationLayer.Applications
 {
@@ -16,6 +18,7 @@ namespace DVLD_PresentationLayer.Applications
     {
 
         DataView _dvLDLApplications ;
+
         public frmLocalDrivingLicenseApplicationsManagement()
         {
             InitializeComponent();
@@ -26,11 +29,7 @@ namespace DVLD_PresentationLayer.Applications
             _dvLDLApplications = clsLocalDrivingLicenseApplication.GetAllLocalDrivingLicenseApplications().DefaultView;
             dgvLDLApplications.DataSource = _dvLDLApplications; 
             lblRecordsNum.Text = dgvLDLApplications.RowCount.ToString();
-        }
 
-        private void frmLocalDrivingLicenseApplicationsManagement_Load(object sender, EventArgs e)
-        {
-            RefreshLDLApplicationsList();
             if (dgvLDLApplications.RowCount > 0)
             {
                 dgvLDLApplications.Columns[0].HeaderText = "L.D.L AppID";
@@ -43,10 +42,10 @@ namespace DVLD_PresentationLayer.Applications
                 dgvLDLApplications.Columns[2].Width = 100;
 
                 dgvLDLApplications.Columns[3].HeaderText = "Full Name";
-                dgvLDLApplications.Columns[3].Width = 220;
+                dgvLDLApplications.Columns[3].Width = 250;
 
                 dgvLDLApplications.Columns[4].HeaderText = "Application Date";
-                dgvLDLApplications.Columns[4].Width = 120;
+                dgvLDLApplications.Columns[4].Width = 130;
 
                 dgvLDLApplications.Columns[5].HeaderText = "Passed Tests";
                 dgvLDLApplications.Columns[5].Width = 100;
@@ -56,6 +55,12 @@ namespace DVLD_PresentationLayer.Applications
 
             }
             cbFilterLDLApplications.SelectedIndex = 0;
+        }
+
+        private void frmLocalDrivingLicenseApplicationsManagement_Load(object sender, EventArgs e)
+        {
+            RefreshLDLApplicationsList();
+           
 
         }
 
@@ -132,10 +137,7 @@ namespace DVLD_PresentationLayer.Applications
 
         }
 
-        private void scheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void deleteApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -211,14 +213,11 @@ namespace DVLD_PresentationLayer.Applications
 
         void ShowCompletedMode_cmsLDLApplications()
         {
-
-            //TODO : come here after finishing license class
-           
+            issueDrivingLicenseToolStripMenuItem.Enabled = false;
             deleteApplicationToolStripMenuItem.Enabled = false;
             editApplicationToolStripMenuItem.Enabled = false;   
-            cancelApplicationToolStripMenuItem.Enabled = false; 
-            scheduleStreetTestToolStripMenuItem.Enabled = false;    
-            issueDrivingLicenseToolStripMenuItem.Enabled = false;
+            cancelApplicationToolStripMenuItem.Enabled = false;
+            scheduleTestToolStripMenuItem.Enabled = false;    
             showLicenseToolStripMenuItem.Enabled = true;
 
         }
@@ -228,7 +227,7 @@ namespace DVLD_PresentationLayer.Applications
             deleteApplicationToolStripMenuItem.Enabled = false;
             editApplicationToolStripMenuItem.Enabled = false;
             cancelApplicationToolStripMenuItem.Enabled = false;
-            scheduleStreetTestToolStripMenuItem.Enabled = false;
+            scheduleTestToolStripMenuItem.Enabled = false;
             issueDrivingLicenseToolStripMenuItem.Enabled = false;
             showLicenseToolStripMenuItem.Enabled = false;
         }
@@ -238,7 +237,7 @@ namespace DVLD_PresentationLayer.Applications
             deleteApplicationToolStripMenuItem.Enabled = true;
             editApplicationToolStripMenuItem.Enabled = true;
             cancelApplicationToolStripMenuItem.Enabled = true;
-            scheduleStreetTestToolStripMenuItem.Enabled = true;
+            scheduleTestToolStripMenuItem.Enabled = true;
             issueDrivingLicenseToolStripMenuItem.Enabled = false;
             showLicenseToolStripMenuItem.Enabled = false;
 
@@ -261,24 +260,108 @@ namespace DVLD_PresentationLayer.Applications
                 scheduleWrittenTestToolStripMenuItem.Enabled = false;
                 scheduleStreetTestToolStripMenuItem.Enabled = true;
             }
+            else if (PassedTests == 3)
+            {
+                scheduleTestToolStripMenuItem.Enabled = false;
+                issueDrivingLicenseToolStripMenuItem.Enabled = true;
+            }
         }
+
+      
         private void cmsLDLApplications_Opening(object sender, CancelEventArgs e)
         {
-            switch ((clsApplication.enApplicationStatus)dgvLDLApplications.CurrentRow.Cells["ApplicationStatus"].Value)
+            clsLocalDrivingLicenseApplication LDLAppInfo =
+              clsLocalDrivingLicenseApplication.FindLocalDrivingLicenseApplicationByLDLAppID((int)dgvLDLApplications.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
+
+            byte TotalPassedTest = Convert.ToByte(dgvLDLApplications.CurrentRow.Cells["PassedTests"].Value);
+            bool LicenseExists = LDLAppInfo.IsLicenseIssued();
+
+            showApplicationDetailsToolStripMenuItem.Enabled = true;
+            showPersonsLicenseHistoryToolStripMenuItem.Enabled = true;
+
+
+            editApplicationToolStripMenuItem.Enabled = (LDLAppInfo.enApplicationStatusID == clsApplication.enApplicationStatus.New);
+
+            deleteApplicationToolStripMenuItem.Enabled = (LDLAppInfo.enApplicationStatusID == clsApplication.enApplicationStatus.New);
+            cancelApplicationToolStripMenuItem.Enabled = (LDLAppInfo.enApplicationStatusID == clsApplication.enApplicationStatus.New);
+            scheduleTestToolStripMenuItem.Enabled = (LDLAppInfo.enApplicationStatusID == clsApplication.enApplicationStatus.New)
+                && (TotalPassedTest < 3);
+
+            bool IsVisionTestPassed = LDLAppInfo.IsTestTypePassed(clsTestType.enTestType.VisionTest);
+            bool IsWrittenTestPassed = LDLAppInfo.IsTestTypePassed(clsTestType.enTestType.WrittenTest);
+            bool IsStreetTestPassed = LDLAppInfo.IsTestTypePassed(clsTestType.enTestType.StreetTest);
+
+
+
+            if (scheduleTestToolStripMenuItem.Enabled)
             {
-                case clsApplication.enApplicationStatus.Completed:
-                    ShowCompletedMode_cmsLDLApplications();
-                    break;
-
-                case clsApplication.enApplicationStatus.Canceled:
-                    ShowCanceledMode_cmsLDLApplications();
-                    break;
-
-                case clsApplication.enApplicationStatus.New:
-                    ShowNewMode_cmsLDLApplications((byte)dgvLDLApplications.CurrentRow.Cells["PassedTests"].Value);
-                    break;
-                    
+                scheduleVisionTestToolStripMenuItem.Enabled = !IsVisionTestPassed;
+                scheduleWrittenTestToolStripMenuItem.Enabled = IsVisionTestPassed && !IsWrittenTestPassed;
+                scheduleStreetTestToolStripMenuItem.Enabled = IsVisionTestPassed && IsWrittenTestPassed && !IsStreetTestPassed;
             }
+
+            issueDrivingLicenseToolStripMenuItem.Enabled = (TotalPassedTest == 3) &&
+                (LDLAppInfo.enApplicationStatusID == clsApplication.enApplicationStatus.New) && !LicenseExists;
+
+            showLicenseToolStripMenuItem.Enabled = LicenseExists;
+
+        }
+
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int BaseApplicationID =
+                clsLocalDrivingLicenseApplication.FindLocalDrivingLicenseApplicationByLDLAppID
+                ((int)dgvLDLApplications.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value).ApplicationID;
+            int LicenseID = clsLicense.GetLicenseIDUsingApplicationID(BaseApplicationID);
+
+            if (LicenseID != -1)
+            {
+                frmShowDriverLicenseInfo LicenseInfo = new frmShowDriverLicenseInfo(LicenseID);
+                LicenseInfo.ShowDialog();   
+            }
+            else
+            {
+                MessageBox.Show("Showing License has failed","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);  
+            }
+        }
+
+
+        private void scheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmScheduleTestAppointment frmScheduleTest = new frmScheduleTestAppointment((int)dgvLDLApplications.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value
+                , clsTestType.enTestType.VisionTest);
+            frmScheduleTest.ShowDialog();
+            RefreshLDLApplicationsList();
+        }
+        private void scheduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmScheduleTestAppointment frmScheduleTest = new frmScheduleTestAppointment((int)dgvLDLApplications.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value
+               , clsTestType.enTestType.WrittenTest);
+            frmScheduleTest.ShowDialog();
+            RefreshLDLApplicationsList();
+        }
+
+        private void scheduleStreetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmScheduleTestAppointment frmScheduleTest = new frmScheduleTestAppointment((int)dgvLDLApplications.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value
+           , clsTestType.enTestType.StreetTest);
+            frmScheduleTest.ShowDialog();
+            RefreshLDLApplicationsList();
+        }
+
+        private void issueDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIssueDrivingLicense IssueLicense = new frmIssueDrivingLicense((int)dgvLDLApplications.CurrentRow.Cells["LocalDrivingLicenseApplicationID"].Value);
+            IssueLicense.ShowDialog();
+            RefreshLDLApplicationsList();
+        }
+
+        private void showPersonsLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            frmLicenseHistory LicenseHistory = new frmLicenseHistory(clsPerson.FindPerson(dgvLDLApplications.CurrentRow.Cells["ApplicantPersonNationalNo"].Value.ToString()).PersonID);
+            LicenseHistory.ShowDialog();
         }
     }
 }

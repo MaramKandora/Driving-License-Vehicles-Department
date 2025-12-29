@@ -20,19 +20,18 @@ namespace DVLD_BusinessLayer
                 _TestAppointmentID = value;
                 if (value == -1)
                 {
-                    _TestAppointmentInfo = null;
+                    TestAppointmentInfo = null;
                     return;
                 }
 
 
-                _TestAppointmentInfo = clsTestAppointment.FindTestAppointmentByTestAppointmentID(value);
+                TestAppointmentInfo = clsTestAppointment.FindTestAppointmentByTestAppointmentID(value);
                 if (TestAppointmentInfo == null)
                     _TestAppointmentID = -1;
             }
         }
 
-        clsTestAppointment _TestAppointmentInfo;
-        public clsTestAppointment TestAppointmentInfo { get { return _TestAppointmentInfo; } }
+        public clsTestAppointment TestAppointmentInfo { get; set; }
 
 
         public string Notes { get; set; }
@@ -65,7 +64,7 @@ namespace DVLD_BusinessLayer
         enum enMode { AddNew, Update }
         enMode _Mode;
 
-        clsTest()
+        public clsTest()
         {
             _TestID = -1;
             TestAppointmentID = -1;
@@ -100,7 +99,10 @@ namespace DVLD_BusinessLayer
 
             if (clsTestData.FindTestByTestID(TestID, ref TestAppointmentID, ref TestResult, ref Notes, ref CreatedByUserID)) 
             {
+
                 return new clsTest(TestID, TestAppointmentID, TestResult, Notes, CreatedByUserID);
+
+              
 
             }
             else
@@ -111,7 +113,26 @@ namespace DVLD_BusinessLayer
         }
 
       
+        static public clsTest FindTestByAppointmentID(int TestAppointmentID)
+        {
+            int TestID = -1, CreatedByUserID = -1;
+            string Notes = "";
+            bool TestResult = false;
 
+
+
+            if (clsTestData.FindTestByAppointmentID(TestAppointmentID, ref TestID, ref TestResult, ref Notes, ref CreatedByUserID))
+            {
+              
+                    return new clsTest(TestID, TestAppointmentID, TestResult, Notes, CreatedByUserID);
+
+               
+            }
+            else
+            {
+                return null;
+            }
+        }
         public static bool IsTestExist(int TestID)
         {
             return clsTestData.IsTestExistByTestID(TestID);
@@ -120,7 +141,7 @@ namespace DVLD_BusinessLayer
  
         bool AddNewTest()
         {
-
+            
             this._TestID = clsTestData.AddNewTest(this.TestID, this.TestAppointmentID, this.TestResult, this.Notes, this.CreatedByUserID);
 
             return this._TestID != -1;
@@ -137,6 +158,22 @@ namespace DVLD_BusinessLayer
         }
 
 
+        public static byte GetNumberOfPassedTests(int LDLAppID)
+        {
+            return clsTestData.GetPassedTests(LDLAppID);
+        }
+
+        public static int GetPassedTestIDForTestType(int LDLAppID,clsTestType.enTestType TestType)
+        {
+            return clsTestData.GetPassedTestIDForTestType(LDLAppID, (int)TestType);
+        }
+
+        public static bool IsTestPassed(int LDLAppID, clsTestType.enTestType TestType)
+        {
+            return clsTestData.GetPassedTestIDForTestType(LDLAppID, (int)TestType) != -1;
+        }
+
+     
 
         public bool Save()
         {

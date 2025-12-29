@@ -30,7 +30,7 @@ namespace DVLD_PresentationLayer.Tests.Test_Types
 
             if (_TestType != null)
             {
-                lblTestTypeID.Text = _TestType.enTestType1.ToString();
+                lblTestTypeID.Text = _TestType.enTestTypeID.ToString();
                 txtTestTypeTitle.Text = _TestType.TestTypeTitle;
                 txtTestTypeDescription.Text = _TestType.TestTypeDescription;
                 txtTestTypeFees.Text = _TestType.TestFees.ToString();

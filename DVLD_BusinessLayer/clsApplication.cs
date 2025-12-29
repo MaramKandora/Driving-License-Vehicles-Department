@@ -58,8 +58,7 @@ namespace DVLD_BusinessLayer
 
         public enum enApplicationStatus { New = 1, Canceled = 2, Completed = 3 }
 
-        private enApplicationStatus _enApplicationStatus;
-        public enApplicationStatus enApplicationStatus1 { get {return _enApplicationStatus; } }
+        public enApplicationStatus enApplicationStatusID { get; set; }
 
         private DateTime _LastStatusDate;
         public DateTime LastStatusDate { get { return _LastStatusDate; } }
@@ -98,7 +97,7 @@ namespace DVLD_BusinessLayer
             _ApplicantPersonInfo = null;
             _ApplicationDate = DateTime.Now;
             enApplicationTypeID = clsApplicationType.enApplicationTypes.NewLocalLicense;
-            _enApplicationStatus = enApplicationStatus.New;
+            enApplicationStatusID = enApplicationStatus.New;
 
             Fees = 0;
             _LastStatusDate = DateTime.Now; 
@@ -117,7 +116,7 @@ namespace DVLD_BusinessLayer
             this._ApplicationDate = ApplicationDate;
             this.enApplicationTypeID = ApplicationType;
             this.Fees = PaidFees;
-            this._enApplicationStatus = ApplicationStatus;  
+            this.enApplicationStatusID = ApplicationStatus;  
             this._LastStatusDate = LastStatusDate;   
             this.CreatedByUserID = CreatedByUserID;
 
@@ -151,7 +150,7 @@ namespace DVLD_BusinessLayer
 
         private bool AddNewApplication()
         {
-            this._ApplicationID = clsApplicationData.AddNewApplication(_ApplicantPersonID, DateTime.Now, (int)enApplicationTypeID, (int)enApplicationStatus1,
+            this._ApplicationID = clsApplicationData.AddNewApplication(_ApplicantPersonID, DateTime.Now, (int)enApplicationTypeID, (int)enApplicationStatusID,
                 LastStatusDate, Fees, CreatedByUserID);
 
             return _ApplicationID != -1;
@@ -160,7 +159,7 @@ namespace DVLD_BusinessLayer
         bool UpdateApplication()
         {
             return clsApplicationData.UpdateApplication(this.ApplicationID, this.ApplicantPersonID, this.ApplicationDate, (int)this.enApplicationTypeID
-                 , (int)this.enApplicationStatus1, this.LastStatusDate, this.Fees, this.CreatedByUserID);
+                 , (int)this.enApplicationStatusID, this.LastStatusDate, this.Fees, this.CreatedByUserID);
         }
 
 
@@ -190,9 +189,9 @@ namespace DVLD_BusinessLayer
 
         public bool Cancel()
         {
-            if (this._enApplicationStatus == enApplicationStatus.New)
+            if (this.enApplicationStatusID == enApplicationStatus.New)
             {
-                this._enApplicationStatus = enApplicationStatus.Canceled;
+                this.enApplicationStatusID = enApplicationStatus.Canceled;
                 this._LastStatusDate = DateTime.Now;
                 return clsApplicationData.UpdateStatus(this.ApplicationID, (short)enApplicationStatus.Canceled);
            
@@ -205,9 +204,9 @@ namespace DVLD_BusinessLayer
 
         public bool SetCompleted()
         {
-            if (this._enApplicationStatus == enApplicationStatus.New)
+            if (this.enApplicationStatusID == enApplicationStatus.New)
             {
-                this._enApplicationStatus = enApplicationStatus.Completed;
+                this.enApplicationStatusID = enApplicationStatus.Completed;
                 this._LastStatusDate = DateTime.Now;
                 return clsApplicationData.UpdateStatus(this.ApplicationID, (short)enApplicationStatus.Completed);
             }

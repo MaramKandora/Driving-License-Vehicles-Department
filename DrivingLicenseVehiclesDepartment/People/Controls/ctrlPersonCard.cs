@@ -107,15 +107,15 @@ namespace DVLD_PresentationLayer
 
        
 
-       public bool LoadPersonInfo(int ID)
+       public bool LoadPersonInfo(int PersonID)
         {
 
 
-            _Person = clsPerson.FindPerson(ID);
+            _Person = clsPerson.FindPerson(PersonID);
 
             if (_Person == null)
             {
-                MessageBox.Show($"Person with ID \'{ID}\' was not found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Person with ID \'{PersonID}\' was not found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ShowDefaultPersonInfo();
                return false ; 
             }

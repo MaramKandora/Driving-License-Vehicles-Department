@@ -10,7 +10,7 @@ namespace DVLD_DataAccessLayer
 {
     public class clsDriverData
     {
-        public static bool FindDriverByID(int DriverID, ref int PersonID, ref int CreatedByUserID, ref DateTime CreationDate)
+        public static bool FindDriverUsingDriverID(int DriverID, ref int PersonID, ref int CreatedByUserID, ref DateTime CreationDate)
         {
             bool IsFound = false;
 
@@ -61,7 +61,56 @@ namespace DVLD_DataAccessLayer
             return IsFound;
         }
 
+        public static bool FindDriverUsingPersonID( int PersonID,ref int DriverID, ref int CreatedByUserID, ref DateTime CreationDate)
+        {
+            bool IsFound = false;
 
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $"Select * from Drivers Where PersonID = @PersonID";
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@PersonID", PersonID);
+
+
+
+            try
+            {
+                Connection.Open();
+                SqlDataReader Reader = Command.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    DriverID = (int)Reader["DriverID"];
+                    CreatedByUserID = (int)Reader["CreatedByUserID"];
+                    CreationDate = (DateTime)Reader["CreatedDate"];
+
+
+                    IsFound = true;
+
+                }
+                else
+                {
+                    IsFound = false;
+                }
+
+                Reader.Close();
+
+
+            }
+            catch
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+
+            return IsFound;
+        }
 
 
 
@@ -72,7 +121,7 @@ namespace DVLD_DataAccessLayer
 
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string Query = $@"Insert Into Users 
+            string Query = $@"Insert Into Drivers 
                               Values (@PersonID, @CreatedByUserID, @CreationDate);
                               select Scope_Identity()";
 
@@ -81,7 +130,7 @@ namespace DVLD_DataAccessLayer
 
             Command.Parameters.AddWithValue("@PersonID", PersonID);
             Command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
-            Command.Parameters.AddWithValue("@CreatedDate", CreationDate);
+            Command.Parameters.AddWithValue("@CreationDate", CreationDate);
 
             try
             {
@@ -117,7 +166,7 @@ namespace DVLD_DataAccessLayer
 
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string Query = $@"Update Users 
+            string Query = $@"Update Drivers 
                               Set PersonID = @PersonID, CreatedByUserID= @CreatedByUserID, CreatedDate= @CreationDate
                               Where DriverID = @DriverID";
 
@@ -190,7 +239,7 @@ namespace DVLD_DataAccessLayer
         {
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string Query = $"Select Found = 1 from Users Where DriverID = @DriverID";
+            string Query = $"Select Found = 1 from Drivers Where DriverID = @DriverID";
 
             SqlCommand Command = new SqlCommand(Query, Connection);
 
@@ -224,7 +273,7 @@ namespace DVLD_DataAccessLayer
 
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string Query = @"SELECT * Drivers_View";
+            string Query = @"SELECT * from Drivers_View";
 
             SqlCommand Command = new SqlCommand(Query, Connection);
 

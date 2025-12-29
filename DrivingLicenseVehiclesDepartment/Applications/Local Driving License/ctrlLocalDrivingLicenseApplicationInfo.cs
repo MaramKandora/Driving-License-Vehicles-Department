@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
+using DVLD_PresentationLayer.License;
 
 namespace DVLD_PresentationLayer.Applications.Controls
 {
@@ -16,24 +17,33 @@ namespace DVLD_PresentationLayer.Applications.Controls
         clsLocalDrivingLicenseApplication _LDLAppInfo;
 
         int _LDLAppID = -1;
+
+        int _LicenseID = -1;
         public ctrlLocalDrivingLicenseApplicationInfo()
         {
             InitializeComponent();
         }
 
 
-        public void LoadLocalDrivingLicenseApplicationInfo(int LDLAppID)
+        public void LoadLocalDrivingLicenseApplicationInfoUsingLDLAppID(int LDLAppID)
         {
              _LDLAppInfo = clsLocalDrivingLicenseApplication.FindLocalDrivingLicenseApplicationByLDLAppID(LDLAppID);
             if (_LDLAppInfo != null)
             {
+                byte PassedTests = clsTest.GetNumberOfPassedTests(LDLAppID);
                 ctrlApplicationBasicInfo1.LoadApplicationInfo(_LDLAppInfo.ApplicationID);
 
+                _LicenseID = clsLicense.GetLicenseIDUsingApplicationID(_LDLAppInfo.ApplicationID);
                 _LDLAppID = _LDLAppInfo.LDLApplicationID;
                 llblShowLicenseInfo.Enabled = true;
                 lblLDLAppID.Text = _LDLAppInfo.LDLApplicationID.ToString();
                 lblLicenseClass.Text = _LDLAppInfo.LicenseClassInfo.ClassName;
-                lblPassedTest.Text = $"{clsLocalDrivingLicenseApplication.GetNumberOfPassedTests(LDLAppID)}\\3";
+                lblPassedTest.Text = $"{PassedTests}\\3";
+
+                if (PassedTests != 3)
+                    llblShowLicenseInfo.Enabled = false;
+                else
+                    llblShowLicenseInfo.Enabled = true;
             }
             else
             {
@@ -62,7 +72,8 @@ namespace DVLD_PresentationLayer.Applications.Controls
 
         private void llblShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           // TODO: finish this after implementing clsLicense and clsTest
+            frmShowDriverLicenseInfo LicenseInfo = new frmShowDriverLicenseInfo(_LicenseID);
+            LicenseInfo.ShowDialog();   
         }
     }
 }

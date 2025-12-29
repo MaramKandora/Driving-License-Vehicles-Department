@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.llblShowLicenseInfo = new System.Windows.Forms.LinkLabel();
-            this.lblLDLAppID = new System.Windows.Forms.Label();
-            this.lblLicenseClass = new System.Windows.Forms.Label();
             this.lblPassedTest = new System.Windows.Forms.Label();
+            this.lblLicenseClass = new System.Windows.Forms.Label();
+            this.lblLDLAppID = new System.Windows.Forms.Label();
+            this.llblShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.ctrlApplicationBasicInfo1 = new DVLD_PresentationLayer.Applications.ctrlApplicationBasicInfo();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -64,46 +64,46 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(845, 155);
+            this.groupBox1.Size = new System.Drawing.Size(845, 126);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Driving License Application Info";
             // 
-            // label1
+            // lblPassedTest
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 19);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "D.L App ID :";
+            this.lblPassedTest.AutoSize = true;
+            this.lblPassedTest.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassedTest.Location = new System.Drawing.Point(642, 45);
+            this.lblPassedTest.Name = "lblPassedTest";
+            this.lblPassedTest.Size = new System.Drawing.Size(30, 19);
+            this.lblPassedTest.TabIndex = 19;
+            this.lblPassedTest.Text = "???";
             // 
-            // label2
+            // lblLicenseClass
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(162, 19);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Applied For License :";
+            this.lblLicenseClass.AutoSize = true;
+            this.lblLicenseClass.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLicenseClass.Location = new System.Drawing.Point(253, 85);
+            this.lblLicenseClass.Name = "lblLicenseClass";
+            this.lblLicenseClass.Size = new System.Drawing.Size(30, 19);
+            this.lblLicenseClass.TabIndex = 18;
+            this.lblLicenseClass.Text = "???";
             // 
-            // label3
+            // lblLDLAppID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(478, 49);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 19);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Passed Tests  :";
+            this.lblLDLAppID.AutoSize = true;
+            this.lblLDLAppID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLDLAppID.Location = new System.Drawing.Point(253, 41);
+            this.lblLDLAppID.Name = "lblLDLAppID";
+            this.lblLDLAppID.Size = new System.Drawing.Size(30, 19);
+            this.lblLDLAppID.TabIndex = 17;
+            this.lblLDLAppID.Text = "???";
             // 
             // llblShowLicenseInfo
             // 
             this.llblShowLicenseInfo.AutoSize = true;
             this.llblShowLicenseInfo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblShowLicenseInfo.Location = new System.Drawing.Point(632, 99);
+            this.llblShowLicenseInfo.Location = new System.Drawing.Point(632, 83);
             this.llblShowLicenseInfo.Name = "llblShowLicenseInfo";
             this.llblShowLicenseInfo.Size = new System.Drawing.Size(145, 19);
             this.llblShowLicenseInfo.TabIndex = 16;
@@ -111,41 +111,11 @@
             this.llblShowLicenseInfo.Text = "Show License Info";
             this.llblShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblShowLicenseInfo_LinkClicked);
             // 
-            // lblLDLAppID
-            // 
-            this.lblLDLAppID.AutoSize = true;
-            this.lblLDLAppID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLDLAppID.Location = new System.Drawing.Point(253, 45);
-            this.lblLDLAppID.Name = "lblLDLAppID";
-            this.lblLDLAppID.Size = new System.Drawing.Size(30, 19);
-            this.lblLDLAppID.TabIndex = 17;
-            this.lblLDLAppID.Text = "???";
-            // 
-            // lblLicenseClass
-            // 
-            this.lblLicenseClass.AutoSize = true;
-            this.lblLicenseClass.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLicenseClass.Location = new System.Drawing.Point(253, 101);
-            this.lblLicenseClass.Name = "lblLicenseClass";
-            this.lblLicenseClass.Size = new System.Drawing.Size(30, 19);
-            this.lblLicenseClass.TabIndex = 18;
-            this.lblLicenseClass.Text = "???";
-            // 
-            // lblPassedTest
-            // 
-            this.lblPassedTest.AutoSize = true;
-            this.lblPassedTest.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassedTest.Location = new System.Drawing.Point(642, 49);
-            this.lblPassedTest.Name = "lblPassedTest";
-            this.lblPassedTest.Size = new System.Drawing.Size(30, 19);
-            this.lblPassedTest.TabIndex = 19;
-            this.lblPassedTest.Text = "???";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox3.Image = global::DVLD_PresentationLayer.Properties.Resources.Test_32;
-            this.pictureBox3.Location = new System.Drawing.Point(599, 47);
+            this.pictureBox3.Location = new System.Drawing.Point(599, 43);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(27, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -156,18 +126,38 @@
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = global::DVLD_PresentationLayer.Properties.Resources.License_Type_32;
-            this.pictureBox2.Location = new System.Drawing.Point(200, 99);
+            this.pictureBox2.Location = new System.Drawing.Point(200, 83);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(478, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 19);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Passed Tests  :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(32, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 19);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Applied For License :";
+            // 
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox6.Image = global::DVLD_PresentationLayer.Properties.Resources.License_View_32;
-            this.pictureBox6.Location = new System.Drawing.Point(599, 99);
+            this.pictureBox6.Location = new System.Drawing.Point(599, 83);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(27, 24);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,18 +168,28 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.Number_32;
-            this.pictureBox1.Location = new System.Drawing.Point(200, 44);
+            this.pictureBox1.Location = new System.Drawing.Point(200, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(97, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 19);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "D.L App ID :";
+            // 
             // ctrlApplicationBasicInfo1
             // 
-            this.ctrlApplicationBasicInfo1.Location = new System.Drawing.Point(3, 164);
+            this.ctrlApplicationBasicInfo1.Location = new System.Drawing.Point(3, 135);
             this.ctrlApplicationBasicInfo1.Name = "ctrlApplicationBasicInfo1";
-            this.ctrlApplicationBasicInfo1.Size = new System.Drawing.Size(845, 289);
+            this.ctrlApplicationBasicInfo1.Size = new System.Drawing.Size(845, 252);
             this.ctrlApplicationBasicInfo1.TabIndex = 1;
             // 
             // ctrlLocalDrivingLicenseApplicationInfo
@@ -198,7 +198,7 @@
             this.Controls.Add(this.ctrlApplicationBasicInfo1);
             this.Controls.Add(this.groupBox1);
             this.Name = "ctrlLocalDrivingLicenseApplicationInfo";
-            this.Size = new System.Drawing.Size(854, 462);
+            this.Size = new System.Drawing.Size(854, 389);
             this.Load += new System.EventHandler(this.ctrlLocalDrivingLicenseApplicationInfo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

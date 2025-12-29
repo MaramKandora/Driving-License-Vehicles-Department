@@ -108,11 +108,14 @@ namespace DVLD_BusinessLayer
         clsApplication _RetakeTestApplicationInfo;
         public clsApplication RetakeTestApplicationInfo { get { return _RetakeTestApplicationInfo; } }
 
-
+       public int TestID
+        {
+            get { return _GetTestID(); }
+        }
         enum enMode { AddNew, Update }
         enMode _Mode;
 
-        clsTestAppointment()
+        public clsTestAppointment()
         {
             _TestAppointmentID = -1;
             RetakeTestApplicationID = -1;
@@ -122,7 +125,7 @@ namespace DVLD_BusinessLayer
             PaidFees = 0;
             IsLocked = false;
             CreatedByUserID = -1;
-
+           
             _Mode = enMode.AddNew;
 
         }
@@ -167,30 +170,9 @@ namespace DVLD_BusinessLayer
 
         }
 
-        static public clsTestAppointment FindTestAppointmentByRetakeTestApplicationID(int RetakeTestApplicationID)
-        {
 
-            int LocalDrivingLicenseApplicationID = -1, TestAppointmentID = -1, CreatedByUserID = -1, TestTypeID = -1;
-
-            DateTime AppointmentDate = DateTime.Now;
-            float PaidFees = 0;
-            bool IsLocked = false;
-
-
-            if (clsTestAppointmentData.FindTestAppointmentByRetakeTestApplicationID(RetakeTestApplicationID,ref TestAppointmentID,
-                ref TestTypeID, ref LocalDrivingLicenseApplicationID,
-                ref AppointmentDate, ref PaidFees, ref CreatedByUserID, ref IsLocked))
-            {
-                return new clsTestAppointment(TestAppointmentID, (clsTestType.enTestType)TestTypeID, LocalDrivingLicenseApplicationID, AppointmentDate,
-                    PaidFees, CreatedByUserID, IsLocked, RetakeTestApplicationID);
-
-            }
-            else
-            {
-                return null;
-            }
-
-        }
+      
+     
         public static bool IsTestAppointmentExistByTestAppointmentID(int TestAppointmentID)
         {
             return clsTestAppointmentData.IsTestAppointmentExistByTestAppointmentID(TestAppointmentID);
@@ -204,15 +186,18 @@ namespace DVLD_BusinessLayer
         bool AddNewTestAppointment()
         {
 
+            
 
             this._TestAppointmentID = clsTestAppointmentData.AddNewTestAppointment(this.TestAppointmentID, (int)this.TestTypeID, this.LocalDrivingLicenseApplicationID,
                 this.AppointmentDate, this.PaidFees, this.CreatedByUserID, this.IsLocked, this.RetakeTestApplicationID);
-
             return this._TestAppointmentID != -1;
+
+       
         }
 
-        bool UpdateLicense()
+        bool UpdateTestAppointment()
         {
+            
             return clsTestAppointmentData.UpdateTestAppointment(this.TestAppointmentID, (int)this.TestTypeID, this.LocalDrivingLicenseApplicationID,
                 this.AppointmentDate, this.PaidFees, this.CreatedByUserID, this.IsLocked, this.RetakeTestApplicationID);
         }
@@ -243,7 +228,7 @@ namespace DVLD_BusinessLayer
 
                 case enMode.Update:
                     {
-                        return UpdateLicense();
+                        return UpdateTestAppointment();
                     }
 
                 default:
@@ -251,11 +236,32 @@ namespace DVLD_BusinessLayer
             }
 
         }
+       
 
-        public static DataTable GetAllTestAppointments()
+        public static DataTable GetAllTestAppointmentsUsingLDLAppIDAndTestType(int LDLAppID, clsTestType.enTestType TestType)
         {
-            return clsTestAppointmentData.GetAllTestAppointments();
+            return clsTestAppointmentData.GetAllTestAppointmentsUsingLDLAppIDAndTestType(LDLAppID, (int) TestType);
         }
+
+     
+
+
+     
+        public int GetPassedTestID(clsTestType.enTestType TestType)
+        {
+            return clsTest.GetPassedTestIDForTestType(this.LocalDrivingLicenseApplicationID, TestType);
+        }
+
+      
+
+
+        private int _GetTestID()
+        {
+            return clsTestAppointmentData.GetTestID(this.TestAppointmentID); 
+        }
+
+
+      
 
     }
 }

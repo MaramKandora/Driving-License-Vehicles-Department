@@ -166,20 +166,7 @@ namespace DVLD_PresentationLayer.Users
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            //if (e.TabPage == tabControl1.TabPages["tpLoginInfo"])
-            //{
-            //    if (ctrlPersonCardWithFilter1.PersonID != -1)
-            //    {
-            //        tpLoginInfo.Enabled = true;
-            //        ShowSelectedPersonBrief(ctrlPersonCardWithFilter1.SelectedPerson);
-            //    }
-            //    else
-            //    {
-            //        tpLoginInfo.Enabled = false;
-            //        ClearLoginInfoPage();
-            //    }
-
-            //}
+          
 
             btnSave.Enabled = (e.TabPage == tabControl1.TabPages["tpLoginInfo"]) && tpLoginInfo.Enabled;
 

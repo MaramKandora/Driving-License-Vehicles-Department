@@ -60,8 +60,127 @@ namespace DVLD_DataAccessLayer
         }
 
 
+        public static bool FindTestByAppointmentID( int TestAppointmentID, ref int TestID, ref bool TestResult,
+           ref string Notes, ref int CreatedByUserID)
+        {
+            bool IsFound = false;
+
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $"Select * from Tests Where TestAppointmentID = @TestAppointmentID";
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+
+            try
+            {
+                Connection.Open();
+                SqlDataReader Reader = Command.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    TestID = (int)Reader["TestID"];
+                    TestResult = Convert.ToBoolean(Reader["TestResult"]);
+                    Notes = (Reader["Notes"] == DBNull.Value) ? "" : Reader["Notes"].ToString();
+                    CreatedByUserID = (int)Reader["CreatedByUserID"];
+
+                    IsFound = true;
+
+                }
+                else
+                {
+                    IsFound = false;
+                }
+
+                Reader.Close();
 
 
+            }
+            catch
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+
+            return IsFound;
+        }
+
+
+        public static byte GetPassedTests(int LDLAppID)
+        {
+            byte PassedTests = 0;
+
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $@"Select Count(TestResult) from TestAppointmentsView_Mine where LocalDrivingLicenseApplicationID = @LDLAppID
+                           And TestResult = 1";
+
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@LDLAppID", LDLAppID);
+
+            try
+            {
+                Connection.Open();
+                object Result = Command.ExecuteScalar();
+
+                if (Result != null && int.TryParse(Result.ToString(), out int Num))
+                {
+                    PassedTests = (byte)Num;
+                }
+
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+
+            return PassedTests;
+        }
+
+
+        public static int GetPassedTestIDForTestType(int LDLAppID, int TestTypeID)
+        {
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $@"select TestID from TestAppointmentsView_Mine where LocalDrivingLicenseApplicationID= @LDLAppID
+                            And TestTypeID =@TestTypeID And TestResult =1;";
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+            Command.Parameters.AddWithValue("@LDLAppID", LDLAppID);
+            object Result = null;
+            try
+            {
+
+                Connection.Open();
+                Result = Command.ExecuteScalar();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+            // return -1 if there is no passed test
+            return Result != null ? (int)Result : -1;
+        }
 
 
         public static int AddNewTest(int TestID, int TestAppointmentID, bool TestResult
@@ -72,7 +191,7 @@ namespace DVLD_DataAccessLayer
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $@"Insert Into Tests 
-                              Values (@TestID, @TestAppointmentID, @TestResult, @Notes, @CreatedByUserID);
+                              Values ( @TestAppointmentID, @TestResult, @Notes, @CreatedByUserID);
                               select Scope_Identity()";
 
 
@@ -126,7 +245,7 @@ namespace DVLD_DataAccessLayer
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string Query = $@"Update Tests 
-                              Set TestID = @TestID, TestAppointmentID= @TestAppointmentID, TestResult= @TestResult, 
+                              Set TestAppointmentID= @TestAppointmentID, TestResult= @TestResult, 
                               Notes= @Notes, CreatedByUserID= @CreatedByUserID
                               Where TestID = @TestID";
 
@@ -234,6 +353,8 @@ namespace DVLD_DataAccessLayer
             return Result != null;
         }
 
+
+       
        
 
         //    public static DataTable GetAllTests()

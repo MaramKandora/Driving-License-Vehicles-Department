@@ -258,30 +258,29 @@ namespace DVLD_DataAccessLayer
             return Result != null;
         }
 
-
-      
-        public static int GetPassedTests(int LDLAppID)
+        public static int GetActiveTestAppointmentID(int LDLAppID, int TestTypeID)
         {
-            int PassedTests = 0;
+            int FoundAppointmentID = -1;
 
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string Query = $@"Select Count(TestResult) from TestAppointmentsView_Mine where LocalDrivingLicenseApplicationID = @LDLAppID
-                           And TestResult = 1";
-
+            string Query = $@"select TestAppointmentID from TestAppointments where TestTypeID = @TestTypeID 
+                           And LocalDrivingLicenseApplicationID = @LDLAppID And IsLocked = 0;";
 
             SqlCommand Command = new SqlCommand(Query, Connection);
 
+            Command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
             Command.Parameters.AddWithValue("@LDLAppID", LDLAppID);
 
+            object Result = null;
             try
             {
                 Connection.Open();
-                object Result = Command.ExecuteScalar();
+                Result = Command.ExecuteScalar();
 
-                if (Result != null && int.TryParse(Result.ToString(), out int Num))
+                if (Result != null && int.TryParse(Result.ToString(), out int ID))
                 {
-                    PassedTests = Num;
+                    FoundAppointmentID = ID;
                 }
 
 
@@ -296,8 +295,77 @@ namespace DVLD_DataAccessLayer
 
             }
 
-            return PassedTests;
+            return FoundAppointmentID;
+
+
         }
+
+        public static int GetTrialsForTestType(int LDLAppID, int TestTypeID)
+        {
+
+
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $@"select Count(*) from TestAppointmentsView_Mine where TestTypeID = @TestTypeID 
+                           And LocalDrivingLicenseApplicationID = @LDLAppID And IsLocked=1;";
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+            Command.Parameters.AddWithValue("@LDLAppID", LDLAppID);
+            object Result = null;
+            try
+            {
+
+                Connection.Open();
+                Result = Command.ExecuteScalar();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+
+            return Result != null ? (int)Result : -1;
+        }
+
+        public static bool IsTestForFirstTime(int LDLAppID, int TestTypeID)
+        {
+
+
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $@"select Found = 1 from TestAppointments where TestTypeID = @TestTypeID 
+                           And LocalDrivingLicenseApplicationID = @LDLAppID;";
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+            Command.Parameters.AddWithValue("@LDLAppID", LDLAppID);
+            object Result = null;
+            try
+            {
+
+                Connection.Open();
+                Result = Command.ExecuteScalar();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+
+            return Result == null;
+        }
+
 
         public static DataTable GetAllLocalDrivingLicenseApplications()
         {

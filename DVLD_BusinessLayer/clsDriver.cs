@@ -29,7 +29,7 @@ namespace DVLD_BusinessLayer
                 }
 
                 _PersonInfo = clsPerson.FindPerson(_PersonID);
-                if (PersonInfo == null)
+                if (_PersonInfo == null)
                     _PersonID = -1;
             }
         }
@@ -65,7 +65,7 @@ namespace DVLD_BusinessLayer
 
         enum enMode { AddNew, Update}
         enMode _Mode;
-        clsDriver()
+        public clsDriver()
         {
             PersonID = -1;
             CreatedByUserID = -1;
@@ -76,7 +76,7 @@ namespace DVLD_BusinessLayer
         clsDriver(int DriverID, int PersonID, int CreatedByUserID, DateTime CreationDate)
         {
             this._DriverID = DriverID;
-            this._PersonID = PersonID;
+            this.PersonID = PersonID;
             this.CreatedByUserID = CreatedByUserID;
             this._CreationDate = CreationDate;
 
@@ -84,15 +84,33 @@ namespace DVLD_BusinessLayer
 
 
         }
-        static public clsDriver FindDriver(int DriverID)
+        static public clsDriver FindDriverUsingDriverID(int DriverID)
         {
 
             int PersonID = -1, CreatedByUserID = -1;
             DateTime CreationDate = DateTime.Now;
 
-            if (clsDriverData.FindDriverByID(DriverID,ref PersonID,ref CreatedByUserID,ref CreationDate))
+            if (clsDriverData.FindDriverUsingDriverID(DriverID,ref PersonID,ref CreatedByUserID,ref CreationDate))
             {
                 return new clsDriver(DriverID,PersonID,CreatedByUserID,CreationDate);
+
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        static public clsDriver FindDriverUsingPersonID(int PersonID)
+        {
+
+            int DriverID = -1, CreatedByUserID = -1;
+            DateTime CreationDate = DateTime.Now;
+
+            if (clsDriverData.FindDriverUsingPersonID(PersonID,ref DriverID, ref CreatedByUserID, ref CreationDate))
+            {
+                return new clsDriver(DriverID, PersonID, CreatedByUserID, CreationDate);
 
             }
             else
@@ -110,7 +128,7 @@ namespace DVLD_BusinessLayer
       
         bool AddNewDriver()
         {
-
+            this._CreationDate = DateTime.Now;
 
             this._DriverID = clsDriverData.AddNewDriver(this.PersonID, this.CreatedByUserID, this.CreationDate);
 

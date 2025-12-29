@@ -23,7 +23,7 @@ namespace DVLD_PresentationLayer.Applications.Local_Driving_License
 
         private void frmShowLocalDrivingLicenseApplicationInfo_Load(object sender, EventArgs e)
         {
-            ctrlLocalDrivingLicenseApplicationInfo1.LoadLocalDrivingLicenseApplicationInfo(_LDLAppID);
+            ctrlLocalDrivingLicenseApplicationInfo1.LoadLocalDrivingLicenseApplicationInfoUsingLDLAppID(_LDLAppID);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

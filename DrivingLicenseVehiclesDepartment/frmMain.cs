@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DVLD_BusinessLayer;
 using DVLD_PresentationLayer.Application_Types;
 using DVLD_PresentationLayer.Applications;
+using DVLD_PresentationLayer.Drivers;
 using DVLD_PresentationLayer.Global_Classes;
 using DVLD_PresentationLayer.Tests;
 using DVLD_PresentationLayer.Users;
@@ -119,6 +120,12 @@ namespace DVLD_PresentationLayer
         {
             Form frmLDLApplications = new frmLocalDrivingLicenseApplicationsManagement();
             frmLDLApplications.ShowDialog();        
+        }
+
+        private void driversToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDriversList frmDrivers = new frmDriversList();
+            frmDrivers.ShowDialog();
         }
     }
 }

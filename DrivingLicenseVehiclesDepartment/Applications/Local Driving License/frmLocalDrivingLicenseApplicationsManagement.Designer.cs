@@ -54,14 +54,14 @@
             this.cbFilterLDLApplications = new System.Windows.Forms.ComboBox();
             this.lblRecordsNum = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAddNewLDLApp = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAddNewLDLApp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLDLApplications)).BeginInit();
             this.cmsLDLApplications.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +69,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(217, 187);
+            this.label1.Location = new System.Drawing.Point(255, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(914, 50);
             this.label1.TabIndex = 0;
@@ -90,7 +90,7 @@
             this.dgvLDLApplications.RowHeadersWidth = 51;
             this.dgvLDLApplications.RowTemplate.Height = 24;
             this.dgvLDLApplications.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLDLApplications.Size = new System.Drawing.Size(1352, 408);
+            this.dgvLDLApplications.Size = new System.Drawing.Size(1401, 475);
             this.dgvLDLApplications.TabIndex = 1;
             // 
             // cmsLDLApplications
@@ -113,7 +113,7 @@
             this.toolStripSeparator6,
             this.showPersonsLicenseHistoryToolStripMenuItem});
             this.cmsLDLApplications.Name = "contextMenuStrip1";
-            this.cmsLDLApplications.Size = new System.Drawing.Size(304, 276);
+            this.cmsLDLApplications.Size = new System.Drawing.Size(304, 248);
             this.cmsLDLApplications.Opening += new System.ComponentModel.CancelEventHandler(this.cmsLDLApplications_Opening);
             // 
             // toolStripSeparator1
@@ -189,6 +189,7 @@
             this.scheduleWrittenTestToolStripMenuItem.Name = "scheduleWrittenTestToolStripMenuItem";
             this.scheduleWrittenTestToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.scheduleWrittenTestToolStripMenuItem.Text = "Schedule Written Test";
+            this.scheduleWrittenTestToolStripMenuItem.Click += new System.EventHandler(this.scheduleWrittenTestToolStripMenuItem_Click);
             // 
             // scheduleStreetTestToolStripMenuItem
             // 
@@ -196,6 +197,7 @@
             this.scheduleStreetTestToolStripMenuItem.Name = "scheduleStreetTestToolStripMenuItem";
             this.scheduleStreetTestToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.scheduleStreetTestToolStripMenuItem.Text = "Schedule Street Test";
+            this.scheduleStreetTestToolStripMenuItem.Click += new System.EventHandler(this.scheduleStreetTestToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
@@ -208,6 +210,7 @@
             this.issueDrivingLicenseToolStripMenuItem.Name = "issueDrivingLicenseToolStripMenuItem";
             this.issueDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.issueDrivingLicenseToolStripMenuItem.Text = "Issue Driving License (First Time)";
+            this.issueDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.issueDrivingLicenseToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
@@ -220,6 +223,7 @@
             this.showLicenseToolStripMenuItem.Name = "showLicenseToolStripMenuItem";
             this.showLicenseToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.showLicenseToolStripMenuItem.Text = "Show License";
+            this.showLicenseToolStripMenuItem.Click += new System.EventHandler(this.showLicenseToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
@@ -232,6 +236,7 @@
             this.showPersonsLicenseHistoryToolStripMenuItem.Name = "showPersonsLicenseHistoryToolStripMenuItem";
             this.showPersonsLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(303, 26);
             this.showPersonsLicenseHistoryToolStripMenuItem.Text = "Show Person`s License History";
+            this.showPersonsLicenseHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonsLicenseHistoryToolStripMenuItem_Click);
             // 
             // txtFilterLDLApplications
             // 
@@ -272,7 +277,7 @@
             // 
             this.lblRecordsNum.AutoSize = true;
             this.lblRecordsNum.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsNum.Location = new System.Drawing.Point(164, 755);
+            this.lblRecordsNum.Location = new System.Drawing.Point(164, 816);
             this.lblRecordsNum.Name = "lblRecordsNum";
             this.lblRecordsNum.Size = new System.Drawing.Size(0, 24);
             this.lblRecordsNum.TabIndex = 15;
@@ -281,39 +286,28 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 755);
+            this.label3.Location = new System.Drawing.Point(40, 816);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 24);
             this.label3.TabIndex = 14;
             this.label3.Text = "# Records : ";
             // 
-            // btnAddNewLDLApp
+            // pictureBox2
             // 
-            this.btnAddNewLDLApp.BackgroundImage = global::DVLD_PresentationLayer.Properties.Resources.New_Application_64;
-            this.btnAddNewLDLApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddNewLDLApp.Location = new System.Drawing.Point(1283, 247);
-            this.btnAddNewLDLApp.Name = "btnAddNewLDLApp";
-            this.btnAddNewLDLApp.Size = new System.Drawing.Size(74, 67);
-            this.btnAddNewLDLApp.TabIndex = 16;
-            this.btnAddNewLDLApp.UseVisualStyleBackColor = true;
-            this.btnAddNewLDLApp.Click += new System.EventHandler(this.btnAddNewLDLApp_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.Applications;
-            this.pictureBox1.Location = new System.Drawing.Point(571, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 169);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox2.Image = global::DVLD_PresentationLayer.Properties.Resources.Local_32;
+            this.pictureBox2.Location = new System.Drawing.Point(722, 117);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(77, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
             // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_PresentationLayer.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1201, 740);
+            this.btnClose.Location = new System.Drawing.Point(1251, 801);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(147, 49);
             this.btnClose.TabIndex = 18;
@@ -321,21 +315,32 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // pictureBox2
+            // pictureBox1
             // 
-            this.pictureBox2.Image = global::DVLD_PresentationLayer.Properties.Resources.Local_32;
-            this.pictureBox2.Location = new System.Drawing.Point(675, 117);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(65, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.Applications;
+            this.pictureBox1.Location = new System.Drawing.Point(622, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(181, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAddNewLDLApp
+            // 
+            this.btnAddNewLDLApp.BackgroundImage = global::DVLD_PresentationLayer.Properties.Resources.New_Application_64;
+            this.btnAddNewLDLApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddNewLDLApp.Location = new System.Drawing.Point(1339, 247);
+            this.btnAddNewLDLApp.Name = "btnAddNewLDLApp";
+            this.btnAddNewLDLApp.Size = new System.Drawing.Size(74, 67);
+            this.btnAddNewLDLApp.TabIndex = 16;
+            this.btnAddNewLDLApp.UseVisualStyleBackColor = true;
+            this.btnAddNewLDLApp.Click += new System.EventHandler(this.btnAddNewLDLApp_Click);
             // 
             // frmLocalDrivingLicenseApplicationsManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1369, 801);
+            this.ClientSize = new System.Drawing.Size(1425, 859);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
@@ -355,8 +360,8 @@
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmLocalDrivingLicenseApplicationsManagement_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLDLApplications)).EndInit();
             this.cmsLDLApplications.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

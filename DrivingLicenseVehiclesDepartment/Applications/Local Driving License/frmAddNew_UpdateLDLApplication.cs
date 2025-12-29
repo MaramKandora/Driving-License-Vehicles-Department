@@ -76,7 +76,7 @@ namespace DVLD_PresentationLayer.Applications
                 return;
             }
             ctrlPersonCardWithFilter1.LoadPersonInfoInCard(_LDLApplication.ApplicantPersonID);
-            lblApplicationID.Text = _LDLApplication.ApplicationID.ToString();
+            lblApplicationID.Text = _LDLApplication.LDLApplicationID.ToString();
             lblCreatedByUserName.Text= _LDLApplication.CreatedByUserInfo.UserName;
             lblDate.Text = _LDLApplication.ApplicationDate.ToString("dd/MM/yyyy");
             lblFees.Text = _LDLApplication.Fees.ToString();

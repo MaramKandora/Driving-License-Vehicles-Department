@@ -35,7 +35,6 @@ namespace DVLD_PresentationLayer
                                                        "Phone", "Email");
         }
 
-       enum enPeopleFilterByCol { None, PersonID, NationalNo, FirstName, SecondName, ThirdName, LastName,Nationality, Gender, Phone, Email }
         void RefreshPeopleList()
         {
             LoadPeopleList();

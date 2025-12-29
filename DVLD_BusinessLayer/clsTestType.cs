@@ -10,10 +10,10 @@ namespace DVLD_BusinessLayer
 {
     public class clsTestType
     {
-        public enum enTestType { VisionTest = 1, WrittenTest = 2, PracticalTest = 3 }
+        public enum enTestType { VisionTest = 1, WrittenTest = 2, StreetTest = 3 }
 
 
-        public enTestType enTestType1 { get; set; }
+        public enTestType enTestTypeID { get; set; }
 
         public string TestTypeTitle { get; set; }
 
@@ -25,7 +25,7 @@ namespace DVLD_BusinessLayer
 
         public clsTestType()
         {
-            this.enTestType1 = 0;
+            this.enTestTypeID = 0;
             this.TestTypeTitle = "";
             this.TestTypeDescription = "";
             this.TestFees = 0;
@@ -33,7 +33,7 @@ namespace DVLD_BusinessLayer
         }
         private clsTestType(enTestType TestType, string TestTypeTitle, string TestTypeDescription, float TestFees)
         {
-            this.enTestType1 = TestType;
+            this.enTestTypeID = TestType;
             this.TestTypeTitle = TestTypeTitle;
             this.TestTypeDescription= TestTypeDescription;  
             this.TestFees = TestFees;
@@ -57,12 +57,12 @@ namespace DVLD_BusinessLayer
         {
             if (Enum.TryParse(clsTestTypesDataAccess.AddNewTestType(this.TestTypeTitle, this.TestTypeDescription, this.TestFees).ToString(), out enTestType TestType))
             {
-                this.enTestType1= TestType;
+                this.enTestTypeID= TestType;
                 return true;
             }
             else
             {
-                this.enTestType1 = enTestType.VisionTest;
+                this.enTestTypeID = enTestType.VisionTest;
                 return false;
             }
                
@@ -70,7 +70,7 @@ namespace DVLD_BusinessLayer
 
         private bool UpdateTestType()
         {
-            return clsTestTypesDataAccess.UpdateTestType((int)this.enTestType1, this.TestTypeTitle, this.TestTypeDescription, this.TestFees);
+            return clsTestTypesDataAccess.UpdateTestType((int)this.enTestTypeID, this.TestTypeTitle, this.TestTypeDescription, this.TestFees);
         }
         public bool Save()
         {

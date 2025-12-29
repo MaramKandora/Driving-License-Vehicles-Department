@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using DVLD_DataAccessLayer;
@@ -49,7 +50,7 @@ namespace DVLD_BusinessLayer
                 }
 
 
-                _DriverInfo = clsDriver.FindDriver(_DriverID);
+                _DriverInfo = clsDriver.FindDriverUsingDriverID(_DriverID);
                 if (_DriverInfo == null)
                     _DriverID = -1;
             }
@@ -111,10 +112,34 @@ namespace DVLD_BusinessLayer
 
         public enIssueReason IssueReason { get; set; }
 
+        public string GetIssueReasonText
+        {
+            get
+            {
+                switch (IssueReason)
+                {
+                    case enIssueReason.FirstTime:
+                        return "First Time";
+
+                    case enIssueReason.Renew:
+                        return "Renew";
+
+                    case enIssueReason.ReplacementForDamaged:
+                        return "Replacement For Damaged";
+
+                    case enIssueReason.ReplacementForLost:
+                        return "Replacement For Lost";
+
+                    default:
+                        return "Unknown";
+                }
+            }
+        }
+
         enum enMode  {AddNew, Update}
         enMode _Mode;
 
-        clsLicense()
+        public clsLicense()
         {
             _LicenseID = -1;
             DriverID = -1;
@@ -178,7 +203,7 @@ namespace DVLD_BusinessLayer
 
         }
 
-        static public clsLicense FindLicenseByApplicationIDID(int ApplicationID)
+        static public clsLicense FindLicenseByApplicationID(int ApplicationID)
         {
 
             int LicenseID = -1, DriverID = -1, CreatedByUserID = -1, LicenseClassID = -1;
@@ -212,12 +237,19 @@ namespace DVLD_BusinessLayer
 
         public static bool IsLicenseExistByApplicationID(int ApplicationID)
         {
-            return clsLicenseData.IsLicenseExistByApplicationID(ApplicationID);
+            return clsLicenseData.GetLicenseIDUsingApplicationID(ApplicationID) != -1 ;
+        }
+
+        public static int GetLicenseIDUsingApplicationID(int ApplicationID)
+        {
+            return clsLicenseData.GetLicenseIDUsingApplicationID(ApplicationID);
         }
 
         bool AddNewLicense()
         {
+            this._IssueDate = DateTime.Now;
 
+            this._ExpirationDate = this.IssueDate.AddYears(clsLicenseClass.FindLicenseClassByID(this.LicenseClassID).DefaultValidityLength);
 
             this._LicenseID = clsLicenseData.AddNewLicense(this.ApplicationID, this.DriverID, (int)this.LicenseClassID, this.IssueDate, this.ExpirationDate,
                 this.Notes, this.PaidFees, this.IsActive, (byte)this.IssueReason, this.CreatedByUserID);
@@ -266,11 +298,11 @@ namespace DVLD_BusinessLayer
 
         }
 
-        //public static DataTable GetAllLicenses()
+        public static DataTable GetAllLocalLicensesForPerson(int PersonID)
 
-        //{
-            
-        //}
+        {
+            return clsLicenseData.GetAllLocalLicensesForPerson(PersonID);
+        }
 
 
     }
