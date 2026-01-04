@@ -75,7 +75,7 @@ namespace DVLD_PresentationLayer
 
             lblPhone.Text = _Person.Phone;
             lblAddress.Text = _Person.Address;
-            lblDateOfBirth.Text = _Person.DateOfBirth.ToString("dd/MM/yyyy");
+            lblDateOfBirth.Text = _Person.DateOfBirth.ToString("dd/MMM/yyyy");
             lblEmail.Text = _Person.Email;
             
             lblCountry.Text = _Person.CountryInfo.CountryName;

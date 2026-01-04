@@ -211,61 +211,7 @@ namespace DVLD_PresentationLayer.Applications
             }
         }
 
-        void ShowCompletedMode_cmsLDLApplications()
-        {
-            issueDrivingLicenseToolStripMenuItem.Enabled = false;
-            deleteApplicationToolStripMenuItem.Enabled = false;
-            editApplicationToolStripMenuItem.Enabled = false;   
-            cancelApplicationToolStripMenuItem.Enabled = false;
-            scheduleTestToolStripMenuItem.Enabled = false;    
-            showLicenseToolStripMenuItem.Enabled = true;
-
-        }
-
-        void ShowCanceledMode_cmsLDLApplications()
-        {
-            deleteApplicationToolStripMenuItem.Enabled = false;
-            editApplicationToolStripMenuItem.Enabled = false;
-            cancelApplicationToolStripMenuItem.Enabled = false;
-            scheduleTestToolStripMenuItem.Enabled = false;
-            issueDrivingLicenseToolStripMenuItem.Enabled = false;
-            showLicenseToolStripMenuItem.Enabled = false;
-        }
-
-        void ShowNewMode_cmsLDLApplications(byte PassedTests)
-        {
-            deleteApplicationToolStripMenuItem.Enabled = true;
-            editApplicationToolStripMenuItem.Enabled = true;
-            cancelApplicationToolStripMenuItem.Enabled = true;
-            scheduleTestToolStripMenuItem.Enabled = true;
-            issueDrivingLicenseToolStripMenuItem.Enabled = false;
-            showLicenseToolStripMenuItem.Enabled = false;
-
-
-            if (PassedTests == 0)
-            {
-                scheduleVisionTestToolStripMenuItem.Enabled = true;
-                scheduleWrittenTestToolStripMenuItem.Enabled = false;
-                scheduleStreetTestToolStripMenuItem.Enabled= false; 
-            }
-            else if (PassedTests == 1)
-            {
-                scheduleVisionTestToolStripMenuItem.Enabled = false;
-                scheduleWrittenTestToolStripMenuItem.Enabled = true;
-                scheduleStreetTestToolStripMenuItem.Enabled = false;
-            }
-            else if (PassedTests == 2)
-            {
-                scheduleVisionTestToolStripMenuItem.Enabled = false;
-                scheduleWrittenTestToolStripMenuItem.Enabled = false;
-                scheduleStreetTestToolStripMenuItem.Enabled = true;
-            }
-            else if (PassedTests == 3)
-            {
-                scheduleTestToolStripMenuItem.Enabled = false;
-                issueDrivingLicenseToolStripMenuItem.Enabled = true;
-            }
-        }
+   
 
       
         private void cmsLDLApplications_Opening(object sender, CancelEventArgs e)
@@ -359,8 +305,8 @@ namespace DVLD_PresentationLayer.Applications
 
         private void showPersonsLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-            frmLicenseHistory LicenseHistory = new frmLicenseHistory(clsPerson.FindPerson(dgvLDLApplications.CurrentRow.Cells["ApplicantPersonNationalNo"].Value.ToString()).PersonID);
+            int PersonID = clsPerson.FindPerson(dgvLDLApplications.CurrentRow.Cells["ApplicantPersonNationalNo"].Value.ToString()).PersonID;
+            frmShowPersonLicenseHistory LicenseHistory = new frmShowPersonLicenseHistory(PersonID);
             LicenseHistory.ShowDialog();
         }
     }

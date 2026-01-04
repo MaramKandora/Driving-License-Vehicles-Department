@@ -120,6 +120,22 @@ namespace DVLD_BusinessLayer
 
         }
 
+        static public clsDriver FindDriverUsingNationalNo(string NationalNo)
+        {
+            int DriverID = -1, CreatedByUserID = -1, PersonID = -1;
+            DateTime CreationDate = DateTime.Now;
+
+            if (clsDriverData.FindDriverUsingNationalNo(NationalNo,ref PersonID, ref DriverID, ref CreatedByUserID, ref CreationDate))
+            {
+                return new clsDriver(DriverID, PersonID, CreatedByUserID, CreationDate);
+
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public static bool IsDriverExist(int DriverID)
         {
             return clsDriverData.IsDriverExist(DriverID);
@@ -181,6 +197,6 @@ namespace DVLD_BusinessLayer
             return clsDriverData.GetAllDrivers();
         }
 
-
+        
     }
 }

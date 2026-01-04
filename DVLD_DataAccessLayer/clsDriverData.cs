@@ -113,7 +113,58 @@ namespace DVLD_DataAccessLayer
         }
 
 
+        public static bool FindDriverUsingNationalNo(string NationalNo,ref int PersonID, ref int DriverID, ref int CreatedByUserID, ref DateTime CreationDate)
+        {
+            bool IsFound = false;
 
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $@"Select Drivers.PersonID, Drivers.DriverID, Drivers.CreatedByUserID, Drivers.CreatedDate
+                            from Drivers inner join People on Drivers.PersonID = People.PersonID
+                            Where NationalNo = @NationalNo";
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@NationalNo", NationalNo);
+
+
+
+            try
+            {
+                Connection.Open();
+                SqlDataReader Reader = Command.ExecuteReader();
+
+                if (Reader.Read())
+                {
+                    DriverID = (int)Reader["DriverID"];
+                    CreatedByUserID = (int)Reader["CreatedByUserID"];
+                    CreationDate = (DateTime)Reader["CreatedDate"];
+
+
+                    IsFound = true;
+
+                }
+                else
+                {
+                    IsFound = false;
+                }
+
+                Reader.Close();
+
+
+            }
+            catch
+            {
+                IsFound = false;
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+
+            return IsFound;
+        }
 
         public static int AddNewDriver(int PersonID, int CreatedByUserID, DateTime CreationDate)
         {
@@ -305,6 +356,8 @@ namespace DVLD_DataAccessLayer
             return dt;
 
         }
+
+      
 
     }
 }

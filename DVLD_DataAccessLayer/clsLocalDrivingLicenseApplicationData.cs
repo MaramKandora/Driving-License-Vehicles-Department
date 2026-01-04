@@ -367,6 +367,8 @@ namespace DVLD_DataAccessLayer
         }
 
 
+       
+
         public static DataTable GetAllLocalDrivingLicenseApplications()
         {
             DataTable dt = new DataTable();

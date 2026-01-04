@@ -65,59 +65,7 @@ namespace DVLD_DataAccessLayer
         }
 
 
-        //public static bool FindTestAppointmentByRetakeTestApplicationID(int RetakeTestApplicationID,ref int TestAppointmentID, ref int TestTypeID, ref int LocalDrivingLicenseApplicationID
-        // , ref DateTime AppointmentDate, ref float PaidFees, ref int CreatedByUserID, ref bool IsLocked)
-        //{
-        //    bool IsFound = false;
-
-        //    SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-        //    string Query = $"Select * from TestAppointments Where RetakeTestApplicationID = @RetakeTestApplicationID";
-
-        //    SqlCommand Command = new SqlCommand(Query, Connection);
-
-        //    Command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
-
-        //    try
-        //    {
-        //        Connection.Open();
-        //        SqlDataReader Reader = Command.ExecuteReader();
-
-        //        if (Reader.Read())
-        //        {
-        //            TestAppointmentID = (int)Reader["TestAppointmentID"];
-        //            TestTypeID = (int)Reader["TestTypeID"];
-        //            LocalDrivingLicenseApplicationID = (int)Reader["LocalDrivingLicenseApplicationID"];
-        //            AppointmentDate = (DateTime)Reader["AppointmentDate"];
-        //            PaidFees = Convert.ToSingle(Reader["PaidFees"]);
-        //            CreatedByUserID = (int)Reader["CreatedByUserID"];
-        //            IsLocked = Convert.ToBoolean(Reader["IsLocked"]);
-
-        //            IsFound = true;
-
-        //        }
-        //        else
-        //        {
-        //            IsFound = false;
-        //        }
-
-        //        Reader.Close();
-
-
-        //    }
-        //    catch
-        //    {
-        //        IsFound = false;
-        //    }
-        //    finally
-        //    {
-        //        Connection.Close();
-
-        //    }
-
-        //    return IsFound;
-        //}
-
+      
 
        
 

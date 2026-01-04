@@ -365,7 +365,7 @@
             // dtpDateOfBirth
             // 
             this.dtpDateOfBirth.Checked = false;
-            this.dtpDateOfBirth.CustomFormat = "dd/mm/yyyy";
+            this.dtpDateOfBirth.CustomFormat = "dd/MMM/yyyy";
             this.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateOfBirth.Location = new System.Drawing.Point(595, 293);
             this.dtpDateOfBirth.MinDate = new System.DateTime(1900, 11, 10, 0, 0, 0, 0);

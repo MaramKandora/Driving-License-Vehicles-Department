@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
+using DVLD_PresentationLayer.License;
 
 namespace DVLD_PresentationLayer.Drivers
 {
@@ -119,6 +120,20 @@ namespace DVLD_PresentationLayer.Drivers
         private void btnClosePeopleManagement_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void showPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPersonInformation frm = new frmPersonInformation((int)dgvDrivers.CurrentRow.Cells["PersonID"].Value);
+            frm.ShowDialog();
+            RefreshDriversList();
+        }
+
+        private void showPersonsLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory((int)dgvDrivers.CurrentRow.Cells["PersonID"].Value);
+            frm.ShowDialog();
+            RefreshDriversList();
         }
     }
 }

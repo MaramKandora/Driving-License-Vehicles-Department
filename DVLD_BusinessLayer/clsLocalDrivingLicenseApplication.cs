@@ -195,6 +195,17 @@ namespace DVLD_BusinessLayer
             return clsTest.IsTestPassed(this.LDLApplicationID, TestType);
         }
 
+        public bool DoesPassedAllTests()
+        {
+            return clsTest.GetNumberOfPassedTests(this.LDLApplicationID) == 3;
+        }
+
+        public int GetLicenseID()
+        {
+            clsLicense License = clsLicense.FindLicenseByApplicationID(this.ApplicationID);
+            return (License != null) ? License.LicenseID : -1;
+        }
+
         public int GetTrialsOfTestType(clsTestType.enTestType TestType)
         {
             return clsLocalDrivingLicenseApplicationData.GetTrialsForTestType(this.LDLApplicationID, (int)TestType);
@@ -204,6 +215,47 @@ namespace DVLD_BusinessLayer
         {
             return clsLocalDrivingLicenseApplicationData.GetActiveTestAppointmentID(this.LDLApplicationID,(int)TestType) != -1;
         }
+
+        public int IssueLicenseForFirstTime(int CreatedByUserID, string Notes)
+        {
+           
+            clsDriver Driver = clsDriver.FindDriverUsingPersonID(this.ApplicantPersonID);
+
+            if (Driver == null)
+            {
+                Driver = new clsDriver();
+                Driver.PersonID = this.ApplicantPersonID;
+                Driver.CreatedByUserID = CreatedByUserID;
+
+                if (!Driver.Save())
+                {
+                    return -1;
+                }
+
+            }
+            clsLicense License = new clsLicense();
+            License.ApplicationID = this.ApplicationID;
+            License.DriverID = Driver.DriverID;
+            License.LicenseClassID = this.LicenseClassID;
+            License.Notes = Notes;
+            License.PaidFees = this.LicenseClassInfo.Fees;
+            License.IsActive = true;
+            License.IssueReason = clsLicense.enIssueReason.FirstTime;
+            License.CreatedByUserID = CreatedByUserID;
+
+            if (License.Save())
+            {
+                this.SetCompleted();
+               return License.LicenseID;    
+            }
+            else
+            {
+                return -1;
+
+            }
+        }
+
+       
 
     }
 

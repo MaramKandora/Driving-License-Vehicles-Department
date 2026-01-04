@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gbFilter = new System.Windows.Forms.GroupBox();
-            this.btnFindPerson = new System.Windows.Forms.Button();
-            this.btnAddNewPerson = new System.Windows.Forms.Button();
             this.txtFindBy = new System.Windows.Forms.TextBox();
             this.cbFindPersonBy = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.ctrlPersonCard1 = new DVLD_PresentationLayer.ctrlPersonCard();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnFindPerson = new System.Windows.Forms.Button();
+            this.btnAddNewPerson = new System.Windows.Forms.Button();
+            this.ctrlPersonCard1 = new DVLD_PresentationLayer.ctrlPersonCard();
             this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,42 @@
             this.gbFilter.TabIndex = 1;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
+            // 
+            // txtFindBy
+            // 
+            this.txtFindBy.Location = new System.Drawing.Point(317, 36);
+            this.txtFindBy.Name = "txtFindBy";
+            this.txtFindBy.Size = new System.Drawing.Size(215, 27);
+            this.txtFindBy.TabIndex = 2;
+            this.txtFindBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFindBy_KeyPress);
+            this.txtFindBy.Validating += new System.ComponentModel.CancelEventHandler(this.txtFindBy_Validating);
+            // 
+            // cbFindPersonBy
+            // 
+            this.cbFindPersonBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFindPersonBy.FormattingEnabled = true;
+            this.cbFindPersonBy.Items.AddRange(new object[] {
+            "National No",
+            "Person ID"});
+            this.cbFindPersonBy.Location = new System.Drawing.Point(133, 36);
+            this.cbFindPersonBy.Name = "cbFindPersonBy";
+            this.cbFindPersonBy.Size = new System.Drawing.Size(164, 28);
+            this.cbFindPersonBy.TabIndex = 1;
+            this.cbFindPersonBy.SelectedIndexChanged += new System.EventHandler(this.cbFindPersonBy_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(39, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Find By : ";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // btnFindPerson
             // 
@@ -81,47 +117,12 @@
             this.btnAddNewPerson.UseVisualStyleBackColor = true;
             this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
             // 
-            // txtFindBy
-            // 
-            this.txtFindBy.Location = new System.Drawing.Point(317, 36);
-            this.txtFindBy.Name = "txtFindBy";
-            this.txtFindBy.Size = new System.Drawing.Size(215, 27);
-            this.txtFindBy.TabIndex = 2;
-            this.txtFindBy.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFindBy_KeyPress);
-            this.txtFindBy.Validating += new System.ComponentModel.CancelEventHandler(this.txtFindBy_Validating);
-            // 
-            // cbFindPersonBy
-            // 
-            this.cbFindPersonBy.FormattingEnabled = true;
-            this.cbFindPersonBy.Items.AddRange(new object[] {
-            "National No",
-            "Person ID"});
-            this.cbFindPersonBy.Location = new System.Drawing.Point(133, 36);
-            this.cbFindPersonBy.Name = "cbFindPersonBy";
-            this.cbFindPersonBy.Size = new System.Drawing.Size(164, 28);
-            this.cbFindPersonBy.TabIndex = 1;
-            this.cbFindPersonBy.SelectedIndexChanged += new System.EventHandler(this.cbFindPersonBy_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Find By : ";
-            // 
             // ctrlPersonCard1
             // 
             this.ctrlPersonCard1.Location = new System.Drawing.Point(3, 97);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
             this.ctrlPersonCard1.Size = new System.Drawing.Size(960, 346);
             this.ctrlPersonCard1.TabIndex = 2;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // ctrlPersonCardWithFilter
             // 

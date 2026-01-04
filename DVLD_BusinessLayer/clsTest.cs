@@ -160,8 +160,9 @@ namespace DVLD_BusinessLayer
 
         public static byte GetNumberOfPassedTests(int LDLAppID)
         {
-            return clsTestData.GetPassedTests(LDLAppID);
+            return clsTestData.GetPassedTestsCount(LDLAppID);
         }
+
 
         public static int GetPassedTestIDForTestType(int LDLAppID,clsTestType.enTestType TestType)
         {

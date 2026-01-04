@@ -57,7 +57,7 @@ namespace DVLD_PresentationLayer.Applications
             lblCreatedByUserName.Text = clsGlobal.CurrentUser.UserName;
             lblFees.Text = clsApplicationType.FindApplicationType(clsApplicationType.enApplicationTypes.NewLocalLicense).ApplicationFees.ToString();
             cbLicenseClasses.SelectedValue = 3;
-            lblDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            lblDate.Text = DateTime.Now.ToString("dd/MMM/yyyy");
 
         }
 
@@ -78,7 +78,7 @@ namespace DVLD_PresentationLayer.Applications
             ctrlPersonCardWithFilter1.LoadPersonInfoInCard(_LDLApplication.ApplicantPersonID);
             lblApplicationID.Text = _LDLApplication.LDLApplicationID.ToString();
             lblCreatedByUserName.Text= _LDLApplication.CreatedByUserInfo.UserName;
-            lblDate.Text = _LDLApplication.ApplicationDate.ToString("dd/MM/yyyy");
+            lblDate.Text = _LDLApplication.ApplicationDate.ToString("dd/MMM/yyyy");
             lblFees.Text = _LDLApplication.Fees.ToString();
             cbLicenseClasses.SelectedValue = _LDLApplication.LicenseClassID;
             ShowApplicantPersonBrief(_LDLApplication.ApplicantPersonInfo);

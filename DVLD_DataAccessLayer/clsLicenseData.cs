@@ -343,7 +343,7 @@ namespace DVLD_DataAccessLayer
             return Result != null ? (int)Result : -1 ;
         }
 
-        public static DataTable GetAllLocalLicensesForPerson(int PersonID)
+        public static DataTable GetAllLocalLicensesForDriver(int DriverID)
         {
             DataTable dt = new DataTable();
 
@@ -353,12 +353,12 @@ namespace DVLD_DataAccessLayer
                             Licenses.IsActive from Licenses
                             inner join LicenseClasses on Licenses.LicenseClass = LicenseClasses.LicenseClassID
                             inner join Drivers on Drivers.DriverID = Licenses.DriverID
-                            where Drivers.PersonID = @PersonID
+                            where Drivers.DriverID = @DriverID
                             Order by IssueDate;";
 
             SqlCommand Command = new SqlCommand(Query, Connection);
 
-            Command.Parameters.AddWithValue("@PersonID", PersonID);
+            Command.Parameters.AddWithValue("@DriverID", DriverID);
 
 
             try
@@ -388,7 +388,41 @@ namespace DVLD_DataAccessLayer
 
         }
 
+        public static bool DeactivateLicense(int LicenseID)
+        {
+            int AffectedRows = 0;
 
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string Query = $@"Update Licenses 
+                              Set IsActive= 0
+                              Where LicenseID = @LicenseID";
+
+
+            SqlCommand Command = new SqlCommand(Query, Connection);
+
+            Command.Parameters.AddWithValue("@LicenseID", LicenseID);
+           
+
+            try
+            {
+                Connection.Open();
+                AffectedRows = Command.ExecuteNonQuery();
+
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                Connection.Close();
+
+            }
+
+            return AffectedRows > 0;
+        }
 
 
     }

@@ -271,7 +271,7 @@
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(122, 24);
             this.lblDate.TabIndex = 11;
-            this.lblDate.Text = "dd/mm/yyyy";
+            this.lblDate.Text = "dd/MMM/yyyy";
             // 
             // pictureBox3
             // 

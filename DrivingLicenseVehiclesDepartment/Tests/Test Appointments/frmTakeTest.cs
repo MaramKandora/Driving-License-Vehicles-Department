@@ -55,7 +55,7 @@ namespace DVLD_PresentationLayer.Tests.Test_Appointments
             lblLicenseClass.Text = _TestAppointmentInfo.LDLApplicationInfo.LicenseClassInfo.ClassName;
             lblFullName.Text = _TestAppointmentInfo.LDLApplicationInfo.ApplicantPersonInfo.FullName;
             lblTrialCount.Text = _TestAppointmentInfo.LDLApplicationInfo.GetTrialsOfTestType(_TestAppointmentInfo.TestTypeID).ToString();
-            lblDate.Text =_TestAppointmentInfo.AppointmentDate.ToString("dd/MM/yyyy");
+            lblDate.Text =_TestAppointmentInfo.AppointmentDate.ToString("dd/MMM/yyyy");
             lblFees.Text = _TestAppointmentInfo.PaidFees.ToString();
            
             _Test = clsTest.FindTestByAppointmentID(this._TestAppointmentID);
@@ -131,25 +131,26 @@ namespace DVLD_PresentationLayer.Tests.Test_Appointments
 
            
 
-            if (MessageBox.Show("Are you sure do you want to Save Changes?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning)
+            if (MessageBox.Show("Are you sure do you want to Save Changes?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Information)
                 == DialogResult.OK)
             {
                 if (_Test.Save())
                 {
                     lblTestID.Text = _Test.TestID.ToString();
-                    _TestAppointmentInfo.IsLocked = true;
-                    if (_TestAppointmentInfo.Save())
-                    {
-                        if (_Mode == enMode.AddNew)
-                            _Mode = enMode.Update;
-                        MessageBox.Show("Data Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        rbFail.Enabled = false;
-                        rbPass.Enabled = false;
-                        lblChangeResultMessage.Text= "Test Completed, Changing Result is not Allowed.";
-                    }
-                    else
-                        MessageBox.Show("Save has Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                    MessageBox.Show("Data Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    if (_Mode == enMode.AddNew)
+                    {
+
+                        lblTrialCount.Text = (Convert.ToInt16(lblTrialCount.Text) + 1).ToString();
+                        _Mode = enMode.Update;
+                    }
+                   
+                    rbFail.Enabled = false;
+                    rbPass.Enabled = false;
+                    lblChangeResultMessage.Text = "Test Completed, Changing Result is not Allowed.";
+                
                 }
                 else
                 {

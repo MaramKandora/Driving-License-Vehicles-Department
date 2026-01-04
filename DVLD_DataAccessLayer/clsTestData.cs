@@ -111,7 +111,7 @@ namespace DVLD_DataAccessLayer
         }
 
 
-        public static byte GetPassedTests(int LDLAppID)
+        public static byte GetPassedTestsCount(int LDLAppID)
         {
             byte PassedTests = 0;
 
@@ -192,6 +192,9 @@ namespace DVLD_DataAccessLayer
 
             string Query = $@"Insert Into Tests 
                               Values ( @TestAppointmentID, @TestResult, @Notes, @CreatedByUserID);
+                             
+                              Update TestAppointments 
+                              set IsLocked = 1 where TestAppointmentID= @TestAppointmentID
                               select Scope_Identity()";
 
 

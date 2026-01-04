@@ -32,9 +32,9 @@ namespace DVLD_PresentationLayer.Applications
                 _ApplicationID= _ApplicationInfo.ApplicationID; 
                 lblID.Text = _ApplicationInfo.ApplicationID.ToString();
                 lblFees.Text = _ApplicationInfo.Fees.ToString();
-                lblDate.Text = _ApplicationInfo.ApplicationDate.ToString("dd/MM/yyyy");
+                lblDate.Text = _ApplicationInfo.ApplicationDate.ToString("dd/MMM/yyyy");
                 lblApplicant.Text = _ApplicationInfo.ApplicantPersonInfo.FullName;
-                lblLastStatusDate.Text = _ApplicationInfo.LastStatusDate.ToString("dd/MM/yyyy");
+                lblLastStatusDate.Text = _ApplicationInfo.LastStatusDate.ToString("dd/MMM/yyyy");
                 lblStatus.Text = _ApplicationInfo.enApplicationStatusID.ToString();
                 lblType.Text = _ApplicationInfo.ApplicationTypeInfo.ApplicationTypeTitle;
                 lblUserCreatedBy.Text = _ApplicationInfo.CreatedByUserInfo.UserName;

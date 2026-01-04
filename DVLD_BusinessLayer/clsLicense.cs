@@ -85,6 +85,7 @@ namespace DVLD_BusinessLayer
         public float PaidFees { get; set; } 
         public bool IsActive { get; set; }
 
+        
 
         int _CreatedByUserID;
         public int CreatedByUserID
@@ -136,6 +137,21 @@ namespace DVLD_BusinessLayer
             }
         }
 
+        public bool IsDetained
+        {
+            get
+            {
+                return clsDetainedLicense.IsLicenseDetained(this.LicenseID);
+            }
+        }
+
+        public bool IsExpired
+        {
+            get
+            {
+                return this.ExpirationDate < DateTime.Now;
+            }
+        }
         enum enMode  {AddNew, Update}
         enMode _Mode;
 
@@ -249,13 +265,16 @@ namespace DVLD_BusinessLayer
         {
             this._IssueDate = DateTime.Now;
 
-            this._ExpirationDate = this.IssueDate.AddYears(clsLicenseClass.FindLicenseClassByID(this.LicenseClassID).DefaultValidityLength);
+            
+                this._ExpirationDate = this.IssueDate.AddYears(clsLicenseClass.FindLicenseClassByID(this.LicenseClassID).DefaultValidityLength);
 
             this._LicenseID = clsLicenseData.AddNewLicense(this.ApplicationID, this.DriverID, (int)this.LicenseClassID, this.IssueDate, this.ExpirationDate,
                 this.Notes, this.PaidFees, this.IsActive, (byte)this.IssueReason, this.CreatedByUserID);
 
             return this._LicenseID != -1;
         }
+
+      
 
         bool UpdateLicense()
         {
@@ -298,12 +317,130 @@ namespace DVLD_BusinessLayer
 
         }
 
-        public static DataTable GetAllLocalLicensesForPerson(int PersonID)
+        public static DataTable GetAllLocalLicensesForDriver(int DriverID)
 
         {
-            return clsLicenseData.GetAllLocalLicensesForPerson(PersonID);
+            return clsLicenseData.GetAllLocalLicensesForDriver(DriverID);
+        }
+
+        public bool Deactivate()
+        {
+            this.IsActive = false;
+           return clsLicenseData.DeactivateLicense(this.LicenseID);
         }
 
 
+        public int IssueInternationalLicense(int CreatedByUserID)
+        {
+            if (this.LicenseID == -1)
+                return -1;
+
+            clsApplication Application = new clsApplication();
+            Application.enApplicationStatusID = clsApplication.enApplicationStatus.Completed;
+            Application.enApplicationTypeID = clsApplicationType.enApplicationTypes.NewInternationalL;
+            Application.ApplicantPersonID = this.DriverInfo.PersonID;
+            Application.CreatedByUserID = CreatedByUserID;
+            Application.Fees = clsApplicationType.FindApplicationType(clsApplicationType.enApplicationTypes.NewInternationalL).ApplicationFees;
+            if (!Application.Save())
+            {
+                return -1;
+            }
+
+            clsInternationalLicense InternationalLicense= new clsInternationalLicense();
+            InternationalLicense.ApplicationID = Application.ApplicationID;
+            InternationalLicense.DriverID = this.DriverID;
+            InternationalLicense.LocalLicenseID = this.LicenseID;
+            InternationalLicense.IsActive = true;
+            InternationalLicense.CreatedByUserID= CreatedByUserID;
+
+            if (InternationalLicense.Save())
+            {
+                return InternationalLicense.InternationalLicenseID;
+            }
+            else
+            {
+                return -1;
+            }
+
+        }
+
+        public clsLicense RenewLicense(int CreatedByUserID, string Notes)
+        {
+            if (this.LicenseID == -1|| !this.IsExpired || !this.IsActive)
+                return null;
+
+            clsApplication Application = new clsApplication();
+            Application.ApplicantPersonID= this.DriverInfo.PersonID;
+            Application.CreatedByUserID = CreatedByUserID;
+            Application.enApplicationStatusID = clsApplication.enApplicationStatus.Completed;
+            Application.enApplicationTypeID = clsApplicationType.enApplicationTypes.RenewLicense;
+            Application.Fees = clsApplicationType.FindApplicationType(clsApplicationType.enApplicationTypes.RenewLicense).ApplicationFees;
+            if (!Application.Save())
+                return null;
+
+            if (!this.Deactivate())
+                return null;  
+           
+
+            clsLicense NewLicense = new clsLicense();
+            NewLicense.Notes = Notes;
+            NewLicense.CreatedByUserID = CreatedByUserID;
+            NewLicense.IsActive = true;
+            NewLicense.ApplicationID = Application.ApplicationID;
+            NewLicense.DriverID = this.DriverID;
+            NewLicense.IssueReason = enIssueReason.Renew;
+            NewLicense.PaidFees = clsLicenseClass.FindLicenseClassByID(this.LicenseClassID).Fees;
+            NewLicense.LicenseClassID = this.LicenseClassID;  
+            if (NewLicense.Save())
+            {
+                return NewLicense;
+            }
+            else
+            {
+                return null;  
+            }
+            
+
+        }
+
+        public enum enReplacementMode { ForLost, ForDamaged }
+        public clsLicense Replace(enReplacementMode ReplacementMode,int CreatedByUserID)
+        {
+            if (this.LicenseID == -1  || !this.IsActive)
+                return null;
+
+            clsApplication Application = new clsApplication();
+            Application.ApplicantPersonID = this.DriverInfo.PersonID;
+            Application.CreatedByUserID = CreatedByUserID;
+            Application.enApplicationStatusID = clsApplication.enApplicationStatus.Completed;
+            Application.enApplicationTypeID = (ReplacementMode == enReplacementMode.ForDamaged) ? clsApplicationType.enApplicationTypes.Replacement_Damaged
+                : clsApplicationType.enApplicationTypes.Replacement_Lost;
+
+            Application.Fees = (ReplacementMode == enReplacementMode.ForDamaged) ? clsApplicationType.FindApplicationType(clsApplicationType.enApplicationTypes.Replacement_Damaged).ApplicationFees
+                : clsApplicationType.FindApplicationType(clsApplicationType.enApplicationTypes.Replacement_Lost).ApplicationFees;
+            if (!Application.Save())
+                return null;
+
+            if (!this.Deactivate())
+                return null;
+
+
+            enIssueReason IssueReason = (ReplacementMode == enReplacementMode.ForDamaged)? enIssueReason.ReplacementForDamaged : enIssueReason.ReplacementForLost;
+
+            int NewLicenseID = clsLicenseData.AddNewLicense(Application.ApplicationID, this.DriverID, (int)this.LicenseClassID, DateTime.Now,
+                this.ExpirationDate, this.Notes, 0, true, (byte)IssueReason, CreatedByUserID);
+            if (NewLicenseID !=-1)
+            {
+                return clsLicense.FindLicenseByLicenseID(NewLicenseID);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+       
+
+        //Reminder: there are more functions in instructor`s code, Check them out
     }
 }
