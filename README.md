@@ -71,7 +71,7 @@ Architecture: 3-tier Architecture (UI, Business Logic, Data Access)
 
 ## Screenshots
 
-[Login Screen](screenshots/login.png)
+![Login Screen](screenshots/login.png)
 
 ![Main Screen](screenshots/dashboard.png)
 
