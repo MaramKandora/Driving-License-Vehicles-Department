@@ -16,68 +16,68 @@ Database: SQL Server
 Architecture: 3-tier Architecture (UI, Business Logic, Data Access)
 
 ## Main Features
+
 ### Person Management
 
-Add, update, delete, and search persons by ID and National No
+- Add, update, delete, and search persons by ID and National No
 
-Prevent duplicate records
+- Prevent duplicate records
 
-Store personal information and profile image
+- Store personal information and profile image
 
 ### Application Management
 
-Create and track applications for different services
+- Create and track applications for different services
 
-Application statuses: New, Completed, Cancelled
+- Application statuses: New, Completed, Cancelled
 
-Each application is linked to a single person
+- Each application is linked to a single person
 
 ### License Services
 
-Issue a driving license for the first time
+- Issue a driving license for the first time
 
-Renew driving licenses
+- Renew driving licenses
 
-Replace lost or damaged licenses
+- Replace lost or damaged licenses
 
-Release seized licenses
+- Release seized licenses
 
-Issue international driving licenses
+- Issue international driving licenses
 
 ### Tests Management
 
-Vision Test
+- Vision Test
 
-Theoretical Test
+- Theoretical Test
 
-Practical Driving Test
+- Practical Driving Test
 
-Track test results, dates, fees, and retries
+- Track test results, dates, fees, and retries
 
 ### License Classes
 
-Multiple license categories (motorcycles, cars, commercial, heavy vehicles, etc.)
+- Multiple license categories (motorcycles, cars, commercial, heavy vehicles, etc.)
 
-Enforced age restrictions
+- Enforced age restrictions
 
-Validity period and fees per class
+- Validity period and fees per class
 
 ### Users & Administration
 
-Manage system users
+- Manage system users
 
-Log all system actions with date and user
+- Log all system actions with date and user
 
 ## Screenshots
 
-### Login screen
+![Login Screen](screenshots/login.png)
 
-### Main dashboard
-screenshots/dashboard.png
-### Person management
-screenshots/People.png
-### Local Diving License Applications Management
-screenshots/LDLApps.png
+![Main Screen](screenshots/dashboard.png)
+
+![people Management](screenshots/people.png)
+
+![Local Diving License Applications Management](screenshots/LDLApps.png)
 
 
 ## What I Learned
