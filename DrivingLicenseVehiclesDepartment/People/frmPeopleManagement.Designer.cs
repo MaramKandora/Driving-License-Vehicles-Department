@@ -61,7 +61,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.label1.Location = new System.Drawing.Point(479, 171);
+            this.label1.Location = new System.Drawing.Point(545, 161);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(439, 52);
             this.label1.TabIndex = 0;
@@ -80,7 +80,7 @@
             this.dgvPeople.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgvPeople.RowTemplate.Height = 24;
             this.dgvPeople.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPeople.Size = new System.Drawing.Size(1389, 462);
+            this.dgvPeople.Size = new System.Drawing.Size(1498, 558);
             this.dgvPeople.TabIndex = 2;
             // 
             // cmsPeopleList
@@ -96,7 +96,7 @@
             this.toolStripMenuItem_SendEmail,
             this.toolStripMenuItem_PhoneCall});
             this.cmsPeopleList.Name = "cmsPeopleList";
-            this.cmsPeopleList.Size = new System.Drawing.Size(192, 172);
+            this.cmsPeopleList.Size = new System.Drawing.Size(215, 200);
             // 
             // toolStripMenuItem_ShowDetails
             // 
@@ -144,15 +144,17 @@
             // 
             this.toolStripMenuItem_SendEmail.Image = global::DVLD_PresentationLayer.Properties.Resources.send_email_32;
             this.toolStripMenuItem_SendEmail.Name = "toolStripMenuItem_SendEmail";
-            this.toolStripMenuItem_SendEmail.Size = new System.Drawing.Size(191, 26);
+            this.toolStripMenuItem_SendEmail.Size = new System.Drawing.Size(214, 26);
             this.toolStripMenuItem_SendEmail.Text = "Send Email";
+            this.toolStripMenuItem_SendEmail.Click += new System.EventHandler(this.toolStripMenuItem_SendEmail_Click);
             // 
             // toolStripMenuItem_PhoneCall
             // 
             this.toolStripMenuItem_PhoneCall.Image = global::DVLD_PresentationLayer.Properties.Resources.call_32;
             this.toolStripMenuItem_PhoneCall.Name = "toolStripMenuItem_PhoneCall";
-            this.toolStripMenuItem_PhoneCall.Size = new System.Drawing.Size(191, 26);
+            this.toolStripMenuItem_PhoneCall.Size = new System.Drawing.Size(214, 26);
             this.toolStripMenuItem_PhoneCall.Text = "Phone Call";
+            this.toolStripMenuItem_PhoneCall.Click += new System.EventHandler(this.toolStripMenuItem_PhoneCall_Click);
             // 
             // label2
             // 
@@ -192,7 +194,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 762);
+            this.label3.Location = new System.Drawing.Point(29, 848);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 24);
             this.label3.TabIndex = 7;
@@ -203,7 +205,7 @@
             this.lblRecordsNum.AutoSize = true;
             this.lblRecordsNum.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblRecordsNum.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsNum.Location = new System.Drawing.Point(156, 762);
+            this.lblRecordsNum.Location = new System.Drawing.Point(144, 848);
             this.lblRecordsNum.Name = "lblRecordsNum";
             this.lblRecordsNum.Size = new System.Drawing.Size(0, 24);
             this.lblRecordsNum.TabIndex = 8;
@@ -226,7 +228,7 @@
             this.btnClosePeopleManagement.FlatAppearance.BorderSize = 4;
             this.btnClosePeopleManagement.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClosePeopleManagement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClosePeopleManagement.Location = new System.Drawing.Point(1235, 754);
+            this.btnClosePeopleManagement.Location = new System.Drawing.Point(1363, 837);
             this.btnClosePeopleManagement.Name = "btnClosePeopleManagement";
             this.btnClosePeopleManagement.Size = new System.Drawing.Size(139, 46);
             this.btnClosePeopleManagement.TabIndex = 6;
@@ -240,7 +242,7 @@
             this.btnAddNewPerson.BackgroundImage = global::DVLD_PresentationLayer.Properties.Resources.Add_Person_72;
             this.btnAddNewPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAddNewPerson.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddNewPerson.Location = new System.Drawing.Point(1333, 215);
+            this.btnAddNewPerson.Location = new System.Drawing.Point(1442, 215);
             this.btnAddNewPerson.Name = "btnAddNewPerson";
             this.btnAddNewPerson.Size = new System.Drawing.Size(59, 52);
             this.btnAddNewPerson.TabIndex = 5;
@@ -252,7 +254,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.People_400;
-            this.pictureBox1.Location = new System.Drawing.Point(614, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(680, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(182, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -268,7 +270,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1403, 814);
+            this.ClientSize = new System.Drawing.Size(1514, 895);
             this.Controls.Add(this.txtPeopleFilter);
             this.Controls.Add(this.lblRecordsNum);
             this.Controls.Add(this.label3);

@@ -40,16 +40,16 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(290, 163);
+            this.label1.Location = new System.Drawing.Point(323, 163);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(398, 52);
+            this.label1.Size = new System.Drawing.Size(431, 52);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Driver License Info";
+            this.label1.Text = "Driver`s License Info";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.LicenseView_400;
-            this.pictureBox1.Location = new System.Drawing.Point(392, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(413, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(182, 148);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -87,7 +87,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmShowDriverLicenseInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmShowDriverLicenseInfo";
+            this.Text = "Driver`s License Info";
             this.Load += new System.EventHandler(this.frmShowDriverLicenseInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

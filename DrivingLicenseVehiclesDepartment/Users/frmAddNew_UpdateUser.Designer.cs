@@ -35,6 +35,9 @@
             this.ctrlPersonCardWithFilter1 = new DVLD_PresentationLayer.People.Controls.ctrlPersonCardWithFilter();
             this.btnNext = new System.Windows.Forms.Button();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
+            this.lblSelectedPersonFullName = new System.Windows.Forms.Label();
+            this.lblSelectedPersonID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pbConfirmPassPeek = new System.Windows.Forms.PictureBox();
@@ -55,9 +58,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblSelectedPersonID = new System.Windows.Forms.Label();
-            this.lblSelectedPersonFullName = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.tpLoginInfo.SuspendLayout();
@@ -146,6 +146,39 @@
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Login Info";
             this.tpLoginInfo.UseVisualStyleBackColor = true;
+            // 
+            // lblSelectedPersonFullName
+            // 
+            this.lblSelectedPersonFullName.AutoSize = true;
+            this.lblSelectedPersonFullName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedPersonFullName.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblSelectedPersonFullName.Location = new System.Drawing.Point(426, 85);
+            this.lblSelectedPersonFullName.Name = "lblSelectedPersonFullName";
+            this.lblSelectedPersonFullName.Size = new System.Drawing.Size(39, 27);
+            this.lblSelectedPersonFullName.TabIndex = 35;
+            this.lblSelectedPersonFullName.Text = "???";
+            // 
+            // lblSelectedPersonID
+            // 
+            this.lblSelectedPersonID.AutoSize = true;
+            this.lblSelectedPersonID.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectedPersonID.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.lblSelectedPersonID.Location = new System.Drawing.Point(507, 46);
+            this.lblSelectedPersonID.Name = "lblSelectedPersonID";
+            this.lblSelectedPersonID.Size = new System.Drawing.Size(39, 27);
+            this.lblSelectedPersonID.TabIndex = 34;
+            this.lblSelectedPersonID.Text = "???";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.label1.Location = new System.Drawing.Point(398, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 27);
+            this.label1.TabIndex = 33;
+            this.label1.Text = "Person ID :";
             // 
             // panel1
             // 
@@ -366,39 +399,6 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.label1.Location = new System.Drawing.Point(398, 46);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 27);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Person ID :";
-            // 
-            // lblSelectedPersonID
-            // 
-            this.lblSelectedPersonID.AutoSize = true;
-            this.lblSelectedPersonID.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedPersonID.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblSelectedPersonID.Location = new System.Drawing.Point(526, 46);
-            this.lblSelectedPersonID.Name = "lblSelectedPersonID";
-            this.lblSelectedPersonID.Size = new System.Drawing.Size(39, 27);
-            this.lblSelectedPersonID.TabIndex = 34;
-            this.lblSelectedPersonID.Text = "???";
-            // 
-            // lblSelectedPersonFullName
-            // 
-            this.lblSelectedPersonFullName.AutoSize = true;
-            this.lblSelectedPersonFullName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelectedPersonFullName.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.lblSelectedPersonFullName.Location = new System.Drawing.Point(444, 85);
-            this.lblSelectedPersonFullName.Name = "lblSelectedPersonFullName";
-            this.lblSelectedPersonFullName.Size = new System.Drawing.Size(39, 27);
-            this.lblSelectedPersonFullName.TabIndex = 35;
-            this.lblSelectedPersonFullName.Text = "???";
             // 
             // frmAddNew_UpdateUser
             // 

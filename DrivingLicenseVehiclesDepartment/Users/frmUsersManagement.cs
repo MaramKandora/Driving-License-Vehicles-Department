@@ -171,11 +171,11 @@ namespace DVLD_PresentationLayer.Users
         {
             int SelectedUserID = (int)dgvUsers.CurrentRow.Cells[0].Value;
 
-            if (clsUser.DeleteUser(SelectedUserID))
+            if (MessageBox.Show("Are you sure do you want to Delete Selected User?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                if (MessageBox.Show("Are you sure do you want to Delete Selected User?", "Deletion", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                if (clsUser.DeleteUser(SelectedUserID))
                 {
-                    MessageBox.Show("User Deleted Successfully", "Deletion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("User Deleted Successfully", "Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     RefreshUsersList();
 
                     if (SelectedUserID == clsGlobal.CurrentUser.UserID)
@@ -186,12 +186,13 @@ namespace DVLD_PresentationLayer.Users
                     }
                     
                 }
-              
+                else
+                {
+                    MessageBox.Show("Deletion Failed. User has Data Linked to it", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
-            else
-            {
-                MessageBox.Show("Deletion Failed. User has Data Linked to it", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
         }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
@@ -218,6 +219,18 @@ namespace DVLD_PresentationLayer.Users
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Feature has not been built yet", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void phoneCallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Feature has not been built yet", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

@@ -37,12 +37,6 @@
             this.lblCreatedByUser = new System.Windows.Forms.Label();
             this.lblReplacedWithLicenseID = new System.Windows.Forms.Label();
             this.lblApplicationFees = new System.Windows.Forms.Label();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,19 +45,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ctrlDriverLicenseInfoWithFilter1 = new DVLD_PresentationLayer.License.Local_Licenses.Controls.ctrlDriverLicenseInfoWithFilter();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnReplace = new System.Windows.Forms.Button();
             this.gbReplaceFor = new System.Windows.Forms.GroupBox();
             this.rbDamagedLicense = new System.Windows.Forms.RadioButton();
             this.rbLostLicense = new System.Windows.Forms.RadioButton();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnReplace = new System.Windows.Forms.Button();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            this.gbReplaceFor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbReplaceFor.SuspendLayout();
             this.SuspendLayout();
             // 
             // llblNewLicenseInfo
@@ -180,66 +180,6 @@
             this.lblApplicationFees.TabIndex = 92;
             this.lblApplicationFees.Text = "???";
             // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::DVLD_PresentationLayer.Properties.Resources.International_32;
-            this.pictureBox13.Location = new System.Drawing.Point(676, 28);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(31, 30);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 91;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::DVLD_PresentationLayer.Properties.Resources.LocalDriving_License;
-            this.pictureBox12.Location = new System.Drawing.Point(676, 71);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(31, 30);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 90;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::DVLD_PresentationLayer.Properties.Resources.User_32__2;
-            this.pictureBox10.Location = new System.Drawing.Point(676, 111);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(31, 30);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 88;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::DVLD_PresentationLayer.Properties.Resources.Number_32;
-            this.pictureBox9.Location = new System.Drawing.Point(232, 33);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(31, 30);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 87;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::DVLD_PresentationLayer.Properties.Resources.Calendar_32;
-            this.pictureBox6.Location = new System.Drawing.Point(232, 71);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(31, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 86;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.money_32;
-            this.pictureBox1.Location = new System.Drawing.Point(232, 110);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 85;
-            this.pictureBox1.TabStop = false;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -321,31 +261,6 @@
             this.lblHeader.TabIndex = 84;
             this.lblHeader.Text = "Replacement Header";
             // 
-            // btnClose
-            // 
-            this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Image = global::DVLD_PresentationLayer.Properties.Resources.Close_32;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(565, 770);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(140, 49);
-            this.btnClose.TabIndex = 89;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // btnReplace
-            // 
-            this.btnReplace.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReplace.Image = global::DVLD_PresentationLayer.Properties.Resources.Renew_Driving_License_32;
-            this.btnReplace.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReplace.Location = new System.Drawing.Point(724, 770);
-            this.btnReplace.Name = "btnReplace";
-            this.btnReplace.Size = new System.Drawing.Size(254, 49);
-            this.btnReplace.TabIndex = 90;
-            this.btnReplace.Text = "Issue Replacement";
-            this.btnReplace.UseVisualStyleBackColor = true;
-            this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
-            // 
             // gbReplaceFor
             // 
             this.gbReplaceFor.Controls.Add(this.rbDamagedLicense);
@@ -383,6 +298,92 @@
             this.rbLostLicense.UseVisualStyleBackColor = true;
             this.rbLostLicense.CheckedChanged += new System.EventHandler(this.rbLostLicense_CheckedChanged);
             // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Image = global::DVLD_PresentationLayer.Properties.Resources.Close_32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(565, 770);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(140, 49);
+            this.btnClose.TabIndex = 89;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnReplace
+            // 
+            this.btnReplace.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReplace.Image = global::DVLD_PresentationLayer.Properties.Resources.Renew_Driving_License_32;
+            this.btnReplace.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReplace.Location = new System.Drawing.Point(724, 770);
+            this.btnReplace.Name = "btnReplace";
+            this.btnReplace.Size = new System.Drawing.Size(254, 49);
+            this.btnReplace.TabIndex = 90;
+            this.btnReplace.Text = "Issue Replacement";
+            this.btnReplace.UseVisualStyleBackColor = true;
+            this.btnReplace.Click += new System.EventHandler(this.btnReplace_Click);
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::DVLD_PresentationLayer.Properties.Resources.International_32;
+            this.pictureBox13.Location = new System.Drawing.Point(676, 28);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 91;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = global::DVLD_PresentationLayer.Properties.Resources.LocalDriving_License;
+            this.pictureBox12.Location = new System.Drawing.Point(676, 71);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 90;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::DVLD_PresentationLayer.Properties.Resources.User_32__2;
+            this.pictureBox10.Location = new System.Drawing.Point(676, 111);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 88;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::DVLD_PresentationLayer.Properties.Resources.Number_32;
+            this.pictureBox9.Location = new System.Drawing.Point(232, 33);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 87;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::DVLD_PresentationLayer.Properties.Resources.Calendar_32;
+            this.pictureBox6.Location = new System.Drawing.Point(232, 71);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 86;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.money_32;
+            this.pictureBox1.Location = new System.Drawing.Point(232, 110);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 85;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmReplacementForLostOrDamaged
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -402,14 +403,14 @@
             this.Load += new System.EventHandler(this.frmReplacementForLostOrDamaged_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.gbReplaceFor.ResumeLayout(false);
+            this.gbReplaceFor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gbReplaceFor.ResumeLayout(false);
-            this.gbReplaceFor.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

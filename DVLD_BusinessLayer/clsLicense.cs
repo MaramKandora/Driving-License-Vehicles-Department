@@ -282,6 +282,7 @@ namespace DVLD_BusinessLayer
                 this.Notes, this.PaidFees, this.IsActive, (byte)this.IssueReason, this.CreatedByUserID);
         }
 
+      
         public static bool DeleteLicense(int LicenseID)
         {
             return clsLicenseData.DeleteLicense(LicenseID);
@@ -332,7 +333,7 @@ namespace DVLD_BusinessLayer
 
         public int IssueInternationalLicense(int CreatedByUserID)
         {
-            if (this.LicenseID == -1)
+            if (this.LicenseID == -1 || !this.IsActive || this.IsDetained)
                 return -1;
 
             clsApplication Application = new clsApplication();
@@ -406,7 +407,7 @@ namespace DVLD_BusinessLayer
         public enum enReplacementMode { ForLost, ForDamaged }
         public clsLicense Replace(enReplacementMode ReplacementMode,int CreatedByUserID)
         {
-            if (this.LicenseID == -1  || !this.IsActive)
+            if (this.LicenseID == -1  || !this.IsActive || this.IsDetained)
                 return null;
 
             clsApplication Application = new clsApplication();
@@ -437,6 +438,29 @@ namespace DVLD_BusinessLayer
             {
                 return null;
             }
+        }
+
+        public int Detain(float FineFees, int CreatedByUserID)
+        {
+            // it returns Detain ID, or -1 if detention failed
+            if (this.LicenseID == -1 )
+                return -1;
+
+
+            clsDetainedLicense DetainedLicense = new clsDetainedLicense();
+
+            DetainedLicense.LicenseID = this.LicenseID; 
+            DetainedLicense.FineFees = FineFees;
+            DetainedLicense.CreatedByUserID = CreatedByUserID;
+
+
+            if (DetainedLicense.Save())
+                return DetainedLicense.DetainID;
+            else
+                return -1;
+            
+            
+
         }
 
        

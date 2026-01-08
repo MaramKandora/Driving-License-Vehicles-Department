@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DVLD_BusinessLayer;
 using DVLD_PresentationLayer.Application_Types;
 using DVLD_PresentationLayer.Applications;
+using DVLD_PresentationLayer.Applications.Detain_And_Release_License;
 using DVLD_PresentationLayer.Applications.Renew_License;
 using DVLD_PresentationLayer.Applications.Replacement_for_lost_or_damaged;
 using DVLD_PresentationLayer.Drivers;
@@ -159,6 +160,30 @@ namespace DVLD_PresentationLayer
         {
             frmLocalDrivingLicenseApplicationsManagement frm = new frmLocalDrivingLicenseApplicationsManagement();
             frm.ShowDialog();   
+        }
+
+        private void detainALicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDetainLicense frm = new frmDetainLicense();
+            frm.ShowDialog();       
+        }
+
+        private void manageDetainedLicensesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDetainedLicensesList frm = new frmDetainedLicensesList();    
+            frm.ShowDialog();   
+        }
+
+        private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReleaseLicenseApplication frm = new frmReleaseLicenseApplication();
+            frm.ShowDialog();   
+        }
+
+        private void releaseDetainedDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReleaseLicenseApplication frm = new frmReleaseLicenseApplication();
+            frm.ShowDialog();
         }
     }
 }

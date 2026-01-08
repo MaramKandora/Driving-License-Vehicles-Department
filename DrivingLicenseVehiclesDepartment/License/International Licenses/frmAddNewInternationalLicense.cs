@@ -72,6 +72,17 @@ namespace DVLD_PresentationLayer.License.International_Licenses
             }
             return true;
         }
+
+        bool CheckDetainedLicenseConstraint()
+        {
+            if (ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.IsDetained)
+            {
+                MessageBox.Show($"Selected License is Detained", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+                return false;
+            }
+            return true;
+        }
       
         private void btnIssue_Click(object sender, EventArgs e)
         {
@@ -132,7 +143,8 @@ namespace DVLD_PresentationLayer.License.International_Licenses
                 llblLicensesHistory.Enabled = true;
                 ctrlInternationalApplicationInfo1.SetLocalLicenseID(SelectedLicenseID);
 
-                if (CheckOrdinaryLocalLicenseConstraint() && CheckActiveLocalLicenseConstraint() && CheckLocalLicenseExpirationConstraint() && CheckHasInternationalLicenseConstraint())
+                if (CheckOrdinaryLocalLicenseConstraint() && CheckActiveLocalLicenseConstraint() &&
+                    CheckLocalLicenseExpirationConstraint() && CheckHasInternationalLicenseConstraint() && CheckDetainedLicenseConstraint())
                 {
                     btnIssue.Enabled = true;
                 }

@@ -37,7 +37,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_PresentationLayer.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(712, 466);
+            this.btnClose.Location = new System.Drawing.Point(718, 444);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(134, 49);
             this.btnClose.TabIndex = 6;
@@ -47,15 +47,15 @@
             // 
             // ctrlLocalDrivingLicenseApplicationInfo1
             // 
-            this.ctrlLocalDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(12, 12);
+            this.ctrlLocalDrivingLicenseApplicationInfo1.Location = new System.Drawing.Point(12, 33);
             this.ctrlLocalDrivingLicenseApplicationInfo1.Name = "ctrlLocalDrivingLicenseApplicationInfo1";
-            this.ctrlLocalDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(854, 462);
+            this.ctrlLocalDrivingLicenseApplicationInfo1.Size = new System.Drawing.Size(854, 396);
             this.ctrlLocalDrivingLicenseApplicationInfo1.TabIndex = 0;
             // 
             // frmShowLocalDrivingLicenseApplicationInfo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(877, 527);
+            this.ClientSize = new System.Drawing.Size(877, 513);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlLocalDrivingLicenseApplicationInfo1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

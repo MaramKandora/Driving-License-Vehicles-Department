@@ -90,7 +90,7 @@
             this.lblHeaderAddNew_UpdatePerson.AutoSize = true;
             this.lblHeaderAddNew_UpdatePerson.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeaderAddNew_UpdatePerson.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.lblHeaderAddNew_UpdatePerson.Location = new System.Drawing.Point(344, 69);
+            this.lblHeaderAddNew_UpdatePerson.Location = new System.Drawing.Point(393, 59);
             this.lblHeaderAddNew_UpdatePerson.Name = "lblHeaderAddNew_UpdatePerson";
             this.lblHeaderAddNew_UpdatePerson.Size = new System.Drawing.Size(144, 52);
             this.lblHeaderAddNew_UpdatePerson.TabIndex = 0;
@@ -100,7 +100,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 97);
+            this.label1.Location = new System.Drawing.Point(52, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 24);
             this.label1.TabIndex = 1;
@@ -109,7 +109,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.Number_32;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 97);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 127);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -120,7 +120,7 @@
             // 
             this.lblPersonID.AutoSize = true;
             this.lblPersonID.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonID.Location = new System.Drawing.Point(160, 97);
+            this.lblPersonID.Location = new System.Drawing.Point(160, 127);
             this.lblPersonID.Name = "lblPersonID";
             this.lblPersonID.Size = new System.Drawing.Size(45, 24);
             this.lblPersonID.TabIndex = 3;

@@ -64,6 +64,24 @@
     <Compile Include="Applications\Controls\ctrlApplicationBasicInfo.Designer.cs">
       <DependentUpon>ctrlApplicationBasicInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\Detain And Release License\frmDetainedLicensesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Detain And Release License\frmDetainedLicensesList.Designer.cs">
+      <DependentUpon>frmDetainedLicensesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Detain And Release License\frmDetainLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Detain And Release License\frmDetainLicense.Designer.cs">
+      <DependentUpon>frmDetainLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Detain And Release License\frmReleaseLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Detain And Release License\frmReleaseLicenseApplication.Designer.cs">
+      <DependentUpon>frmReleaseLicenseApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\Local Driving License\ctrlLocalDrivingLicenseApplicationInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -293,6 +311,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Controls\ctrlApplicationBasicInfo.resx">
       <DependentUpon>ctrlApplicationBasicInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Detain And Release License\frmDetainedLicensesList.resx">
+      <DependentUpon>frmDetainedLicensesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Detain And Release License\frmDetainLicense.resx">
+      <DependentUpon>frmDetainLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Detain And Release License\frmReleaseLicenseApplication.resx">
+      <DependentUpon>frmReleaseLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\ctrlLocalDrivingLicenseApplicationInfo.resx">
       <DependentUpon>ctrlLocalDrivingLicenseApplicationInfo.cs</DependentUpon>

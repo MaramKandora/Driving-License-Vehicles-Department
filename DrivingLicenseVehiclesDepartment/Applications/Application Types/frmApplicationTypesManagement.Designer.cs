@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAppTypes = new System.Windows.Forms.DataGridView();
             this.cmsAppTypesList = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editApplicationTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.lblRecordsNum = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
-            this.editApplicationTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppTypes)).BeginInit();
             this.cmsAppTypesList.SuspendLayout();
@@ -47,7 +47,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(151, 189);
+            this.label1.Location = new System.Drawing.Point(177, 189);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(577, 46);
             this.label1.TabIndex = 1;
@@ -79,6 +79,14 @@
             this.cmsAppTypesList.Name = "cmsAppTypesList";
             this.cmsAppTypesList.Size = new System.Drawing.Size(227, 30);
             // 
+            // editApplicationTypeToolStripMenuItem
+            // 
+            this.editApplicationTypeToolStripMenuItem.Image = global::DVLD_PresentationLayer.Properties.Resources.edit_32;
+            this.editApplicationTypeToolStripMenuItem.Name = "editApplicationTypeToolStripMenuItem";
+            this.editApplicationTypeToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.editApplicationTypeToolStripMenuItem.Text = "Edit Application Type";
+            this.editApplicationTypeToolStripMenuItem.Click += new System.EventHandler(this.editApplicationTypeToolStripMenuItem_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -103,27 +111,18 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_PresentationLayer.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(773, 640);
+            this.btnClose.Location = new System.Drawing.Point(731, 640);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(116, 50);
+            this.btnClose.Size = new System.Drawing.Size(158, 50);
             this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // editApplicationTypeToolStripMenuItem
-            // 
-            this.editApplicationTypeToolStripMenuItem.Image = global::DVLD_PresentationLayer.Properties.Resources.edit_32;
-            this.editApplicationTypeToolStripMenuItem.Name = "editApplicationTypeToolStripMenuItem";
-            this.editApplicationTypeToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
-            this.editApplicationTypeToolStripMenuItem.Text = "Edit Application Type";
-            this.editApplicationTypeToolStripMenuItem.Click += new System.EventHandler(this.editApplicationTypeToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.Application_Types_512;
-            this.pictureBox1.Location = new System.Drawing.Point(335, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(369, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(204, 163);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

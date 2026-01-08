@@ -31,9 +31,9 @@ namespace DVLD_DataAccessLayer
 
                 if (Reader.Read())
                 {
-                    ApplicationID =(int) Reader["ApplicationID"];
-                    DriverID =(int) Reader["DriverID"];
-                    LicenseClass =(int) Reader["LicenseClass"];
+                    ApplicationID = (int)Reader["ApplicationID"];
+                    DriverID = (int)Reader["DriverID"];
+                    LicenseClass = (int)Reader["LicenseClass"];
                     IssueDate = (DateTime)Reader["IssueDate"];
                     ExpirationDate = (DateTime)Reader["ExpirationDate"];
                     Notes = (Reader["Notes"] == DBNull.Value) ? "" : Reader["Notes"].ToString();
@@ -186,7 +186,7 @@ namespace DVLD_DataAccessLayer
         }
 
 
-        public static bool UpdateLicense(int LicenseID,int ApplicationID, int DriverID, int LicenseClass, DateTime IssueDate
+        public static bool UpdateLicense(int LicenseID, int ApplicationID, int DriverID, int LicenseClass, DateTime IssueDate
           , DateTime ExpirationDate, string Notes, float PaidFees, bool IsActive, byte IssueReason, int CreatedByUserID)
         {
 
@@ -313,7 +313,7 @@ namespace DVLD_DataAccessLayer
         public static int GetLicenseIDUsingApplicationID(int ApplicationID)
         {
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-           
+
 
             string Query = $"Select LicenseID from Licenses Where ApplicationID = @ApplicationID";
 
@@ -340,7 +340,7 @@ namespace DVLD_DataAccessLayer
 
             }
 
-            return Result != null ? (int)Result : -1 ;
+            return Result != null ? (int)Result : -1;
         }
 
         public static DataTable GetAllLocalLicensesForDriver(int DriverID)
@@ -402,7 +402,7 @@ namespace DVLD_DataAccessLayer
             SqlCommand Command = new SqlCommand(Query, Connection);
 
             Command.Parameters.AddWithValue("@LicenseID", LicenseID);
-           
+
 
             try
             {
@@ -423,7 +423,6 @@ namespace DVLD_DataAccessLayer
 
             return AffectedRows > 0;
         }
-
 
     }
 

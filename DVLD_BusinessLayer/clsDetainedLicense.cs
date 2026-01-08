@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using DVLD_DataAccessLayer;
@@ -120,7 +122,7 @@ namespace DVLD_BusinessLayer
         enum enMode { AddNew, Update }
         enMode _Mode;
 
-        clsDetainedLicense()
+        public clsDetainedLicense()
         {
             _DetainID = -1;
             LicenseID = -1;
@@ -178,10 +180,10 @@ namespace DVLD_BusinessLayer
 
         }
 
-        static public clsDetainedLicense FindDetainedLicenseByReleaseApplicationID(int ReleaseApplicationID)
+        static public clsDetainedLicense FindDetainedLicenseByLicenseID(int LicenseID)
         {
 
-            int LicenseID = -1, ReleasedByUserID = -1, CreatedByUserID = -1, DetainID = -1;
+            int DetainID = -1, ReleasedByUserID = -1, CreatedByUserID = -1, ReleaseApplicationID = -1;
 
             DateTime DetainDate = DateTime.Now;
             DateTime ReleaseDate = DateTime.Now;
@@ -189,8 +191,8 @@ namespace DVLD_BusinessLayer
             bool IsReleased = false;
 
 
-            if (clsDetainedLicenseData.FindDetainedLicenseByReleaseApplicationID(ReleaseApplicationID,ref DetainID, ref LicenseID, ref DetainDate, ref FineFees, ref CreatedByUserID,
-               ref IsReleased, ref ReleaseDate, ref ReleasedByUserID))
+            if (clsDetainedLicenseData.FindDetainedLicenseByLicenseID(LicenseID, ref DetainID, ref DetainDate, ref FineFees, ref CreatedByUserID,
+               ref IsReleased, ref ReleaseDate, ref ReleasedByUserID, ref ReleaseApplicationID))
             {
                 return new clsDetainedLicense(DetainID, LicenseID, DetainDate, FineFees, CreatedByUserID,
                 IsReleased, ReleaseDate, ReleasedByUserID, ReleaseApplicationID);
@@ -220,18 +222,22 @@ namespace DVLD_BusinessLayer
 
         bool AddNewDetainedLicense()
         {
-
-
-            this._DetainID = clsDetainedLicenseData.AddNewDetainedLicense(this.LicenseID, this.DetainDate, this.FineFees, this.CreatedByUserID,
-                this.IsReleased, this.ReleaseDate, this.ReleasedByUserID, this.ReleaseApplicationID);  
+            this._DetainDate = DateTime.Now;
+            
+            
+            this._DetainID = clsDetainedLicenseData.AddNewDetainedLicense(this.LicenseID, this.DetainDate, this.FineFees, this.CreatedByUserID);  
 
             return this._DetainID != -1;
         }
 
         bool UpdateLicense()
         {
-            return clsDetainedLicenseData.UpdateDetainedLicense(this.DetainID, this.LicenseID, this.DetainDate, this.FineFees, this.CreatedByUserID,
-                this.IsReleased, this.ReleaseDate, this.ReleasedByUserID, this.ReleaseApplicationID);
+            return clsDetainedLicenseData.UpdateDetainedLicense(this.DetainID, this.LicenseID, this.DetainDate, this.FineFees, this.CreatedByUserID);
+        }
+
+        bool ReleaseDetainedLicense(int ReleaseApplicationID, int ReleasedByUserID)
+        {
+            return clsDetainedLicenseData.ReleaseDetainedLicense(this.DetainID, ReleasedByUserID, ReleaseApplicationID);
         }
 
         public static bool DeleteDetainedLicense(int DetainID)
@@ -269,12 +275,31 @@ namespace DVLD_BusinessLayer
 
         }
 
-        //public static DataTable GetAllLicenses()
+        public static DataTable GetAllLicenses()
+        {
+            return clsDetainedLicenseData.GetAllDetainedLicenses();
+        }
 
-        //{
+        public bool Release(int ReleasedByUserID)
+        {
+            if (this.DetainID == -1 || this.IsReleased == true) 
+                return false;
 
-        //}
+            clsApplication Application = new clsApplication();
+            Application.ApplicantPersonID = this.LicenseInfo.DriverInfo.PersonID;
+            Application.CreatedByUserID = ReleasedByUserID;
+            Application.enApplicationStatusID = clsApplication.enApplicationStatus.Completed;
+            Application.enApplicationTypeID = clsApplicationType.enApplicationTypes.ReleaseDetainedL;
+            Application.Fees = clsApplicationType.FindApplicationType(clsApplicationType.enApplicationTypes.ReleaseDetainedL).ApplicationFees;
 
+            if (!Application.Save())
+                return false;
+            this.ReleaseApplicationID = Application.ApplicationID;
+
+            return this.ReleaseDetainedLicense(this.ReleaseApplicationID, ReleasedByUserID);
+            
+
+        }
 
     }
 }

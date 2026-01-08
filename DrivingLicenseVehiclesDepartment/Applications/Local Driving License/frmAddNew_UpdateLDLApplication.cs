@@ -143,7 +143,7 @@ namespace DVLD_PresentationLayer.Applications
 
             if (e.TabPage == tabControl1.TabPages["tpApplicationInfo"] ) 
             {
-                if (ctrlPersonCardWithFilter1.PersonID != -1)
+                if (ctrlPersonCardWithFilter1.SelectedPerson != null)
                 {
                     tpApplicationInfo.Enabled = true;
                     ShowApplicantPersonBrief(ctrlPersonCardWithFilter1.SelectedPerson);

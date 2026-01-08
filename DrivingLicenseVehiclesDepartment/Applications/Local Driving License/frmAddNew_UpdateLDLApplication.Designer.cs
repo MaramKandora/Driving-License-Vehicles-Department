@@ -69,14 +69,14 @@
             // 
             // lblHeader
             // 
-            this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Microsoft YaHei UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeader.ForeColor = System.Drawing.Color.Purple;
-            this.lblHeader.Location = new System.Drawing.Point(164, 19);
+            this.lblHeader.Location = new System.Drawing.Point(-2, 19);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(158, 50);
+            this.lblHeader.Size = new System.Drawing.Size(1021, 50);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "Header";
+            this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabControl1
             // 
@@ -269,7 +269,7 @@
             this.lblDate.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.Location = new System.Drawing.Point(330, 104);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(122, 24);
+            this.lblDate.Size = new System.Drawing.Size(139, 24);
             this.lblDate.TabIndex = 11;
             this.lblDate.Text = "dd/MMM/yyyy";
             // 
@@ -408,7 +408,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

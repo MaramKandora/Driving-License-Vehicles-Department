@@ -74,6 +74,13 @@ namespace DVLD_PresentationLayer.Applications.Renew_License
                     return ;
                 }
 
+                if (ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.IsDetained)
+                {
+                    MessageBox.Show($"Selected License is Detained", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnRenew.Enabled = false;
+                    return;
+                }
+
 
                 btnRenew.Enabled = true;
                 

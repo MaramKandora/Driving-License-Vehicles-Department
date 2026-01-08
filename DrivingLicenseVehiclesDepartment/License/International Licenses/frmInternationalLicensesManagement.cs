@@ -167,7 +167,8 @@ namespace DVLD_PresentationLayer.License.International_Licenses
 
         private void showPersonsLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmShowPersonLicenseHistory LicensesHistory = new frmShowPersonLicenseHistory(); 
+            int PersonID = clsDriver.FindDriverUsingDriverID((int)dgvInternationalLicenses.CurrentRow.Cells["DriverID"].Value).PersonID;
+            frmShowPersonLicenseHistory LicensesHistory = new frmShowPersonLicenseHistory(PersonID); 
             LicensesHistory.ShowDialog(); 
 
         }

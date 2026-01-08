@@ -66,6 +66,13 @@ namespace DVLD_PresentationLayer.Applications.Replacement_for_lost_or_damaged
                     return;
                 }
 
+                if (ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.IsDetained)
+                {
+                    MessageBox.Show($"Selected License is Detained", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    btnReplace.Enabled = false;
+                    return;
+                }
+
 
                 btnReplace.Enabled = true;
 
@@ -150,6 +157,11 @@ namespace DVLD_PresentationLayer.Applications.Replacement_for_lost_or_damaged
         {
             frmShowDriverLicenseInfo frm = new frmShowDriverLicenseInfo(_NewLicenseID);
             frm.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     

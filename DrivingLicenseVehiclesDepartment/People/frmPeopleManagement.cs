@@ -41,29 +41,6 @@ namespace DVLD_PresentationLayer
             dgvPeople.DataSource = _dtPeopleList;
 
             lblRecordsNum.Text = dgvPeople.RowCount.ToString();
-        }
-
-        void FilterPeopleUsingString(string FilterByColumn, string Value)
-        {
-
-            if (!string.IsNullOrWhiteSpace(Value))
-                _dtPeopleList.DefaultView.RowFilter = $"{FilterByColumn} Like '{Value}%'";
-        
-
-        }
-
-        void FilterPeopleByID(string PersonID)
-        {
-            _dtPeopleList.DefaultView.RowFilter = $"PersonID = {PersonID}";
-          
-        }
-
-        
-        private void frmPeopleManagement_Load(object sender, EventArgs e)
-        {
-            cbPeopleFilter.SelectedIndex = 0;
-
-            RefreshPeopleList();
 
             if (dgvPeople.Rows.Count > 0)
             {
@@ -101,6 +78,31 @@ namespace DVLD_PresentationLayer
                 dgvPeople.Columns[10].Width = 170;
 
             }
+        }
+
+        void FilterPeopleUsingString(string FilterByColumn, string Value)
+        {
+
+            if (!string.IsNullOrWhiteSpace(Value))
+                _dtPeopleList.DefaultView.RowFilter = $"{FilterByColumn} Like '{Value}%'";
+        
+
+        }
+
+        void FilterPeopleByID(string PersonID)
+        {
+            _dtPeopleList.DefaultView.RowFilter = $"PersonID = {PersonID}";
+          
+        }
+
+        
+        private void frmPeopleManagement_Load(object sender, EventArgs e)
+        {
+            cbPeopleFilter.SelectedIndex = 0;
+
+            RefreshPeopleList();
+
+            
 
         }
 
@@ -229,6 +231,15 @@ namespace DVLD_PresentationLayer
             
         }
 
-     
+        private void toolStripMenuItem_SendEmail_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Feature has not been built yet", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void toolStripMenuItem_PhoneCall_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This Feature has not been built yet", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }

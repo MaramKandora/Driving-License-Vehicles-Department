@@ -69,7 +69,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(255, 187);
+            this.label1.Location = new System.Drawing.Point(270, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(914, 50);
             this.label1.TabIndex = 0;
@@ -90,7 +90,7 @@
             this.dgvLDLApplications.RowHeadersWidth = 51;
             this.dgvLDLApplications.RowTemplate.Height = 24;
             this.dgvLDLApplications.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLDLApplications.Size = new System.Drawing.Size(1401, 475);
+            this.dgvLDLApplications.Size = new System.Drawing.Size(1411, 550);
             this.dgvLDLApplications.TabIndex = 1;
             // 
             // cmsLDLApplications
@@ -277,7 +277,7 @@
             // 
             this.lblRecordsNum.AutoSize = true;
             this.lblRecordsNum.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsNum.Location = new System.Drawing.Point(164, 816);
+            this.lblRecordsNum.Location = new System.Drawing.Point(141, 888);
             this.lblRecordsNum.Name = "lblRecordsNum";
             this.lblRecordsNum.Size = new System.Drawing.Size(0, 24);
             this.lblRecordsNum.TabIndex = 15;
@@ -286,7 +286,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 816);
+            this.label3.Location = new System.Drawing.Point(28, 888);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 24);
             this.label3.TabIndex = 14;
@@ -295,7 +295,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DVLD_PresentationLayer.Properties.Resources.Local_32;
-            this.pictureBox2.Location = new System.Drawing.Point(722, 117);
+            this.pictureBox2.Location = new System.Drawing.Point(752, 117);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(77, 64);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -307,7 +307,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_PresentationLayer.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1251, 801);
+            this.btnClose.Location = new System.Drawing.Point(1276, 876);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(147, 49);
             this.btnClose.TabIndex = 18;
@@ -318,7 +318,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.Applications;
-            this.pictureBox1.Location = new System.Drawing.Point(622, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(652, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 169);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -329,7 +329,7 @@
             // 
             this.btnAddNewLDLApp.BackgroundImage = global::DVLD_PresentationLayer.Properties.Resources.New_Application_64;
             this.btnAddNewLDLApp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddNewLDLApp.Location = new System.Drawing.Point(1339, 247);
+            this.btnAddNewLDLApp.Location = new System.Drawing.Point(1349, 247);
             this.btnAddNewLDLApp.Name = "btnAddNewLDLApp";
             this.btnAddNewLDLApp.Size = new System.Drawing.Size(74, 67);
             this.btnAddNewLDLApp.TabIndex = 16;
@@ -340,7 +340,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1425, 859);
+            this.ClientSize = new System.Drawing.Size(1430, 932);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);

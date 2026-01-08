@@ -68,7 +68,7 @@
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 24;
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsers.Size = new System.Drawing.Size(1145, 374);
+            this.dgvUsers.Size = new System.Drawing.Size(1145, 477);
             this.dgvUsers.TabIndex = 0;
             this.dgvUsers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellDoubleClick);
             // 
@@ -87,7 +87,7 @@
             this.sendEmailToolStripMenuItem,
             this.phoneCallToolStripMenuItem});
             this.cmsUsersList.Name = "cmsUsersList";
-            this.cmsUsersList.Size = new System.Drawing.Size(203, 198);
+            this.cmsUsersList.Size = new System.Drawing.Size(215, 226);
             // 
             // showDetailsToolStripMenuItem
             // 
@@ -143,22 +143,24 @@
             // 
             this.sendEmailToolStripMenuItem.Image = global::DVLD_PresentationLayer.Properties.Resources.send_email_32;
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
+            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
             // 
             // phoneCallToolStripMenuItem
             // 
             this.phoneCallToolStripMenuItem.Image = global::DVLD_PresentationLayer.Properties.Resources.call_32;
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
             this.phoneCallToolStripMenuItem.Text = "Phone Call";
+            this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.phoneCallToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Purple;
-            this.label1.Location = new System.Drawing.Point(364, 184);
+            this.label1.Location = new System.Drawing.Point(393, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(413, 52);
             this.label1.TabIndex = 1;
@@ -205,7 +207,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 714);
+            this.label3.Location = new System.Drawing.Point(31, 815);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 24);
             this.label3.TabIndex = 7;
@@ -215,7 +217,7 @@
             // 
             this.lblRecordsNum.AutoSize = true;
             this.lblRecordsNum.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsNum.Location = new System.Drawing.Point(146, 714);
+            this.lblRecordsNum.Location = new System.Drawing.Point(146, 815);
             this.lblRecordsNum.Name = "lblRecordsNum";
             this.lblRecordsNum.Size = new System.Drawing.Size(0, 24);
             this.lblRecordsNum.TabIndex = 8;
@@ -251,7 +253,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD_PresentationLayer.Properties.Resources.Users_2_400;
-            this.pictureBox1.Location = new System.Drawing.Point(477, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(508, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(202, 169);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -263,7 +265,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::DVLD_PresentationLayer.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1013, 702);
+            this.btnClose.Location = new System.Drawing.Point(1023, 803);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(143, 49);
             this.btnClose.TabIndex = 10;
@@ -275,7 +277,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1190, 757);
+            this.ClientSize = new System.Drawing.Size(1190, 864);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cbIsActive);
             this.Controls.Add(this.lblRecordsNum);
@@ -287,9 +289,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvUsers);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmUsersManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmUsersManagement";
+            this.Text = "Users Management";
             this.Load += new System.EventHandler(this.frmUsersManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.cmsUsersList.ResumeLayout(false);

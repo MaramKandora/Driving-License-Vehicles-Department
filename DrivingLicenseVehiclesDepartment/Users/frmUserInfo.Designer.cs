@@ -60,7 +60,7 @@
             this.Controls.Add(this.ctrlUserInformationCard1);
             this.Name = "frmUserInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmUserInfo";
+            this.Text = "User Info";
             this.Load += new System.EventHandler(this.frmUserInfo_Load);
             this.ResumeLayout(false);
 
