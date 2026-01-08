@@ -71,18 +71,28 @@ Architecture: 3-tier Architecture (UI, Business Logic, Data Access)
 
 ## Screenshots
 
-### Login Screen
+## Login Screen
 ![Login Screen](screenshots/login.png)
 
-### Main Screen
+## Main Screen
 ![Main Screen](screenshots/dashboard.png)
 
-### People Management
+![Menu](screenshots/menu.png)
+
+![Account Settings](screenshots/accountsettings.png)
+
+## People Management
 ![people Management](screenshots/people.png)
 
-### Loacal License Applications
+![New Person](screenshots/newperson.png)
+
+## Loacal License Applications
 ![Local Diving License Applications Management](screenshots/LDLApps.png)
 
+![Menu](screenshots/LDLAppsMenu.png)
+
+## Drivers List
+![Local Diving License Applications Management](screenshots/drivers.png)
 
 ## What I Learned
 
