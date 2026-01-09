@@ -359,7 +359,7 @@ namespace DVLD_PresentationLayer
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (IsThereEmptyRequiredField() || errorProvider1.GetError(txtNationalNo) != string.Empty || errorProvider1.GetError(txtEmail) != string.Empty)
+            if (!this.ValidateChildren()||IsThereEmptyRequiredField() || errorProvider1.GetError(txtNationalNo) != string.Empty || errorProvider1.GetError(txtEmail) != string.Empty)
             {
                 MessageBox.Show("Some fields are not valid!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

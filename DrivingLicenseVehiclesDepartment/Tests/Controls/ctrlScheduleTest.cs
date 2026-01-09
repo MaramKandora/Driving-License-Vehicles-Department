@@ -239,6 +239,15 @@ namespace DVLD_PresentationLayer.Tests.Controls
                 lblFees.Text = clsTestType.FindTestType(TestTypeID).TestFees.ToString();
 
                 _TestAppointmentInfo = new clsTestAppointment();
+
+                if (!HandlePreviousTestConstraint())
+                    return;
+
+                if (!HandleActiveTestConstraint())
+                    return;
+
+                if (!HandleAppointmentIsLockedConstraint())
+                    return;
             }
             else
             {
@@ -247,21 +256,14 @@ namespace DVLD_PresentationLayer.Tests.Controls
             }
 
 
-            if (!HandlePreviousTestConstraint())
-                return;
-
-            if (!HandleActiveTestConstraint())
-                return;
-
-            if (!HandleAppointmentIsLockedConstraint())
-                return;
+          
         }
 
        
 
         private void ctrlScheduleTest_Load(object sender, EventArgs e)
         {
-
+            lblUserMessage.Text = "";
         }
         public bool HandleRetakeTestApplication()
         {

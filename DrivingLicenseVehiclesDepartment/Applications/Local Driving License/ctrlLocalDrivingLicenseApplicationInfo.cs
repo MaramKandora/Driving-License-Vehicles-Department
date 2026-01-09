@@ -43,7 +43,13 @@ namespace DVLD_PresentationLayer.Applications.Controls
                 if (PassedTests != 3)
                     llblShowLicenseInfo.Enabled = false;
                 else
-                    llblShowLicenseInfo.Enabled = true;
+                {
+                    if (_LDLAppInfo.IsLicenseIssued())
+                        llblShowLicenseInfo.Enabled = true;
+                    else
+                        llblShowLicenseInfo.Enabled = false;
+                }
+                    
             }
             else
             {
