@@ -81,7 +81,7 @@ namespace DVLD_PresentationLayer
 
         void OnDeleteCurrentUser_Handler()
         {
-            clsGlobal.ClearRememberMeFile();
+            clsGlobal.ClearRememberMeCredentials();
             _Logout();
         }
         private void frmMain_Load(object sender, EventArgs e)

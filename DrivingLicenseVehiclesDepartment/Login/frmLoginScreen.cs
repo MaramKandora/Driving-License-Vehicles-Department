@@ -61,7 +61,7 @@ namespace DVLD_PresentationLayer.Login
                 }
                 else
                 {
-                    clsGlobal.ClearRememberMeFile();
+                    clsGlobal.ClearRememberMeCredentials();
                     txtUserName.Text = "";
                     txtPassword.Text = "";
                 }

@@ -3,11 +3,76 @@
   "WorkspaceRootPath": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\global classes\\clsglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:global classes\\clsglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\login\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:login\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\drivinglicensevehiclesdepartment\\applications\\controls\\ctrlapplicationbasicinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\controls\\ctrlapplicationbasicinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\controls\\ctrlapplicationbasicinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\controls\\ctrlapplicationbasicinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\application types\\frmeditapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\application types\\frmeditapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\application types\\frmeditapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\application types\\frmeditapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\application types\\frmapplicationtypesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\application types\\frmapplicationtypesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\application types\\frmapplicationtypesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\application types\\frmapplicationtypesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\drivers\\controls\\ctrldriverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:drivers\\controls\\ctrldriverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\drivers\\controls\\ctrldriverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:drivers\\controls\\ctrldriverlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\drivers\\frmdriverslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:drivers\\frmdriverslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clscountry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\login\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:login\\frmloginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2FFC5C8-CF2C-439B-8A9B-50CE8894334D}|..\\DVLD_DataAccessLayer\\DVLD_DataAccessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_dataaccesslayer\\clsapplicationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5954EBC8-E994-4D08-92AA-487E3E1F7C6A}|..\\DVLD_BusinessLayer\\DVLD_BusinessLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\dvld_businesslayer\\clsapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\local driving license\\ctrllocaldrivinglicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\local driving license\\ctrllocaldrivinglicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\drivinglicensevehiclesdepartment\\tests\\test appointments\\frmscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\tests\\test appointments\\frmscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:tests\\test appointments\\frmscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,11 +80,11 @@
       "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:tests\\controls\\ctrlscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\drivinglicensevehiclesdepartment\\tests\\controls\\ctrlscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\tests\\controls\\ctrlscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:tests\\controls\\ctrlscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|e:\\githupreprositries\\driving-license-vehicle-department\\drivinglicensevehiclesdepartment\\license\\local licenses\\frmissuedrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\license\\local licenses\\frmissuedrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:license\\local licenses\\frmissuedrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -51,28 +116,12 @@
       "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:people\\frmaddnew_updateperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\application types\\frmapplicationtypesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\application types\\frmapplicationtypesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\application types\\frmapplicationtypesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\application types\\frmapplicationtypesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\local driving license\\frmshowlocaldrivinglicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\local driving license\\frmshowlocaldrivinglicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\local driving license\\frmlocaldrivinglicenseapplicationsmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:applications\\local driving license\\frmlocaldrivinglicenseapplicationsmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4B5E40B6-1B4F-4E93-AB53-685973A82651}|DVLD_PresentationLayer.csproj|E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\applications\\local driving license\\frmaddnew_updateldlapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -182,11 +231,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 44,
               "Title": "frmDetainLicense.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Detain And Release License\\frmDetainLicense.cs",
               "RelativeDocumentMoniker": "Applications\\Detain And Release License\\frmDetainLicense.cs",
@@ -199,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 41,
               "Title": "frmReleaseLicenseApplication.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Detain And Release License\\frmReleaseLicenseApplication.cs",
               "RelativeDocumentMoniker": "Applications\\Detain And Release License\\frmReleaseLicenseApplication.cs",
@@ -216,32 +265,186 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ctrlScheduleTest.cs [Design]",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Controls\\ctrlScheduleTest.cs",
-              "RelativeDocumentMoniker": "Tests\\Controls\\ctrlScheduleTest.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Controls\\ctrlScheduleTest.cs [Design]",
-              "RelativeToolTip": "Tests\\Controls\\ctrlScheduleTest.cs [Design]",
+              "DocumentIndex": 9,
+              "Title": "ctrlDriverLicenses.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Drivers\\Controls\\ctrlDriverLicenses.cs",
+              "RelativeDocumentMoniker": "Drivers\\Controls\\ctrlDriverLicenses.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Drivers\\Controls\\ctrlDriverLicenses.cs",
+              "RelativeToolTip": "Drivers\\Controls\\ctrlDriverLicenses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T02:41:37.619Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-29T12:07:58.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmIssueDrivingLicense.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\Local Licenses\\frmIssueDrivingLicense.cs",
-              "RelativeDocumentMoniker": "License\\Local Licenses\\frmIssueDrivingLicense.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\Local Licenses\\frmIssueDrivingLicense.cs",
-              "RelativeToolTip": "License\\Local Licenses\\frmIssueDrivingLicense.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwDEAAABnAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "frmLoginScreen.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Login\\frmLoginScreen.cs",
+              "RelativeDocumentMoniker": "Login\\frmLoginScreen.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Login\\frmLoginScreen.cs",
+              "RelativeToolTip": "Login\\frmLoginScreen.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwDsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T02:32:06.071Z",
+              "WhenOpened": "2026-01-28T19:07:48.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsGlobal.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Global Classes\\clsGlobal.cs",
+              "RelativeDocumentMoniker": "Global Classes\\clsGlobal.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Global Classes\\clsGlobal.cs",
+              "RelativeToolTip": "Global Classes\\clsGlobal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T19:08:24.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs",
+              "RelativeToolTip": "frmMain.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAuwFEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T16:23:21.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmEditApplicationType.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmEditApplicationType.cs",
+              "RelativeDocumentMoniker": "Applications\\Application Types\\frmEditApplicationType.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmEditApplicationType.cs [Design]",
+              "RelativeToolTip": "Applications\\Application Types\\frmEditApplicationType.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:10:00.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmEditApplicationType.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmEditApplicationType.cs",
+              "RelativeDocumentMoniker": "Applications\\Application Types\\frmEditApplicationType.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmEditApplicationType.cs",
+              "RelativeToolTip": "Applications\\Application Types\\frmEditApplicationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:10:01.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ctrlApplicationBasicInfo.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Controls\\ctrlApplicationBasicInfo.cs",
+              "RelativeDocumentMoniker": "Applications\\Controls\\ctrlApplicationBasicInfo.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Controls\\ctrlApplicationBasicInfo.cs",
+              "RelativeToolTip": "Applications\\Controls\\ctrlApplicationBasicInfo.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:10:08.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ctrlApplicationBasicInfo.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Controls\\ctrlApplicationBasicInfo.cs",
+              "RelativeDocumentMoniker": "Applications\\Controls\\ctrlApplicationBasicInfo.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Controls\\ctrlApplicationBasicInfo.cs [Design]",
+              "RelativeToolTip": "Applications\\Controls\\ctrlApplicationBasicInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:10:06.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmApplicationTypesManagement.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmApplicationTypesManagement.cs",
+              "RelativeDocumentMoniker": "Applications\\Application Types\\frmApplicationTypesManagement.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmApplicationTypesManagement.cs [Design]",
+              "RelativeToolTip": "Applications\\Application Types\\frmApplicationTypesManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T17:41:47.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmApplicationTypesManagement.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmApplicationTypesManagement.cs",
+              "RelativeDocumentMoniker": "Applications\\Application Types\\frmApplicationTypesManagement.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmApplicationTypesManagement.cs",
+              "RelativeToolTip": "Applications\\Application Types\\frmApplicationTypesManagement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T23:52:48.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ctrlDriverLicenses.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Drivers\\Controls\\ctrlDriverLicenses.cs",
+              "RelativeDocumentMoniker": "Drivers\\Controls\\ctrlDriverLicenses.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Drivers\\Controls\\ctrlDriverLicenses.cs [Design]",
+              "RelativeToolTip": "Drivers\\Controls\\ctrlDriverLicenses.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:07:56.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmDriversList.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Drivers\\frmDriversList.cs",
+              "RelativeDocumentMoniker": "Drivers\\frmDriversList.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Drivers\\frmDriversList.cs [Design]",
+              "RelativeToolTip": "Drivers\\frmDriversList.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T12:07:52.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "clsCountry.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsCountry.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsCountry.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsCountry.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsCountry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-29T11:57:34.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmLoginScreen.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Login\\frmLoginScreen.cs",
+              "RelativeDocumentMoniker": "Login\\frmLoginScreen.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Login\\frmLoginScreen.cs [Design]",
+              "RelativeToolTip": "Login\\frmLoginScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-28T19:07:46.36Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "clsApplicationData.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsApplicationData.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsApplicationData.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsApplicationData.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccessLayer\\clsApplicationData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T12:06:09.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ctrlScheduleTest.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Controls\\ctrlScheduleTest.cs",
               "RelativeDocumentMoniker": "Tests\\Controls\\ctrlScheduleTest.cs",
@@ -249,12 +452,11 @@
               "RelativeToolTip": "Tests\\Controls\\ctrlScheduleTest.cs",
               "ViewState": "AgIAAAABAAAAAAAAAAAAAAkBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T00:38:28.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:38:28.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 18,
               "Title": "frmScheduleTest.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Test Appointments\\frmScheduleTest.cs",
               "RelativeDocumentMoniker": "Tests\\Test Appointments\\frmScheduleTest.cs",
@@ -262,12 +464,35 @@
               "RelativeToolTip": "Tests\\Test Appointments\\frmScheduleTest.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwB4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T00:37:03.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-09T00:37:03.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs [Design]",
+              "RelativeToolTip": "frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-04T17:31:54.597Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "clsApplication.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsApplication.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsApplication.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsApplication.cs",
+              "RelativeToolTip": "..\\DVLD_BusinessLayer\\clsApplication.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-19T12:06:01.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "frmScheduleTest.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Test Appointments\\frmScheduleTest.cs",
               "RelativeDocumentMoniker": "Tests\\Test Appointments\\frmScheduleTest.cs",
@@ -278,32 +503,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmTestAppointmentsManagement.cs [Design]",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Test Appointments\\frmTestAppointmentsManagement.cs",
-              "RelativeDocumentMoniker": "Tests\\Test Appointments\\frmTestAppointmentsManagement.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Test Appointments\\frmTestAppointmentsManagement.cs [Design]",
-              "RelativeToolTip": "Tests\\Test Appointments\\frmTestAppointmentsManagement.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T00:36:54.181Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 17,
               "Title": "ctrlLocalDrivingLicenseApplicationInfo.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\ctrlLocalDrivingLicenseApplicationInfo.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\ctrlLocalDrivingLicenseApplicationInfo.cs",
               "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\ctrlLocalDrivingLicenseApplicationInfo.cs",
               "RelativeToolTip": "Applications\\Local Driving License\\ctrlLocalDrivingLicenseApplicationInfo.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAnwEsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAArwEsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T00:33:08.992Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 21,
+              "Title": "frmIssueDrivingLicense.cs",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\Local Licenses\\frmIssueDrivingLicense.cs",
+              "RelativeDocumentMoniker": "License\\Local Licenses\\frmIssueDrivingLicense.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\Local Licenses\\frmIssueDrivingLicense.cs",
+              "RelativeToolTip": "License\\Local Licenses\\frmIssueDrivingLicense.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDEAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T02:32:06.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ctrlScheduleTest.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Controls\\ctrlScheduleTest.cs",
+              "RelativeDocumentMoniker": "Tests\\Controls\\ctrlScheduleTest.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Controls\\ctrlScheduleTest.cs [Design]",
+              "RelativeToolTip": "Tests\\Controls\\ctrlScheduleTest.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T02:41:37.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "frmTestAppointmentsManagement.cs [Design]",
+              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Test Appointments\\frmTestAppointmentsManagement.cs",
+              "RelativeDocumentMoniker": "Tests\\Test Appointments\\frmTestAppointmentsManagement.cs",
+              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Tests\\Test Appointments\\frmTestAppointmentsManagement.cs [Design]",
+              "RelativeToolTip": "Tests\\Test Appointments\\frmTestAppointmentsManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T00:36:54.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "ctrlLocalDrivingLicenseApplicationInfo.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\ctrlLocalDrivingLicenseApplicationInfo.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\ctrlLocalDrivingLicenseApplicationInfo.cs",
@@ -315,19 +562,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 22,
               "Title": "frmIssueDrivingLicense.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\Local Licenses\\frmIssueDrivingLicense.cs",
               "RelativeDocumentMoniker": "License\\Local Licenses\\frmIssueDrivingLicense.cs",
               "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\Local Licenses\\frmIssueDrivingLicense.cs [Design]",
               "RelativeToolTip": "License\\Local Licenses\\frmIssueDrivingLicense.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T00:32:28.336Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-09T00:32:28.336Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 27,
               "Title": "frmAddNew_UpdatePerson.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\People\\frmAddNew_UpdatePerson.cs",
               "RelativeDocumentMoniker": "People\\frmAddNew_UpdatePerson.cs",
@@ -339,30 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "frmApplicationTypesManagement.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmApplicationTypesManagement.cs",
-              "RelativeDocumentMoniker": "Applications\\Application Types\\frmApplicationTypesManagement.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmApplicationTypesManagement.cs",
-              "RelativeToolTip": "Applications\\Application Types\\frmApplicationTypesManagement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-08T23:52:48.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "frmApplicationTypesManagement.cs [Design]",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmApplicationTypesManagement.cs",
-              "RelativeDocumentMoniker": "Applications\\Application Types\\frmApplicationTypesManagement.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Application Types\\frmApplicationTypesManagement.cs [Design]",
-              "RelativeToolTip": "Applications\\Application Types\\frmApplicationTypesManagement.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-08T17:41:47.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 26,
               "Title": "frmShowDriverLicenseInfo.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\Local Licenses\\frmShowDriverLicenseInfo.cs",
               "RelativeDocumentMoniker": "License\\Local Licenses\\frmShowDriverLicenseInfo.cs",
@@ -373,7 +596,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 29,
               "Title": "frmShowLocalDrivingLicenseApplicationInfo.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\frmShowLocalDrivingLicenseApplicationInfo.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmShowLocalDrivingLicenseApplicationInfo.cs",
@@ -384,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 30,
               "Title": "frmLocalDrivingLicenseApplicationsManagement.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
@@ -395,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 31,
               "Title": "frmAddNew_UpdateLDLApplication.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\frmAddNew_UpdateLDLApplication.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmAddNew_UpdateLDLApplication.cs",
@@ -407,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 32,
               "Title": "frmAddNew_UpdateLDLApplication.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\frmAddNew_UpdateLDLApplication.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmAddNew_UpdateLDLApplication.cs",
@@ -418,7 +641,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 36,
               "Title": "frmAddNew_UpdateUser.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmAddNew_UpdateUser.cs",
               "RelativeDocumentMoniker": "Users\\frmAddNew_UpdateUser.cs",
@@ -430,7 +653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 35,
               "Title": "frmUserInfo.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmUserInfo.cs",
               "RelativeDocumentMoniker": "Users\\frmUserInfo.cs",
@@ -441,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 37,
               "Title": "frmAddNew_UpdateUser.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmAddNew_UpdateUser.cs",
               "RelativeDocumentMoniker": "Users\\frmAddNew_UpdateUser.cs",
@@ -452,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 28,
               "Title": "frmAddNew_UpdatePerson.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\People\\frmAddNew_UpdatePerson.cs",
               "RelativeDocumentMoniker": "People\\frmAddNew_UpdatePerson.cs",
@@ -463,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 43,
               "Title": "clsDetainedLicense.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsDetainedLicense.cs",
               "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsDetainedLicense.cs",
@@ -475,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 42,
               "Title": "frmDetainedLicensesList.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Detain And Release License\\frmDetainedLicensesList.cs",
               "RelativeDocumentMoniker": "Applications\\Detain And Release License\\frmDetainedLicensesList.cs",
@@ -487,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 40,
               "Title": "frmReleaseLicenseApplication.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Detain And Release License\\frmReleaseLicenseApplication.cs",
               "RelativeDocumentMoniker": "Applications\\Detain And Release License\\frmReleaseLicenseApplication.cs",
@@ -498,7 +721,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 48,
               "Title": "frmInternationalLicensesManagement.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\International Licenses\\frmInternationalLicensesManagement.cs",
               "RelativeDocumentMoniker": "License\\International Licenses\\frmInternationalLicensesManagement.cs",
@@ -510,7 +733,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 47,
               "Title": "frmInternationalLicensesManagement.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\International Licenses\\frmInternationalLicensesManagement.cs",
               "RelativeDocumentMoniker": "License\\International Licenses\\frmInternationalLicensesManagement.cs",
@@ -521,18 +744,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs",
-              "RelativeDocumentMoniker": "frmMain.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs [Design]",
-              "RelativeToolTip": "frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T17:31:54.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 33,
               "Title": "frmUsersManagement.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmUsersManagement.cs",
               "RelativeDocumentMoniker": "Users\\frmUsersManagement.cs",
@@ -544,7 +756,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 34,
               "Title": "frmUsersManagement.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Users\\frmUsersManagement.cs",
               "RelativeDocumentMoniker": "Users\\frmUsersManagement.cs",
@@ -555,7 +767,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 49,
               "Title": "frmReplacementForLostOrDamaged.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Replacement for lost or damaged\\frmReplacementForLostOrDamaged.cs",
               "RelativeDocumentMoniker": "Applications\\Replacement for lost or damaged\\frmReplacementForLostOrDamaged.cs",
@@ -567,7 +779,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 54,
               "Title": "frmRenewLicense.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Renew License\\frmRenewLicense.cs",
               "RelativeDocumentMoniker": "Applications\\Renew License\\frmRenewLicense.cs",
@@ -579,7 +791,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 53,
               "Title": "frmAddNewInternationalLicense.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\License\\International Licenses\\frmAddNewInternationalLicense.cs",
               "RelativeDocumentMoniker": "License\\International Licenses\\frmAddNewInternationalLicense.cs",
@@ -591,7 +803,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 38,
               "Title": "frmPeopleManagement.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\People\\frmPeopleManagement.cs",
               "RelativeDocumentMoniker": "People\\frmPeopleManagement.cs",
@@ -603,7 +815,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 39,
               "Title": "frmPeopleManagement.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\People\\frmPeopleManagement.cs",
               "RelativeDocumentMoniker": "People\\frmPeopleManagement.cs",
@@ -614,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 46,
               "Title": "frmDetainedLicensesList.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Detain And Release License\\frmDetainedLicensesList.cs",
               "RelativeDocumentMoniker": "Applications\\Detain And Release License\\frmDetainedLicensesList.cs",
@@ -625,19 +837,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "frmMain.cs",
-              "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs",
-              "RelativeDocumentMoniker": "frmMain.cs",
-              "ToolTip": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\frmMain.cs",
-              "RelativeToolTip": "frmMain.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAnwLkAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T16:23:21.381Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 51,
               "Title": "clsDetainedLicenseData.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsDetainedLicenseData.cs",
               "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsDetainedLicenseData.cs",
@@ -649,7 +849,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 50,
               "Title": "frmReplacementForLostOrDamaged.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Replacement for lost or damaged\\frmReplacementForLostOrDamaged.cs",
               "RelativeDocumentMoniker": "Applications\\Replacement for lost or damaged\\frmReplacementForLostOrDamaged.cs",
@@ -660,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 45,
               "Title": "frmDetainLicense.cs [Design]",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Detain And Release License\\frmDetainLicense.cs",
               "RelativeDocumentMoniker": "Applications\\Detain And Release License\\frmDetainLicense.cs",
@@ -671,7 +871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 56,
               "Title": "frmLocalDrivingLicenseApplicationsManagement.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DrivingLicenseVehiclesDepartment\\Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmLocalDrivingLicenseApplicationsManagement.cs",
@@ -683,7 +883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 55,
               "Title": "clsLicenseData.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_DataAccessLayer\\clsLicenseData.cs",
               "RelativeDocumentMoniker": "..\\DVLD_DataAccessLayer\\clsLicenseData.cs",
@@ -695,7 +895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 52,
               "Title": "clsLicense.cs",
               "DocumentMoniker": "E:\\GitHupReprositries\\Driving-License-Vehicle-Department\\DVLD_BusinessLayer\\clsLicense.cs",
               "RelativeDocumentMoniker": "..\\DVLD_BusinessLayer\\clsLicense.cs",

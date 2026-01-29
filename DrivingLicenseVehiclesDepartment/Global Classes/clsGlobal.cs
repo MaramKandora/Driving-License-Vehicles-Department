@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
+using Microsoft.Win32;
 
 namespace DVLD_PresentationLayer.Global_Classes
 {
@@ -13,55 +15,82 @@ namespace DVLD_PresentationLayer.Global_Classes
     {
         public static clsUser CurrentUser;
 
-        static string DirectoryPath = Directory.GetCurrentDirectory();
-        public static string CredentialsFilePath = DirectoryPath + "\\data.txt";
-
+        public static string KeyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
 
         public static void RememberUserCredentials(clsUser User)
         {
             if (User == null)
                 return;
 
-            string UserText = User.UserName + "#//#" + clsEncryptDecrypt.EncryptText(User.Password);
-
             try
             {
-                
-                File.WriteAllText(CredentialsFilePath, UserText);
-
-
+                Registry.SetValue(KeyPath, "UserName", User.UserName, RegistryValueKind.String);
+                Registry.SetValue(KeyPath, "Password", clsEncryptDecrypt.EncryptText(User.Password));
             }
-            catch (IOException EX)
+            catch (Exception ex)
             {
-                MessageBox.Show(EX.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
             }
 
+  
 
         }
 
-        public static void ClearRememberMeFile()
+        public static void ClearRememberMeCredentials()
         {
-            File.Delete(CredentialsFilePath);   
+           
+            try
+            {
+                using (RegistryKey BaseKey = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64))
+                {
+
+                    string SubkeyPath = @"SOFTWARE\DVLD";
+                    using (RegistryKey SubKey = BaseKey.OpenSubKey(SubkeyPath,true))
+                    {
+                        if (SubKey != null)
+                        {
+                            SubKey.DeleteValue("UserName");
+                            SubKey.DeleteValue("Password");
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Registry Key {KeyPath} Is not found");
+                        }
+                    }
+                }
+
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show($"\"UnauthorizedAccessException: Run the program with administrative privileges.\"");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex}");
+
+            }
         }
+
         public static bool LoadStoredCredentials(ref string UserName,ref string Password)
         {
             bool isFound = false;
             try
             {
-                if (File.Exists(CredentialsFilePath))
+                object Value = Registry.GetValue(KeyPath, "UserName", "");
+                if (Value != null)
                 {
-                    string UserText = File.ReadAllText(CredentialsFilePath);
-                    if (UserText != "")
-                    {
-                        string[] UserCredentials = UserText.Split(new string[] { "#//#" }, StringSplitOptions.None);
-
-                        UserName = UserCredentials[0];
-                        Password = clsEncryptDecrypt.DecryptText(UserCredentials[1]);
-
-                        isFound = true;
-                    }
-                   
+                    UserName = Value.ToString();
                 }
+
+                Value = Registry.GetValue(KeyPath, "Password", "");
+                if (Value != null)
+                {
+                    Password = clsEncryptDecrypt.DecryptText(Value.ToString()) ;    
+                }
+
+                isFound = true;
+               
 
             }
             catch (IOException ex)
