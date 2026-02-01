@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Shared;
 
 namespace DVLD_DataAccessLayer
 {
@@ -46,8 +48,10 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
+
                 IsFound = false;
             }
             finally
@@ -94,8 +98,9 @@ namespace DVLD_DataAccessLayer
                 }
             }
 
-            catch 
+            catch (Exception ex)
             {
+               clsLogger.LogError(ex);
 
             }
 
@@ -140,8 +145,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -175,8 +181,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -213,8 +220,9 @@ namespace DVLD_DataAccessLayer
 
                 Reader.Close();
             }
-            catch
+            catch (Exception ex)
             {
+               clsLogger.LogError(ex);
 
             }
             finally

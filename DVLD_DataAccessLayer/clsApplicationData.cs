@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Shared;
 
 namespace DVLD_DataAccessLayer
 {
@@ -51,8 +53,10 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
+
                 IsFound = false;
             }
             finally
@@ -102,8 +106,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -152,8 +157,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -188,8 +194,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch( Exception ex ) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -223,8 +230,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch( Exception ex ) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -262,9 +270,9 @@ namespace DVLD_DataAccessLayer
                 rowsAffected = command.ExecuteNonQuery();
 
             }
-            catch
+            catch ( Exception ex ) 
             {
-                //Console.WriteLine("Error: " + ex.Message);
+               clsLogger.LogError(ex);
                 return false;
             }
 
@@ -277,95 +285,7 @@ namespace DVLD_DataAccessLayer
         }
 
 
-        // public static bool DoesPersonHaveActiveApplication(int PersonID, int ApplicationTypeID)
-        // {
-
-        //     //incase the ActiveApplication ID !=-1 return true.
-        //     return (GetActiveApplicationID(PersonID, ApplicationTypeID) != -1);
-        // }
-
-        // public static int GetActiveApplicationID(int PersonID, int ApplicationTypeID)
-        // {
-        //     int ActiveApplicationID = -1;
-
-        //     SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-        //     string query = "SELECT ActiveApplicationID=ApplicationID FROM Applications WHERE ApplicantPersonID = @ApplicantPersonID and ApplicationTypeID=@ApplicationTypeID and ApplicationStatus=1";
-
-        //     SqlCommand command = new SqlCommand(query, connection);
-
-        //     command.Parameters.AddWithValue("@ApplicantPersonID", PersonID);
-        //     command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
-
-        //     try
-        //     {
-        //         connection.Open();
-        //         object result = command.ExecuteScalar();
-
-
-        //         if (result != null && int.TryParse(result.ToString(), out int AppID))
-        //         {
-        //             ActiveApplicationID = AppID;
-        //         }
-        //     }
-        //     catch (Exception ex)
-        //     {
-        //         //Console.WriteLine("Error: " + ex.Message);
-        //         return ActiveApplicationID;
-        //     }
-        //     finally
-        //     {
-        //         connection.Close();
-        //     }
-
-        //     return ActiveApplicationID;
-        // }
-
-        // public static int GetActiveApplicationIDForLicenseClass(int PersonID, int ApplicationTypeID, int LicenseClassID)
-        // {
-        //     int ActiveApplicationID = -1;
-
-        //     SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-        //     string query = @"SELECT ActiveApplicationID=Applications.ApplicationID  
-        //                     From
-        //                     Applications INNER JOIN
-        //                     LocalDrivingLicenseApplications ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
-        //                     WHERE ApplicantPersonID = @ApplicantPersonID 
-        //                     and ApplicationTypeID=@ApplicationTypeID 
-        //and LocalDrivingLicenseApplications.LicenseClassID = @LicenseClassID
-        //                     and ApplicationStatus=1";
-
-        //     SqlCommand command = new SqlCommand(query, connection);
-
-        //     command.Parameters.AddWithValue("@ApplicantPersonID", PersonID);
-        //     command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
-        //     command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
-        //     try
-        //     {
-        //         connection.Open();
-        //         object result = command.ExecuteScalar();
-
-
-        //         if (result != null && int.TryParse(result.ToString(), out int AppID))
-        //         {
-        //             ActiveApplicationID = AppID;
-        //         }
-        //     }
-        //     catch (Exception ex)
-        //     {
-        //         //Console.WriteLine("Error: " + ex.Message);
-        //         return ActiveApplicationID;
-        //     }
-        //     finally
-        //     {
-        //         connection.Close();
-        //     }
-
-        //     return ActiveApplicationID;
-        // }
-
-
+       
         public static bool IsApplicationExist(int ApplicationID)
         {
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
@@ -385,9 +305,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
-
+                
             }
             finally
             {
@@ -400,44 +320,7 @@ namespace DVLD_DataAccessLayer
 
      
 
-        //public static DataTable GetAllApplications()
-        //{
-        //    DataTable dt = new DataTable();
-
-        //    SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-        //    string Query = @"SELECT ";
-
-        //    SqlCommand Command = new SqlCommand(Query, Connection);
-
-
-
-        //    try
-        //    {
-        //        Connection.Open();
-        //        SqlDataReader Reader = Command.ExecuteReader();
-
-        //        if (Reader.HasRows)
-        //        {
-        //            dt.Load(Reader);
-
-        //        }
-
-        //        Reader.Close();
-        //    }
-        //    catch
-        //    {
-
-        //    }
-        //    finally
-        //    {
-        //        Connection.Close();
-
-        //    }
-
-        //    return dt;
-
-        //}
+       
 
     }
 }

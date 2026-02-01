@@ -7,3 +7,5 @@ E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\obj\
 E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\obj\Debug\DVLD_Bus.693E2707.Up2Date
 E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.dll
 E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\obj\Debug\DVLD_BusinessLayer.pdb
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\bin\Debug\Shared.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_BusinessLayer\bin\Debug\Shared.pdb

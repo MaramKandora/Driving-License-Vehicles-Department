@@ -457,6 +457,10 @@
       <Project>{5954ebc8-e994-4d08-92aa-487e3e1f7c6a}</Project>
       <Name>DVLD_BusinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{249b09a4-6ad3-4137-b19f-e4a82a3f8379}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Release Detained License 64.png" />

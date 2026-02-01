@@ -1,0 +1,6 @@
+E:\GitHupReprositries\Driving-License-Vehicle-Department\Shared\bin\Debug\Shared.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\Shared\bin\Debug\Shared.pdb
+E:\GitHupReprositries\Driving-License-Vehicle-Department\Shared\obj\Debug\Shared.csproj.AssemblyReference.cache
+E:\GitHupReprositries\Driving-License-Vehicle-Department\Shared\obj\Debug\Shared.csproj.CoreCompileInputs.cache
+E:\GitHupReprositries\Driving-License-Vehicle-Department\Shared\obj\Debug\Shared.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\Shared\obj\Debug\Shared.pdb

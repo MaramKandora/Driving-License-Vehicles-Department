@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Shared;
 
 namespace DVLD_DataAccessLayer
 {
@@ -46,8 +48,10 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
+
                 IsFound = false;
             }
             finally
@@ -97,8 +101,10 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
+
                 IsFound = false;
             }
             finally
@@ -137,8 +143,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch( Exception ex ) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -169,8 +176,9 @@ namespace DVLD_DataAccessLayer
                 Connection.Open();
                 Result = Command.ExecuteScalar();
             }
-            catch
+            catch( Exception ex ) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -224,8 +232,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -274,8 +283,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -310,8 +320,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex)
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -343,8 +354,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -359,49 +371,5 @@ namespace DVLD_DataAccessLayer
 
        
        
-
-        //    public static DataTable GetAllTests()
-        //    {
-        //        DataTable dt = new DataTable();
-
-        //        SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-        //        string Query = @"SELECT ";
-
-        //        SqlCommand Command = new SqlCommand(Query, Connection);
-
-
-
-        //        try
-        //        {
-        //            Connection.Open();
-        //            SqlDataReader Reader = Command.ExecuteReader();
-
-        //            if (Reader.HasRows)
-        //            {
-        //                dt.Load(Reader);
-
-        //            }
-
-        //            Reader.Close();
-        //        }
-        //        catch
-        //        {
-
-        //        }
-        //        finally
-        //        {
-        //            Connection.Close();
-
-        //        }
-
-        //        return dt;
-
-        //    }
-
-
-
-
-        //}
     }
 }

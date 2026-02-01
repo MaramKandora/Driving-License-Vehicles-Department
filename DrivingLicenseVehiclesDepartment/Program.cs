@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
 using DVLD_PresentationLayer.Login;
+using Shared;
 
 namespace DVLD_PresentationLayer
 {
@@ -16,6 +17,7 @@ namespace DVLD_PresentationLayer
         [STAThread]
         static void Main()
         {
+            clsLogger.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLoginScreen());

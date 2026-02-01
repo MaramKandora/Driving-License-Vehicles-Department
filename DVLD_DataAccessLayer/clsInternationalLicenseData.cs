@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Shared;
 
 namespace DVLD_DataAccessLayer
 {
@@ -50,8 +52,10 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
+
                 IsFound = false;
             }
             finally
@@ -103,8 +107,10 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
+
                 IsFound = false;
             }
             finally
@@ -160,8 +166,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -212,8 +219,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -248,7 +256,7 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch( Exception ex ) 
             {
 
             }
@@ -281,8 +289,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch ( Exception ex ) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -294,38 +303,7 @@ namespace DVLD_DataAccessLayer
             return Result != null;
         }
 
-        //public static int GetInternationalLicenseIDUsingApplicationID(int ApplicationID)
-        //{
-        //    SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
-
-
-        //    string Query = $"Select InternationalLicenseID from InternationalLicenses Where ApplicationID = @ApplicationID";
-
-        //    SqlCommand Command = new SqlCommand(Query, Connection);
-
-        //    Command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-
-        //    object Result = null;
-
-        //    try
-        //    {
-        //        Connection.Open();
-        //        Result = Command.ExecuteScalar();
-
-
-        //    }
-        //    catch
-        //    {
-
-        //    }
-        //    finally
-        //    {
-        //        Connection.Close();
-
-        //    }
-
-        //    return Result != null ? (int)Result : -1;
-        //}
+     
 
         public static DataTable GetAllInternationalLicensesForDriver(int DriverID)
         {
@@ -394,8 +372,9 @@ namespace DVLD_DataAccessLayer
 
                 Reader.Close();
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -434,8 +413,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally

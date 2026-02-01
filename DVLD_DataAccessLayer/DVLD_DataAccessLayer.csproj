@@ -58,5 +58,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{249b09a4-6ad3-4137-b19f-e4a82a3f8379}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,3 +4,6 @@ E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\ob
 E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.CoreCompileInputs.cache
 E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.dll
 E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.pdb
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\bin\Debug\Shared.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\bin\Debug\Shared.pdb
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DVLD_DataAccessLayer\obj\Debug\DVLD_Dat.5E8DE79F.Up2Date

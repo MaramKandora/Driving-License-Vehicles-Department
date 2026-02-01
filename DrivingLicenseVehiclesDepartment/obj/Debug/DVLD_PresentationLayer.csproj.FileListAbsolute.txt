@@ -67,3 +67,5 @@ E:\GitHupReprositries\Driving-License-Vehicle-Department\DrivingLicenseVehiclesD
 E:\GitHupReprositries\Driving-License-Vehicle-Department\DrivingLicenseVehiclesDepartment\obj\Debug\DVLD_PresentationLayer.Applications.Detain_And_Release_License.frmDetainLicense.resources
 E:\GitHupReprositries\Driving-License-Vehicle-Department\DrivingLicenseVehiclesDepartment\obj\Debug\DVLD_PresentationLayer.Applications.Detain_And_Release_License.frmDetainedLicensesList.resources
 E:\GitHupReprositries\Driving-License-Vehicle-Department\DrivingLicenseVehiclesDepartment\obj\Debug\DVLD_PresentationLayer.Applications.Detain_And_Release_License.frmReleaseLicenseApplication.resources
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DrivingLicenseVehiclesDepartment\bin\Debug\Shared.dll
+E:\GitHupReprositries\Driving-License-Vehicle-Department\DrivingLicenseVehiclesDepartment\bin\Debug\Shared.pdb

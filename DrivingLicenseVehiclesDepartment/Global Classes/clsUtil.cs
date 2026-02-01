@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Shared;
 
 namespace DVLD_PresentationLayer.Global_Classes
 {
@@ -45,7 +47,9 @@ namespace DVLD_PresentationLayer.Global_Classes
             }
             catch(IOException io)
             {
-                MessageBox.Show(io.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);   
+                MessageBox.Show(io.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                clsLogger.LogError(io);
+
                 return false;
             }
 
@@ -66,9 +70,11 @@ namespace DVLD_PresentationLayer.Global_Classes
                     return true;
 
                 }
-                catch(IOException)
+                catch(IOException io)
                 {
                     MessageBox.Show("Error In Creating Folder");
+                    clsLogger.LogError(io);
+
                     return false;
                 }
             }

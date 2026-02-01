@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Shared;
 
 namespace DVLD_DataAccessLayer
 {
@@ -48,8 +51,10 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
+
                 IsFound = false;
             }
             finally
@@ -101,8 +106,10 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch(Exception ex) 
             {
+               clsLogger.LogError(ex);
+
                 IsFound = false;
             }
             finally
@@ -152,8 +159,10 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex)
             {
+               clsLogger.LogError(ex);
+
                 IsFound = false;
             }
             finally
@@ -195,8 +204,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -238,8 +248,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -274,8 +285,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex) 
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -307,8 +319,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex)
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -340,8 +353,9 @@ namespace DVLD_DataAccessLayer
 
 
             }
-            catch
+            catch (Exception ex)
             {
+               clsLogger.LogError(ex);
 
             }
             finally
@@ -370,10 +384,11 @@ namespace DVLD_DataAccessLayer
                 Connection.Open();
                 Result = Command.ExecuteScalar();
 
-
+                
             }
-            catch
+            catch (Exception ex) 
             {
+                clsLogger.LogError(ex);;
 
             }
             finally
@@ -391,7 +406,7 @@ namespace DVLD_DataAccessLayer
 
             SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string Query = @"SELECT Users.UserID, Users.PersonID, 
+            string Query = @"SELECT .UserID, Users.PersonID, 
                            FullName = People.FirstName + ' ' + People.SecondName + ' ' + IsNull(People.ThirdName,'') + People.LastName ,
                             Users.UserName, Users.IsActive From Users
                             Inner Join People on Users.PersonID= People.PersonID";
@@ -413,8 +428,9 @@ namespace DVLD_DataAccessLayer
 
                 Reader.Close();
             }
-            catch
+            catch (Exception ex)
             {
+                clsLogger.LogError(ex);;
 
             }
             finally

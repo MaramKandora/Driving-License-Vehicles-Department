@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.AccessControl;
@@ -8,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
 using Microsoft.Win32;
+using Shared;
+
 
 namespace DVLD_PresentationLayer.Global_Classes
 {
@@ -16,6 +19,8 @@ namespace DVLD_PresentationLayer.Global_Classes
         public static clsUser CurrentUser;
 
         public static string KeyPath = @"HKEY_CURRENT_USER\SOFTWARE\DVLD";
+
+       
 
         public static void RememberUserCredentials(clsUser User)
         {
@@ -29,7 +34,9 @@ namespace DVLD_PresentationLayer.Global_Classes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+               clsLogger.LogError(ex);
             }
 
   
@@ -60,14 +67,24 @@ namespace DVLD_PresentationLayer.Global_Classes
                 }
 
             }
-            catch (UnauthorizedAccessException)
+            catch (UnauthorizedAccessException ex)
             {
                 MessageBox.Show($"\"UnauthorizedAccessException: Run the program with administrative privileges.\"");
+
+                if (!EventLog.SourceExists("DVLD"))
+                {
+                    EventLog.CreateEventSource("DVLD", "Application");
+                }
+
+                EventLog.WriteEntry("DVLD", ex.Message, EventLogEntryType.Error);
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex}");
+
+               clsLogger.LogError(ex);
+
 
             }
         }
@@ -97,6 +114,9 @@ namespace DVLD_PresentationLayer.Global_Classes
             {
 
                 MessageBox.Show(ex.Message);
+
+               clsLogger.LogError(ex);
+
 
             }
             return isFound; 
