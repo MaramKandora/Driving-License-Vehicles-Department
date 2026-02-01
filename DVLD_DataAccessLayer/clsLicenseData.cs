@@ -18,7 +18,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Licenses Where LicenseID = @LicenseID";
 
@@ -76,7 +76,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Licenses Where ApplicationID = @ApplicationID";
 
@@ -138,7 +138,7 @@ namespace DVLD_DataAccessLayer
         {
             int NewLicenseID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Insert Into Licenses 
                               Values (@ApplicationID, @DriverID, @LicenseClass, @IssueDate, @ExpirationDate, @Notes , @PaidFees,
@@ -199,7 +199,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update Licenses 
                               Set ApplicationID = @ApplicationID, DriverID= @DriverID, LicenseClass= @LicenseClass, 
@@ -255,7 +255,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Delete From Licenses Where LicenseID = @LicenseID";
 
@@ -289,7 +289,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsLicenseExistByLicenseID(int LicenseID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from Licenses Where LicenseID = @LicenseID";
 
@@ -322,7 +322,7 @@ namespace DVLD_DataAccessLayer
 
         public static int GetLicenseIDUsingApplicationID(int ApplicationID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
 
             string Query = $"Select LicenseID from Licenses Where ApplicationID = @ApplicationID";
@@ -358,7 +358,7 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = @"Select Licenses.LicenseID, Licenses.ApplicationID, Licenses.IssueDate, Licenses.ExpirationDate,
                             Licenses.IsActive from Licenses
@@ -404,7 +404,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update Licenses 
                               Set IsActive= 0

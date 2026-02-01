@@ -17,7 +17,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from LocalDrivingLicenseApplications Where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
 
@@ -67,7 +67,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from LocalDrivingLicenseApplications Where ApplicationID = @ApplicationID";
 
@@ -116,7 +116,7 @@ namespace DVLD_DataAccessLayer
         {
             int NewPersonID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Insert Into LocalDrivingLicenseApplications 
                               Values (@ApplicationID, @LicenseClassID);
@@ -161,7 +161,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update LocalDrivingLicenseApplications 
                               Set ApplicationID = @ApplicationID, LicenseClassID= @LicenseClassID
@@ -203,7 +203,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Delete From LocalDrivingLicenseApplications Where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
 
@@ -237,7 +237,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsLocalDrivingLicenseApplicationExist(int LocalDrivingLicenseApplicationID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from LocalDrivingLicenseApplications Where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
 
@@ -272,7 +272,7 @@ namespace DVLD_DataAccessLayer
         {
             int FoundAppointmentID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"select TestAppointmentID from TestAppointments where TestTypeID = @TestTypeID 
                            And LocalDrivingLicenseApplicationID = @LDLAppID And IsLocked = 0;";
@@ -315,7 +315,7 @@ namespace DVLD_DataAccessLayer
         {
 
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"select Count(*) from TestAppointmentsView_Mine where TestTypeID = @TestTypeID 
                            And LocalDrivingLicenseApplicationID = @LDLAppID And IsLocked=1;";
@@ -349,7 +349,7 @@ namespace DVLD_DataAccessLayer
         {
 
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"select Found = 1 from TestAppointments where TestTypeID = @TestTypeID 
                            And LocalDrivingLicenseApplicationID = @LDLAppID;";
@@ -386,7 +386,7 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = @"SELECT distinct LocalDrivingLicenseApplicationsView_Mine.LocalDrivingLicenseApplicationID, 
                             LocalDrivingLicenseApplicationsView_Mine.ClassName, LocalDrivingLicenseApplicationsView_Mine.ApplicantPersonNationalNo

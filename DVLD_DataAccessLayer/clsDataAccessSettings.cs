@@ -4,13 +4,17 @@ using System.Linq;
 using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace DVLD_DataAccessLayer
 {
     public class clsDataAccessSettings
     {
-       static public string ConnectionString = "Server=.; Database=DVLD; User id=sa; Password= 123456; ";
+       //static public string ConnectionString = "Server=.; Database=DVLD; User id=sa; Password= 123456; ";
 
-      
+      public static string GetConnectionString()
+        {
+           return ConfigurationManager.ConnectionStrings["DBConnectionString"].ToString();
+        }
     }
 }

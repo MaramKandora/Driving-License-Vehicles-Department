@@ -16,7 +16,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Drivers Where DriverID = @DriverID";
 
@@ -69,7 +69,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Drivers Where PersonID = @PersonID";
 
@@ -123,7 +123,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Select Drivers.PersonID, Drivers.DriverID, Drivers.CreatedByUserID, Drivers.CreatedDate
                             from Drivers inner join People on Drivers.PersonID = People.PersonID
@@ -178,7 +178,7 @@ namespace DVLD_DataAccessLayer
         {
             int NewUserID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Insert Into Drivers 
                               Values (@PersonID, @CreatedByUserID, @CreationDate);
@@ -224,7 +224,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update Drivers 
                               Set PersonID = @PersonID, CreatedByUserID= @CreatedByUserID, CreatedDate= @CreationDate
@@ -265,7 +265,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Delete From Drivers Where DriverID = @DriverID";
 
@@ -299,7 +299,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsDriverExist(int DriverID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from Drivers Where DriverID = @DriverID";
 
@@ -334,7 +334,7 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = @"SELECT * from Drivers_View";
 

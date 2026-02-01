@@ -16,7 +16,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Tests Where TestID = @TestID";
 
@@ -69,7 +69,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Tests Where TestAppointmentID = @TestAppointmentID";
 
@@ -121,7 +121,7 @@ namespace DVLD_DataAccessLayer
         {
             byte PassedTests = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Select Count(TestResult) from TestAppointmentsView_Mine where LocalDrivingLicenseApplicationID = @LDLAppID
                            And TestResult = 1";
@@ -160,7 +160,7 @@ namespace DVLD_DataAccessLayer
 
         public static int GetPassedTestIDForTestType(int LDLAppID, int TestTypeID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"select TestID from TestAppointmentsView_Mine where LocalDrivingLicenseApplicationID= @LDLAppID
                             And TestTypeID =@TestTypeID And TestResult =1;";
@@ -196,7 +196,7 @@ namespace DVLD_DataAccessLayer
         {
             int NewTestID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Insert Into Tests 
                               Values ( @TestAppointmentID, @TestResult, @Notes, @CreatedByUserID);
@@ -254,7 +254,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update Tests 
                               Set TestAppointmentID= @TestAppointmentID, TestResult= @TestResult, 
@@ -303,7 +303,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Delete From Tests Where TestID = @TestID";
 
@@ -337,7 +337,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsTestExistByTestID(int TestID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from Tests Where TestID = @TestID";
 

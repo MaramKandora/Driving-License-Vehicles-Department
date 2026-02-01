@@ -17,7 +17,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from LicenseClasses Where LicenseClassID = @LicenseClassID";
 
@@ -67,7 +67,7 @@ namespace DVLD_DataAccessLayer
         {
             int ApplicationTypeID = -1;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string query = @"Insert Into LicenseClasses
                             Values (@ClassName, @ClassDescription , @MinimumAllowedAge,@DefaultValidityLength,@ClassFees)
@@ -118,7 +118,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update LicenseClasses 
                               Set ClassName = @ClassName, ClassDescription = @ClassDescription , MinimumAllowedAge =@MinimumAllowedAge,
@@ -162,7 +162,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool DoesPersonAlreadyHaveApplicationFprLicenseClass(int PersonID, int LicenseClassID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Select Found = 1 from LocalDrivingLicenseApplicationsView_Mine Where ApplicantPersonID = @PersonID And
                              LicenseClassID= @LicenseClassID And ApplicationStatus in (1 , 3)";
@@ -199,7 +199,7 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * From LicenseClasses order by ClassName";
 

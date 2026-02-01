@@ -18,7 +18,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from DetainedLicenses Where DetainID = @DetainID";
 
@@ -76,7 +76,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select top 1 * from DetainedLicenses Where LicenseID = @LicenseID And IsReleased = 0 order by DetainID desc";
 
@@ -138,7 +138,7 @@ namespace DVLD_DataAccessLayer
         {
             int NewDetainID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Insert Into DetainedLicenses  (LicenseID,
                                DetainDate,
@@ -189,7 +189,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update DetainedLicenses 
                               Set IsReleased = 1, ReleaseDate= @ReleaseDate, ReleasedByUserID = @ReleasedByUserID , ReleaseApplicationID = @ReleaseApplicationID
@@ -231,7 +231,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update DetainedLicenses 
                               Set LicenseID = @LicenseID, DetainDate= @DetainDate, FineFees= @FineFees, 
@@ -275,7 +275,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Delete From DetainedLicenses Where DetainID = @DetainID";
 
@@ -309,7 +309,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsDetainedLicenseExistByDetainID(int DetainID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from DetainedLicenses Where DetainID = @DetainID";
 
@@ -344,7 +344,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsLicenseDetained(int LicenseID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from DetainedLicenses Where LicenseID = @LicenseID And IsReleased = 0";
 
@@ -379,7 +379,7 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = @"SELECT * from DetainedLicenses_View order by IsReleased, DetainID ; ";
 

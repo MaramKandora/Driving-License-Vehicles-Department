@@ -17,7 +17,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from InternationalLicenses Where InternationalLicenseID = @InternationalLicenseID";
 
@@ -72,7 +72,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from InternationalLicenses Where IssuedUsingLocalLicenseID = @IssuedUsingLocalLicenseID";
 
@@ -131,7 +131,7 @@ namespace DVLD_DataAccessLayer
         {
             int NewInternationalLicenseID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update InternationalLicenses Set IsActive = 0
                               Where DriverID = @DriverID;
@@ -188,7 +188,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update InternationalLicenses 
                               Set ApplicationID = @ApplicationID, DriverID= @DriverID, IssuedUsingLocalLicenseID= @IssuedUsingLocalLicenseID, 
@@ -239,7 +239,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Delete From InternationalLicenses Where InternationalLicenseID = @InternationalLicenseID";
 
@@ -272,7 +272,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsLicenseExistByInternationalLicenseID(int InternationalLicenseID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from InternationalLicenses Where InternationalLicenseID = @InternationalLicenseID";
 
@@ -309,7 +309,7 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = @"select InternationalLicenseID, ApplicationID, IssuedUsingLocalLicenseID, IssueDate,
                             ExpirationDate, IsActive from InternationalLicenses
@@ -351,7 +351,7 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = @"select InternationalLicenseID, ApplicationID,DriverID, IssuedUsingLocalLicenseID, IssueDate,
                             ExpirationDate, IsActive from InternationalLicenses order by IsActive, IssueDate Desc;";
@@ -390,7 +390,7 @@ namespace DVLD_DataAccessLayer
         public static int GetActiveInternationalLicenseID(int DriverID)
         {
             int LicenseID = -1;
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Select Top 1 InternationalLicenseID from InternationalLicenses Where DriverID = @DriverID And IsActive = 1
                               And GetDate() Between IssueDate And ExpirationDate

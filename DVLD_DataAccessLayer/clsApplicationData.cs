@@ -16,8 +16,8 @@ namespace DVLD_DataAccessLayer
             , ref short ApplicationStatus, ref DateTime LastStatusDate, ref float PaidFees, ref int CreatedByUserID)
         {
             bool IsFound = false;
-
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Applications Where ApplicationID = @ApplicationID";
 
@@ -74,7 +74,7 @@ namespace DVLD_DataAccessLayer
         {
             int NewPersonID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Insert Into Applications 
                               Values (@ApplicantPersonID, @ApplicationDate, @ApplicationTypeID, @ApplicationStatus,
@@ -128,7 +128,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update Applications 
                               Set ApplicantPersonID = @ApplicantPersonID, ApplicationDate= @ApplicationDate, ApplicationTypeID= @ApplicationTypeID, 
@@ -177,7 +177,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Delete From Applications Where ApplicationID = @ApplicationID";
 
@@ -211,7 +211,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool DoesPersonAlreadyHaveApplication(int PersonID, int ApplicationType)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Select Found = 1 from Applications Where ApplicantPersonID = @PersonID And
                              ApplicationType= @ApplicationType And ApplicationStatus in (1 , 3)";
@@ -249,7 +249,7 @@ namespace DVLD_DataAccessLayer
         {
 
             int rowsAffected = 0;
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string query = @"Update  Applications  
                             set 
@@ -288,7 +288,7 @@ namespace DVLD_DataAccessLayer
        
         public static bool IsApplicationExist(int ApplicationID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from Applications Where ApplicationID = @ApplicationID";
 

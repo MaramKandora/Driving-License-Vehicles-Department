@@ -16,7 +16,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from TestTypes Where TestTypeID = @TestTypeID";
 
@@ -61,7 +61,7 @@ namespace DVLD_DataAccessLayer
         {
             int TestTypeID = -1;
 
-            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string query = @"Insert Into TestTypes 
                             Values (@TestTypeTitle , @TestTypeDescription , @TestTypeFees)
@@ -105,7 +105,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update TestTypes 
                               Set TestTypeTitle = @TestTypeTitle,TestTypeDescription= @TestTypeDescription, TestTypeFees = @TestTypeFees
@@ -148,7 +148,7 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * From TestTypes order by TestTypeTitle";
 

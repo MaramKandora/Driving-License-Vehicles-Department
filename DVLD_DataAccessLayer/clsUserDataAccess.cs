@@ -18,7 +18,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Users Where UserID = @UserID";
 
@@ -71,7 +71,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Users Where UserName = @UserName And Password = @Password";
 
@@ -126,7 +126,7 @@ namespace DVLD_DataAccessLayer
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select * from Users Where PersonID = @PersonID";
 
@@ -178,7 +178,7 @@ namespace DVLD_DataAccessLayer
         {
             int NewUserID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Insert Into Users 
                               Values (@PersonID, @UserName, @Password, @IsActive);
@@ -225,7 +225,7 @@ namespace DVLD_DataAccessLayer
 
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $@"Update Users 
                               Set PersonID = @PersonID, UserName= @UserName, Password= @Password, 
@@ -268,7 +268,7 @@ namespace DVLD_DataAccessLayer
         {
             int AffectedRows = 0;
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Delete From Users Where UserID = @UserID";
 
@@ -302,7 +302,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsUserExist(int UserID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from Users Where UserID = @UserID";
 
@@ -336,7 +336,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsUserExist(string UserName)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from Users Where UserName = @UserName";
 
@@ -369,7 +369,7 @@ namespace DVLD_DataAccessLayer
 
         public static bool IsUserExist_ByPersonID(int PersonID)
         {
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
             string Query = $"Select Found = 1 from Users Where PersonID = @PersonID";
 
@@ -404,9 +404,9 @@ namespace DVLD_DataAccessLayer
         {
             DataTable dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+            SqlConnection Connection = new SqlConnection(clsDataAccessSettings.GetConnectionString());
 
-            string Query = @"SELECT .UserID, Users.PersonID, 
+            string Query = @"SELECT Users.UserID, Users.PersonID, 
                            FullName = People.FirstName + ' ' + People.SecondName + ' ' + IsNull(People.ThirdName,'') + People.LastName ,
                             Users.UserName, Users.IsActive From Users
                             Inner Join People on Users.PersonID= People.PersonID";
