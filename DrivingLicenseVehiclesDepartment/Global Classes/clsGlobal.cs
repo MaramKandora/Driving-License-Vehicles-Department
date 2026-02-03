@@ -22,15 +22,14 @@ namespace DVLD_PresentationLayer.Global_Classes
 
        
 
-        public static void RememberUserCredentials(clsUser User)
+        public static void RememberUserCredentials(string UserName, string Password)
         {
-            if (User == null)
-                return;
+            
 
             try
             {
-                Registry.SetValue(KeyPath, "UserName", User.UserName, RegistryValueKind.String);
-                Registry.SetValue(KeyPath, "Password", clsEncryptDecrypt.EncryptText(User.Password));
+                Registry.SetValue(KeyPath, "UserName", UserName, RegistryValueKind.String);
+                Registry.SetValue(KeyPath, "Password", Password);//TODO: we should find a way to encrypt password
             }
             catch (Exception ex)
             {
@@ -103,7 +102,7 @@ namespace DVLD_PresentationLayer.Global_Classes
                 Value = Registry.GetValue(KeyPath, "Password", "");
                 if (Value != null)
                 {
-                    Password = clsEncryptDecrypt.DecryptText(Value.ToString()) ;    
+                    Password =Value.ToString() ;    
                 }
 
                 isFound = true;

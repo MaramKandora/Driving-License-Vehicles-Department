@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BusinessLayer;
+using Shared;
 
 namespace DVLD_PresentationLayer.Users
 {
@@ -70,7 +71,7 @@ namespace DVLD_PresentationLayer.Users
                 return;
             }
 
-            _User.Password = txtNewPassword.Text;
+            _User.Password = clsHash.ComputeHash(txtNewPassword.Text);
 
             if (_User.Save())
             {
@@ -142,7 +143,7 @@ namespace DVLD_PresentationLayer.Users
             {
                 return;
             }
-            if (txtCurrentPassword.Text != _User.Password)
+            if (clsHash.ComputeHash(txtCurrentPassword.Text) != _User.Password)
             {
                 errorProvider1.SetError(txtCurrentPassword, "Current Password is Wrong!");
                 e.Cancel = true;

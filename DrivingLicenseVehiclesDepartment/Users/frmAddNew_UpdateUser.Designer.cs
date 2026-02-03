@@ -39,6 +39,7 @@
             this.lblSelectedPersonID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pbInfo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pbConfirmPassPeek = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -56,12 +57,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lable2 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.tpLoginInfo.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbConfirmPassPeek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPasswordPeek)).BeginInit();
@@ -92,6 +95,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(982, 537);
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tpPersonalInfo
@@ -146,6 +150,7 @@
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Login Info";
             this.tpLoginInfo.UseVisualStyleBackColor = true;
+            this.tpLoginInfo.Leave += new System.EventHandler(this.tpLoginInfo_Leave);
             // 
             // lblSelectedPersonFullName
             // 
@@ -183,6 +188,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.pbInfo);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pbConfirmPassPeek);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -202,6 +208,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(567, 317);
             this.panel1.TabIndex = 32;
+            // 
+            // pbInfo
+            // 
+            this.pbInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbInfo.Image = global::DVLD_PresentationLayer.Properties.Resources.information_925293__1_;
+            this.pbInfo.Location = new System.Drawing.Point(527, 146);
+            this.pbInfo.Name = "pbInfo";
+            this.pbInfo.Size = new System.Drawing.Size(23, 25);
+            this.pbInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbInfo.TabIndex = 32;
+            this.pbInfo.TabStop = false;
+            this.pbInfo.Visible = false;
+            this.pbInfo.Click += new System.EventHandler(this.pbInfo_Click);
             // 
             // label2
             // 
@@ -304,7 +323,9 @@
             this.txtPassword.Size = new System.Drawing.Size(195, 27);
             this.txtPassword.TabIndex = 25;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_KeyPress);
+            this.txtPassword.MouseEnter += new System.EventHandler(this.txtPassword_MouseEnter);
             this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // label3
@@ -345,7 +366,9 @@
             this.txtConfirmPassword.Size = new System.Drawing.Size(195, 27);
             this.txtConfirmPassword.TabIndex = 26;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
+            this.txtConfirmPassword.Click += new System.EventHandler(this.txtPassword_Click);
             this.txtConfirmPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_KeyPress);
+            this.txtConfirmPassword.MouseEnter += new System.EventHandler(this.txtPassword_MouseEnter);
             this.txtConfirmPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPassword_Validating);
             // 
             // label4
@@ -420,6 +443,7 @@
             this.tpLoginInfo.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbConfirmPassPeek)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPasswordPeek)).EndInit();
@@ -463,5 +487,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblSelectedPersonFullName;
         private System.Windows.Forms.Label lblSelectedPersonID;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pbInfo;
     }
 }

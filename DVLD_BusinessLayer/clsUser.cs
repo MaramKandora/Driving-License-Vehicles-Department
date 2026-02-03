@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DVLD_DataAccessLayer;
+using Shared;
 
 namespace DVLD_BusinessLayer
 {
@@ -32,20 +33,9 @@ namespace DVLD_BusinessLayer
         public clsPerson PersonInfo { get { return _PersonInfo; } }  
         public string UserName { get; set; }
 
-        string _Password;
+       public string Password { get; set; }
 
-        public string Password
-        {
-            get
-            {
-                return clsEncryptDecrypt.DecryptText(_Password);
-            }
-
-            set
-            {
-                _Password = clsEncryptDecrypt.EncryptText(value);
-            }
-        }
+       
         public bool IsActive { get; set; }  
 
         enum enMode { AddNew, Update }
@@ -58,7 +48,7 @@ namespace DVLD_BusinessLayer
             PersonID = -1;
             _PersonInfo = null;
             UserName = "";
-            _Password = "";
+            Password = "";
             IsActive = false;   
 
             _Mode = enMode.AddNew;
@@ -70,7 +60,7 @@ namespace DVLD_BusinessLayer
             this.UserID = UserID;
             this.PersonID = PersonID;
             this.UserName = UserName;   
-            this._Password = Password;   
+            this.Password = Password;   
             this.IsActive = IsActive;
 
             _Mode = enMode.Update;
@@ -100,7 +90,7 @@ namespace DVLD_BusinessLayer
             int UserID = -1, PersonID = -1;
             bool IsActive = false;
 
-            Password = clsEncryptDecrypt.EncryptText(Password);
+            Password = clsHash.ComputeHash(Password);
 
             if (clsUserDataAccess.FindUserByUserNameAndPassword(ref UserName, ref Password, ref UserID, ref PersonID, ref IsActive)) 
             {
@@ -150,15 +140,16 @@ namespace DVLD_BusinessLayer
         bool AddNewUser()
         {
             
-
-            this.UserID = clsUserDataAccess.AddNewUser(this.PersonID, this.UserName, this._Password, this.IsActive);
+            this.Password = clsHash.ComputeHash(Password);  
+            this.UserID = clsUserDataAccess.AddNewUser(this.PersonID, this.UserName, this.Password, this.IsActive);
 
             return this.UserID != -1;
         }
 
         bool UpdateUser()
         {
-            return clsUserDataAccess.UpdateUser(this.UserID, this.PersonID, this.UserName, this._Password, this.IsActive);  
+
+            return clsUserDataAccess.UpdateUser(this.UserID, this.PersonID, this.UserName, this.Password, this.IsActive);  
         }
 
         public static bool DeleteUser(int UserID)

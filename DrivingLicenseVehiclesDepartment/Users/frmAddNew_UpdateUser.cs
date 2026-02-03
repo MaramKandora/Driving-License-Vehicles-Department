@@ -82,13 +82,26 @@ namespace DVLD_PresentationLayer.Users
             _User = clsUser.FindUser(_UserID);
             if (_User != null)
             {
+                txtPassword.Enabled = false;
+                txtConfirmPassword.Enabled = false;
                 lblUserID.Text = _User.UserID.ToString();
                 ShowSelectedPersonBrief(_User.PersonInfo);
-                txtUserName.Text = _User.UserName;
-                txtPassword.Text = _User.Password;
-                txtConfirmPassword.Text = _User.Password;
-                cbIsActive.Checked = _User.IsActive;
                 ctrlPersonCardWithFilter1.LoadPersonInfoInCard(_User.PersonID);
+                txtUserName.Text = _User.UserName;
+                cbIsActive.Checked = _User.IsActive;
+                pbInfo.Visible = true;
+              
+
+
+                toolTip1.SetToolTip(pbInfo, "You can change your password from Account Settings");
+                toolTip1.InitialDelay = 0;
+                toolTip1.IsBalloon = true;
+                toolTip1.ShowAlways = true;
+                toolTip1.ToolTipIcon = ToolTipIcon.Info;
+                
+               
+                
+
             }
             else
             {
@@ -129,7 +142,7 @@ namespace DVLD_PresentationLayer.Users
         private void frmAddNewUser_Load(object sender, EventArgs e)
         {
             btnSave.Enabled = false;
-
+            pbInfo.Visible = false;
             ResetDefaultValues();
 
             if (_Mode == enMode.Update)
@@ -170,13 +183,28 @@ namespace DVLD_PresentationLayer.Users
 
             btnSave.Enabled = (e.TabPage == tabControl1.TabPages["tpLoginInfo"]) && tpLoginInfo.Enabled;
 
-           
 
         }
 
         private void lblSelectedPersonInfo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        bool ValidateEmptyFields()
+        {
+            switch(_Mode)
+            {
+                case enMode.AddNew:
+                    return (txtUserName.Text != "");
+
+                case enMode.Update:
+                    return (txtUserName.Text != "" || txtPassword.Text != ""
+                || txtConfirmPassword.Text != "");
+
+                default:
+                    return false;   
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -188,8 +216,7 @@ namespace DVLD_PresentationLayer.Users
                 return;
             }
 
-            if (txtUserName.Text == "" || txtPassword.Text == "" 
-                || txtConfirmPassword.Text == "")
+            if (!ValidateEmptyFields())
             {
                 MessageBox.Show("Some fields in Login Info are Empty!.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -203,7 +230,6 @@ namespace DVLD_PresentationLayer.Users
             }
 
             _User.UserName = txtUserName.Text.Trim();
-            _User.Password = txtPassword.Text.Trim();
             _User.PersonID = int.Parse(lblSelectedPersonID.Text);
             _User.IsActive = cbIsActive.Checked;
 
@@ -282,12 +308,17 @@ namespace DVLD_PresentationLayer.Users
 
         private void txtPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (!ValidateEmptyTextBox(txtPassword,e))
+            if (_Mode == enMode.Update) 
                 return;
-           
+
+            ValidateEmptyTextBox(txtPassword, e);
+
+
         }
         private void txtConfirmPassword_Validating(object sender, CancelEventArgs e)
         {
+            if (_Mode == enMode.Update)
+                return;
             if (!ValidateEmptyTextBox(txtConfirmPassword, e))
                 return;
 
@@ -345,6 +376,53 @@ namespace DVLD_PresentationLayer.Users
             this.Close();
         }
 
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+            if ((TextBox)sender == txtPassword)
+            {
+                toolTip1.Show("You can change your password from Account Settings", txtPassword);
+            }
+            else if ((TextBox)sender == txtConfirmPassword)
+            {
+                toolTip1.Show("You can change your password from Account Settings", txtConfirmPassword);
+
+            }
+        }
+
+        private void txtPassword_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pbInfo_Click(object sender, EventArgs e)
+        {
+            toolTip1.Show("You can change your password from Account Settings", pbInfo, 3000);
+
+        }
+
        
+        private void tpLoginInfo_Leave(object sender, EventArgs e)
+        {
+            if (_Mode == enMode.Update)
+            {
+                toolTip1.UseFading = false;
+            toolTip1.Active = false;
+            }
+           
+        }
+
+     
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabControl1.TabPages["tpLoginInfo"] && _Mode == enMode.Update) 
+            {
+                toolTip1.Active = true;
+                toolTip1.UseFading = true;
+                toolTip1.Show("You can change your password from Account Settings", pbInfo, 3000);
+            }
+            
+
+        }
     }
 }

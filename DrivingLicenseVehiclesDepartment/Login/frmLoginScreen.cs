@@ -57,7 +57,7 @@ namespace DVLD_PresentationLayer.Login
                 
                 if (cbRemeberMe.Checked)
                 {
-                    clsGlobal.RememberUserCredentials(_User);
+                    clsGlobal.RememberUserCredentials(_User.UserName, txtPassword.Text.Trim());
                 }
                 else
                 {
